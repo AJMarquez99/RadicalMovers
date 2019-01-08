@@ -1,3 +1,25 @@
-
+.radical-intro {
+  height: 515px;
+  position: relative;
+  background-image: url("../images/intro_banner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
+}
+.radical-intro img {
+  position: absolute;
+  height: auto;
+}
+.radical-intro img[src="images/intro_bannerBox.png"] {
+  width: 375px;
+  right: 75px;
+  bottom: 60px;
+}
+.radical-intro img[src="images/intro_bannerIcon.png"] {
+  width: 200px;
+  right: 735px;
+  bottom: -75px;
+  transform: rotate(20deg);
+}
 
 /*# sourceMappingURL=master.css.map */
