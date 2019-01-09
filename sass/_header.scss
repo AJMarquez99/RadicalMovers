@@ -1,1 +1,26 @@
+:root {
+  font-size: 10px;
+}
 
+.header-info-block {
+  $header-color: darken(#ffffff, 30%);
+  $border-color: rgba($header-color, 0.3);
+  div {
+    width: auto;
+    border: {
+      left: 1px solid $border-color;
+    }
+    display: flex;
+  }
+  div:first-child, div:last-child {
+    margin-left: 0;
+    border: {
+      right: 1px solid $border-color;
+      left: 1px solid $border-color;
+    }
+  }
+  .header-info {
+    color: $header-color;
+    font-size: 1.2em;
+  }
+}

@@ -1,25 +1,29 @@
+:root {
+  font-size: 10px;
+}
+
+.header-info-block div {
+  width: auto;
+  border-left: 1px solid rgba(179, 179, 179, 0.3);
+  display: flex;
+}
+.header-info-block div:first-child, .header-info-block div:last-child {
+  margin-left: 0;
+  border-right: 1px solid rgba(179, 179, 179, 0.3);
+  border-left: 1px solid rgba(179, 179, 179, 0.3);
+}
+.header-info-block .header-info {
+  color: #b3b3b3;
+  font-size: 1.2em;
+}
+
 .radical-intro {
-  height: 515px;
+  height: auto;
   position: relative;
-  background-image: url("../images/intro_banner.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #000;
 }
 .radical-intro img {
-  position: absolute;
+  width: 100%;
   height: auto;
-}
-.radical-intro img[src="images/intro_bannerBox.png"] {
-  width: 375px;
-  right: 75px;
-  bottom: 60px;
-}
-.radical-intro img[src="images/intro_bannerIcon.png"] {
-  width: 195px;
-  right: 735px;
-  bottom: -75px;
-  transform: rotate(20deg);
 }
 
 /*# sourceMappingURL=master.css.map */

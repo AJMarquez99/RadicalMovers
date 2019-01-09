@@ -1,34 +1,8 @@
 .radical-intro {
-  height: 515px;
+  height: auto;
   position: relative;
-  background: {
-    image: url("../images/intro_banner.png");
-    repeat: no-repeat;
-    size: contain;
-    color: #000;
-  }
   img {
-    position: absolute;
+    width: 100%;
     height: auto;
-    &[src="images/intro_bannerBox.png"] {
-      width: 375px;
-      right: 75px;
-      bottom: 60px;
-    }
-    &[src="images/intro_bannerIcon.png"] {
-      width: 195px;
-      right: 735px;
-      bottom: -75px;
-      transform: rotate(20deg);
-    }
-    &[src="images/intro_bannerLogo.png"] {
-
-    }
-    &[src="images/intro_bannerLogoBorder.png"] {
-
-    }
-    &[src="images/intro_bannerLogoCaption.png"] {
-
-    }
   }
 }
