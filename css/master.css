@@ -2,19 +2,59 @@
   font-size: 10px;
 }
 
-.header-info-block div {
+header {
+  font-family: "Work Sans", sans-serif;
+}
+header .row:last-child {
+  border-top: 1px solid rgba(179, 179, 179, 0.2);
+}
+header .header-info-block {
+  max-width: 1140px;
+}
+header .header-info-block div {
+  max-width: 35%;
   width: auto;
-  border-left: 1px solid rgba(179, 179, 179, 0.3);
-  display: flex;
+  flex: none;
+  padding: 20px;
+  border-left: 1px solid rgba(179, 179, 179, 0.2);
 }
-.header-info-block div:first-child, .header-info-block div:last-child {
+header .header-info-block div:first-child, header .header-info-block div:last-child {
   margin-left: 0;
-  border-right: 1px solid rgba(179, 179, 179, 0.3);
-  border-left: 1px solid rgba(179, 179, 179, 0.3);
+  border-right: 1px solid rgba(179, 179, 179, 0.2);
+  border-left: 1px solid rgba(179, 179, 179, 0.2);
 }
-.header-info-block .header-info {
+header .header-info-block .header-info {
   color: #b3b3b3;
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+header .header-info-block .header-info i {
+  margin-right: 5px;
+  color: #000;
+}
+header .header-info-block .header-title {
+  margin-right: 60px;
+  text-transform: uppercase;
+}
+header nav {
+  max-width: 1140px;
+}
+header ul {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+header li {
+  padding: 25px 20px;
+  font-size: 1.8em;
+}
+header a {
+  color: #000;
+}
+header a:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 .radical-intro {

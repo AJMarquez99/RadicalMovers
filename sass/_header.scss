@@ -1,26 +1,60 @@
-:root {
-  font-size: 10px;
-}
-
-.header-info-block {
+header {
   $header-color: darken(#ffffff, 30%);
-  $border-color: rgba($header-color, 0.3);
-  div {
-    width: auto;
-    border: {
-      left: 1px solid $border-color;
+  $border-color: rgba($header-color, 0.2);
+  font-family: $nav-font;
+  .row:last-child {
+    border-top: 1px solid $border-color;
+  }
+  .header-info-block {
+    max-width: 1140px;
+    div {
+      max-width: 35%;
+      width: auto;
+      flex: none;
+      padding: 20px;
+      border: {
+        left: 1px solid $border-color;
+      }
     }
+    div:first-child, div:last-child {
+      margin-left: 0;
+      border: {
+        right: 1px solid $border-color;
+        left: 1px solid $border-color;
+      }
+    }
+    .header-info {
+      color: $header-color;
+      font-size: 1.3em;
+      i {
+        margin-right: 5px;
+        color: $text-color;
+      }
+    }
+    .header-title {
+      margin-right: 60px;
+      text-transform: uppercase;
+    }
+  }
+  nav {
+    max-width: 1140px;
+  }
+  ul {
+    float: right;
     display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    margin-bottom: 0;
   }
-  div:first-child, div:last-child {
-    margin-left: 0;
-    border: {
-      right: 1px solid $border-color;
-      left: 1px solid $border-color;
+  li {
+    padding: 25px 20px;
+    font-size: 1.8em;
+  }
+  a {
+    color: $text-color;
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
     }
-  }
-  .header-info {
-    color: $header-color;
-    font-size: 1.2em;
   }
 }
