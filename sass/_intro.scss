@@ -6,3 +6,26 @@
     height: auto;
   }
 }
+
+.about-container {
+  background-color: $primary-color;
+  max-height: 585px;
+  position: relative;
+  img {
+    padding: 60px 20px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-content {
+  position: relative;
+  bottom: 530px;
+  left: 550px;
+  width: 70%;
+  background-color: $tertiary-color;
+  padding: 20px;
+  border: 6px solid rgba( 5, 5, 5, 1);
+  border-radius: 5px;
+  height: 29em;
+}

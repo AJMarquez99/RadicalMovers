@@ -2,6 +2,10 @@
   font-size: 10px;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 //Colors of the Website
 $primary-color: #001A66;
 $secondary-color: #FF0404;

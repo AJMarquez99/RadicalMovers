@@ -2,6 +2,10 @@
   font-size: 10px;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   font-family: "Work Sans", sans-serif;
 }
@@ -64,6 +68,29 @@ header a:hover {
 .radical-intro img {
   width: 100%;
   height: auto;
+}
+
+.about-container {
+  background-color: #001A66;
+  max-height: 585px;
+  position: relative;
+}
+.about-container img {
+  padding: 60px 20px;
+  width: 100%;
+  height: auto;
+}
+
+.about-content {
+  position: relative;
+  bottom: 530px;
+  left: 550px;
+  width: 70%;
+  background-color: #F2F2F2;
+  padding: 20px;
+  border: 6px solid #050505;
+  border-radius: 5px;
+  height: 29em;
 }
 
 /*# sourceMappingURL=master.css.map */
