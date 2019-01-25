@@ -1,5 +1,4 @@
 header {
-  $header-color: darken(#ffffff, 30%);
   $border-color: rgba($header-color, 0.2);
   font-family: $nav-font;
   .row:last-child {
@@ -45,16 +44,84 @@ header {
     flex-direction: row;
     margin-right: 40px;
     margin-bottom: 0;
+    padding: 10px 10px;
   }
   li {
-    padding: 25px 20px;
+    margin: 5px 10px;
     font-size: 1.8em;
   }
   a {
     color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
     &:hover {
       color: $text-color;
       text-decoration: none;
     }
   }
+
+  nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
 }
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+  /* stroke */
+  nav.stroke ul li a{
+    position: relative;
+  }
+  nav.stroke ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+}
+
+
+
+
+/* Add then add JS to display none header-info-block
+Header {
+position: sticky;
+top: 0;
+z-index: 5;
+}
+*/

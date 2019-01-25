@@ -8,6 +8,7 @@ body::-webkit-scrollbar {
 
 header {
   font-family: "Work Sans", sans-serif;
+  /* stroke */
 }
 header .row:last-child {
   border-top: 1px solid rgba(179, 179, 179, 0.2);
@@ -48,19 +49,80 @@ header ul {
   flex-direction: row;
   margin-right: 40px;
   margin-bottom: 0;
+  padding: 10px 10px;
 }
 header li {
-  padding: 25px 20px;
+  margin: 5px 10px;
   font-size: 1.8em;
 }
 header a {
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
 }
 header a:hover {
   color: #000;
   text-decoration: none;
 }
+header nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+}
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+header nav ul li a,
+header nav ul li a:after,
+header nav ul li a:before {
+  transition: all 0.5s;
+}
+header nav ul li a:hover {
+  color: #555;
+}
+header nav.stroke ul li a {
+  position: relative;
+}
+header nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+header nav.stroke ul li a:hover:after {
+  width: 100%;
+}
 
+/* Add then add JS to display none header-info-block
+Header {
+position: sticky;
+top: 0;
+z-index: 5;
+}
+*/
 .radical-intro {
   height: auto;
   position: relative;
@@ -70,10 +132,16 @@ header a:hover {
   height: auto;
 }
 
+#radical_about {
+  display: none;
+}
+
 .about-container {
-  background-color: #001A66;
+  background-color: #26c9ff;
   max-height: 585px;
   position: relative;
+  border-top: 3px solid rgba(105, 105, 105, 0.8);
+  border-bottom: 3px solid rgba(105, 105, 105, 0.8);
 }
 .about-container img {
   padding: 60px 20px;
@@ -88,9 +156,51 @@ header a:hover {
   width: 70%;
   background-color: #F2F2F2;
   padding: 20px;
-  border: 6px solid #050505;
+  border: 4px solid #050505;
   border-radius: 5px;
   height: 29em;
+  font-family: "Noto Serif TC", serif;
+}
+.about-content h2 {
+  font-size: 3em;
+  font-family: "Cabin", sans-serif;
+}
+.about-content p {
+  font-size: 1.4em;
+  line-height: 1.9em;
+  text-align: justify;
+}
+
+#radical_services {
+  text-align: center;
+}
+
+.services-container > p {
+  color: #b3b3b3;
+  font-size: 2em;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 0;
+}
+.services-container h2 {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.cool-border {
+  margin: 25px auto 5px;
+  width: 370px;
+  border-bottom: 3px solid red;
+  position: relative;
+}
+.cool-border::after {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 3px;
+  width: 100px;
+  border-bottom: 3px solid black;
+  content: "";
 }
 
 /*# sourceMappingURL=master.css.map */
