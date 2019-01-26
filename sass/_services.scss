@@ -1,5 +1,8 @@
 #radical_services {
   text-align: center;
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .services-container {
@@ -29,5 +32,99 @@
     width: 100px;
     border-bottom: 3px solid black;
     content: "";
+  }
+}
+
+.services-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 65px;
+  img {
+    box-sizing: content-box;
+    display: block;
+    max-width: 140px;
+    height: auto;
+    border: 4px solid $border-color;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .cool-border {
+    width: 100px;
+    &::after {
+      width: 35px;
+    }
+  }
+  p{
+    margin-top: 20px;
+    height: 45px;
+    font-family: $nav-font;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  p.summary {
+    opacity: 0;
+    position: absolute;
+  }
+  .service-image-container {
+    $services-border: rgb(20,20,20);
+    border: 3px solid $border-color;
+    padding: 40px 20px;
+    max-width: 200px;
+    max-height: 325px;
+    &:hover {
+      background-color: #f14e4f;
+      border-color: $services-border;
+      max-height: 450px;
+      & img {
+        border: 8px solid $services-border;
+      }
+      & .cool-border {
+        border-color: $services-border;
+      }
+      & .cool-border::after {
+        border-color: #FFF;
+      }
+      & p  {
+        opacity: 0;
+        position: absolute;
+      }
+      & p.summary {
+        display: block;
+        font-size: 1.2em;
+        height: auto;
+        opacity: 1;
+        position: relative;
+        text-align: justify;
+        text-align-last: center;
+      }
+      &,
+      & img,
+      & .cool-border,
+      & .cool-border::after,
+      & p {
+        transition: all 0.5s;
+      }
+      & p.summary {
+        transition: opacity 0.5s;
+      }
+      & {
+        transition: height 0.5s;
+      }
+    }
+    &,
+    & img,
+    & .cool-border,
+    & .cool-border::after,
+    & p {
+      transition: all 0.5s;
+    }
+    & p.summary {
+      transition: none;
+    }
   }
 }

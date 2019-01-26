@@ -8,7 +8,6 @@ body::-webkit-scrollbar {
 
 header {
   font-family: "Work Sans", sans-serif;
-  /* stroke */
 }
 header .row:last-child {
   border-top: 1px solid rgba(179, 179, 179, 0.2);
@@ -36,6 +35,15 @@ header .header-info-block .header-info i {
   margin-right: 5px;
   color: #000;
 }
+header .header-info-block .header-info a {
+  color: #b3b3b3;
+  display: inline-block;
+  padding: 0;
+}
+header .header-info-block .header-info a:hover {
+  text-decoration: none;
+  color: #333333;
+}
 header .header-info-block .header-title {
   margin-right: 60px;
   text-transform: uppercase;
@@ -62,45 +70,17 @@ header a {
   align-items: center;
   padding: 10px 10px;
 }
-header a:hover {
-  color: #000;
-  text-decoration: none;
-}
-header nav {
-  width: 80%;
-  margin: 0 auto;
-  background: #fff;
-  padding: 50px 0;
-  box-shadow: 0px 5px 0px #dedede;
-}
-header nav ul {
-  list-style: none;
-  text-align: center;
-}
-header nav ul li {
-  display: inline-block;
-}
-header nav ul li a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #aaa;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0 10px;
-}
-header nav ul li a,
-header nav ul li a:after,
-header nav ul li a:before {
+header a, header a:after, header a:before {
   transition: all 0.5s;
 }
-header nav ul li a:hover {
-  color: #555;
+header a:hover {
+  color: gray;
+  text-decoration: none;
 }
-header nav.stroke ul li a {
+header .underline-effect a {
   position: relative;
 }
-header nav.stroke ul li a:after {
+header .underline-effect a:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -112,7 +92,7 @@ header nav.stroke ul li a:after {
   background: #aaa;
   height: 1px;
 }
-header nav.stroke ul li a:hover:after {
+header .underline-effect a:hover:after {
   width: 100%;
 }
 
@@ -174,6 +154,9 @@ z-index: 5;
 #radical_services {
   text-align: center;
 }
+#radical_services .container {
+  max-width: 1200px;
+}
 
 .services-container > p {
   color: #b3b3b3;
@@ -201,6 +184,91 @@ z-index: 5;
   width: 100px;
   border-bottom: 3px solid black;
   content: "";
+}
+
+.services-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 65px;
+}
+.services-content img {
+  box-sizing: content-box;
+  display: block;
+  max-width: 140px;
+  height: auto;
+  border: 4px solid rgba(179, 179, 179, 0.2);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.services-content .cool-border {
+  width: 100px;
+}
+.services-content .cool-border::after {
+  width: 35px;
+}
+.services-content p {
+  margin-top: 20px;
+  height: 45px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.services-content p.summary {
+  opacity: 0;
+  position: absolute;
+}
+.services-content .service-image-container {
+  border: 3px solid rgba(179, 179, 179, 0.2);
+  padding: 40px 20px;
+  max-width: 200px;
+  max-height: 325px;
+}
+.services-content .service-image-container:hover {
+  background-color: #f14e4f;
+  border-color: #141414;
+  max-height: 450px;
+}
+.services-content .service-image-container:hover img {
+  border: 8px solid #141414;
+}
+.services-content .service-image-container:hover .cool-border {
+  border-color: #141414;
+}
+.services-content .service-image-container:hover .cool-border::after {
+  border-color: #FFF;
+}
+.services-content .service-image-container:hover p {
+  opacity: 0;
+  position: absolute;
+}
+.services-content .service-image-container:hover p.summary {
+  display: block;
+  font-size: 1.2em;
+  height: auto;
+  opacity: 1;
+  position: relative;
+  text-align: justify;
+  text-align-last: center;
+}
+.services-content .service-image-container:hover, .services-content .service-image-container:hover img, .services-content .service-image-container:hover .cool-border, .services-content .service-image-container:hover .cool-border::after, .services-content .service-image-container:hover p {
+  transition: all 0.5s;
+}
+.services-content .service-image-container:hover p.summary {
+  transition: opacity 0.5s;
+}
+.services-content .service-image-container:hover {
+  transition: height 0.5s;
+}
+.services-content .service-image-container, .services-content .service-image-container img, .services-content .service-image-container .cool-border, .services-content .service-image-container .cool-border::after, .services-content .service-image-container p {
+  transition: all 0.5s;
+}
+.services-content .service-image-container p.summary {
+  transition: none;
 }
 
 /*# sourceMappingURL=master.css.map */
