@@ -153,6 +153,7 @@ z-index: 5;
 
 #radical_services {
   text-align: center;
+  transition: all 0.5s;
 }
 #radical_services .container {
   max-width: 1200px;
@@ -187,10 +188,11 @@ z-index: 5;
 }
 
 .services-content {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 65px;
 }
 .services-content img {
@@ -198,7 +200,7 @@ z-index: 5;
   display: block;
   max-width: 140px;
   height: auto;
-  border: 4px solid rgba(179, 179, 179, 0.2);
+  border: 6px solid rgba(179, 179, 179, 0.2);
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -208,64 +210,122 @@ z-index: 5;
 .services-content .cool-border::after {
   width: 35px;
 }
-.services-content p {
+
+.service-card .service-title {
+  border: 2px solid rgba(179, 179, 179, 0.2);
+  padding: 40px 20px;
+  max-width: 200px;
+  position: relative;
+}
+.service-card .service-title span {
   margin-top: 20px;
   height: 45px;
   font-family: "Work Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  letter-spacing: 1.2px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  text-transform: uppercase;
 }
-.services-content p.summary {
-  opacity: 0;
-  display: block;
-  font-size: 1.2em;
-  height: auto;
-  position: relative;
-  text-align: justify;
-  text-align-last: center;
-}
-.services-content .service-image-container {
-  border: 3px solid rgba(179, 179, 179, 0.2);
-  padding: 40px 20px;
-  max-width: 200px;
-}
-.services-content .service-image-container:hover {
+.service-card .service-title:hover {
   background-color: #f14e4f;
-  border-color: #141414;
+  border-color: #f14e4f;
+  cursor: pointer;
 }
-.services-content .service-image-container:hover img {
-  border: 8px solid #141414;
+.service-card .service-title:hover img {
+  border-color: #282828;
 }
-.services-content .service-image-container:hover .cool-border {
-  border-color: #141414;
+.service-card .service-title:hover .cool-border {
+  border-color: #282828;
 }
-.services-content .service-image-container:hover .cool-border::after {
+.service-card .service-title:hover .cool-border::after {
   border-color: #FFF;
 }
-.services-content .service-image-container:hover p {
-  opacity: 0;
-  margin-top: 0;
+.service-card .service-title, .service-card .service-title:hover,
+.service-card .service-title img, .service-card .service-title:hover img,
+.service-card .service-title span, .service-card .service-title:hover span,
+.service-card .service-title .cool-border, .service-card .service-title:hover .cool-border,
+.service-card .service-title .cool-border::after, .service-card .service-title:hover .cool-border::after {
+  transition: all 0.5s;
 }
-.services-content .service-image-container:hover p.summary {
+.service-card .service-summary {
+  transition: all 0.5s;
+  background-color: rgba(179, 179, 179, 0.2);
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #404040;
+  font-size: 1.5em;
+  padding: 20px;
+}
+.service-card .service-summary .fas {
+  font-size: 1.2em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.service-card .service-summary .fas:hover {
+  opacity: 0.9;
+}
+.service-card.is-collapsed .service-title:after {
+  content: "";
+  opacity: 0;
+}
+.service-card.is-collapsed .service-summary {
+  left: 0;
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  opacity: 0;
+}
+.service-card.is-expanded .service-title {
+  background-color: #f14e4f;
+}
+.service-card.is-expanded .service-title:after {
+  content: "";
+  opacity: 1;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 15px);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #333a45;
+}
+.service-card.is-expanded .service-title img {
+  border-color: #282828;
+}
+.service-card.is-expanded .service-title .cool-border {
+  border-color: #282828;
+}
+.service-card.is-expanded .service-title .cool-border::after {
+  border-color: #FFF;
+}
+.service-card.is-expanded .service-summary {
+  left: 0;
+  max-height: 500px;
+  min-height: 200px;
+  overflow: visible;
+  margin-top: 30px;
   opacity: 1;
 }
-.services-content .service-image-container:hover, .services-content .service-image-container:hover img, .services-content .service-image-container:hover .cool-border, .services-content .service-image-container:hover .cool-border::after, .services-content .service-image-container:hover p {
-  transition: all 0.5s;
+.service-card.is-expanded:hover .service-title {
+  transform: scale(1);
 }
-.services-content .service-image-container:hover p.summary {
-  transition: opacity 0.5s;
+.service-card.is-inactive .service-title {
+  pointer-events: none;
+  opacity: 0.5;
 }
-.services-content .service-image-container:hover {
-  transition: height 0.5s;
-}
-.services-content .service-image-container, .services-content .service-image-container img, .services-content .service-image-container .cool-border, .services-content .service-image-container .cool-border::after, .services-content .service-image-container p {
-  transition: all 0.5s;
-}
-.services-content .service-image-container p.summary {
-  transition: none;
+.service-card.is-inactive:hover .service-title {
+  background-color: #f14e4f;
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=master.css.map */

@@ -1,5 +1,6 @@
 #radical_services {
   text-align: center;
+  transition: all 0.5s;
   .container {
     max-width: 1200px;
   }
@@ -36,17 +37,18 @@
 }
 
 .services-content {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 65px;
   img {
     box-sizing: content-box;
     display: block;
     max-width: 140px;
     height: auto;
-    border: 4px solid $border-color;
+    border: 6px solid $border-color;
     border-radius: 50%;
     margin: 0 auto;
   }
@@ -56,35 +58,35 @@
       width: 35px;
     }
   }
-  p{
-    margin-top: 20px;
-    height: 45px;
-    font-family: $nav-font;
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-  p.summary {
-    opacity: 0;
-    display: block;
-    font-size: 1.2em;
-    height: auto;
-    position: relative;
-    text-align: justify;
-    text-align-last: center;
-  }
-  .service-image-container {
-    $services-border: rgb(20,20,20);
-    border: 3px solid $border-color;
+}
+
+.service-card {
+  $transition-time: 0.5s;
+  $hover-color: #f14e4f;
+  $services-border: rgb(40,40,40);
+  .service-title {
+    border: 2px solid $border-color;
     padding: 40px 20px;
     max-width: 200px;
+    position: relative;
+    span {
+      margin-top: 20px;
+      height: 45px;
+      font-family: $nav-font;
+      font-size: 1.6em;
+      letter-spacing: 1.2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
     &:hover {
-      background-color: #f14e4f;
-      border-color: $services-border;
-      & img {
-        border: 8px solid $services-border;
+      background-color: $hover-color;
+      border-color: $hover-color;
+      cursor: pointer;
+      img {
+        border-color: $services-border;
       }
       & .cool-border {
         border-color: $services-border;
@@ -92,36 +94,112 @@
       & .cool-border::after {
         border-color: #FFF;
       }
-      & p  {
+    }
+    &, &:hover,
+    img, &:hover img,
+    span, &:hover span,
+    .cool-border, &:hover .cool-border,
+    .cool-border::after, &:hover .cool-border::after {
+      transition: all $transition-time;
+    }
+  }
+  .service-summary {
+    transition: all $transition-time;
+    background-color: $border-color;
+    width: 100%;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lighten($text-color, 25%);
+    font-size: 1.5em;
+    padding: 20px;
+
+    .fas {
+      font-size: 1.2em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  &.is-collapsed {
+
+    .service-title {
+      &:after {
+        content: "";
         opacity: 0;
-        margin-top: 0;
       }
-      & p.summary {
+    }
+    .service-summary {
+      left: 0;
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+      margin-top: 0;
+      opacity: 0;
+    }
+  }
+  &.is-expanded {
+
+    .service-title {
+      background-color: $hover-color;
+
+      &:after{
+        content: "";
         opacity: 1;
+        height: 0;
+        width: 0;
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 15px);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #333a45;
       }
-      &,
-      & img,
-      & .cool-border,
-      & .cool-border::after,
-      & p {
-        transition: all 0.5s;
+      img {
+        border-color: $services-border;
       }
-      & p.summary {
-        transition: opacity 0.5s;
+      & .cool-border {
+        border-color: $services-border;
       }
-      & {
-        transition: height 0.5s;
+      & .cool-border::after {
+        border-color: #FFF;
       }
     }
-    &,
-    & img,
-    & .cool-border,
-    & .cool-border::after,
-    & p {
-      transition: all 0.5s;
+
+    .service-summary {
+      left: 0;
+      max-height: 500px;
+      min-height: 200px;
+      overflow: visible;
+      margin-top: 30px;
+      opacity: 1;
     }
-    & p.summary {
-      transition: none;
+
+    &:hover {
+      .service-title {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.is-inactive {
+    .service-title {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      .service-title {
+        background-color: $hover-color;
+        transform: scale(1);
+      }
     }
   }
 }
