@@ -1,6 +1,8 @@
 #radical_services {
   text-align: center;
   transition: all 0.5s;
+  margin-top: 60px;
+  margin-bottom: 120px;
   .container {
     max-width: 1200px;
   }
@@ -23,7 +25,7 @@
 .cool-border {
   margin: 25px auto 5px;
   width: 370px;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid $secondary-color;
   position: relative;
   &::after {
     position: relative;
@@ -31,7 +33,7 @@
     margin: 0 auto;
     top: 3px;
     width: 100px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgb(40,40,40);
     content: "";
   }
 }
@@ -62,7 +64,7 @@
 
 .service-card {
   $transition-time: 0.5s;
-  $hover-color: #f14e4f;
+  $hover-color: $secondary-color;
   $services-border: rgb(40,40,40);
   .service-title {
     border: 2px solid $border-color;

@@ -154,6 +154,8 @@ z-index: 5;
 #radical_services {
   text-align: center;
   transition: all 0.5s;
+  margin-top: 60px;
+  margin-bottom: 120px;
 }
 #radical_services .container {
   max-width: 1200px;
@@ -174,7 +176,7 @@ z-index: 5;
 .cool-border {
   margin: 25px auto 5px;
   width: 370px;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid #f25a5a;
   position: relative;
 }
 .cool-border::after {
@@ -183,7 +185,7 @@ z-index: 5;
   margin: 0 auto;
   top: 3px;
   width: 100px;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #282828;
   content: "";
 }
 
@@ -230,8 +232,8 @@ z-index: 5;
   text-transform: uppercase;
 }
 .service-card .service-title:hover {
-  background-color: #f14e4f;
-  border-color: #f14e4f;
+  background-color: #f25a5a;
+  border-color: #f25a5a;
   cursor: pointer;
 }
 .service-card .service-title:hover img {
@@ -285,7 +287,7 @@ z-index: 5;
   opacity: 0;
 }
 .service-card.is-expanded .service-title {
-  background-color: #f14e4f;
+  background-color: #f25a5a;
 }
 .service-card.is-expanded .service-title:after {
   content: "";
@@ -324,8 +326,13 @@ z-index: 5;
   opacity: 0.5;
 }
 .service-card.is-inactive:hover .service-title {
-  background-color: #f14e4f;
+  background-color: #f25a5a;
   transform: scale(1);
+}
+
+#radical_estimate {
+  background-image: linear-gradient(to bottom right, #89f7fe, #26c9ff);
+  height: 500px;
 }
 
 /*# sourceMappingURL=master.css.map */
