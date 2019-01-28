@@ -2,5 +2,114 @@
   background-image: linear-gradient(to bottom right, #89f7fe, $primary-color);
   //#26c9ff
   //f14e4f
-  height: 500px;
+}
+
+.radical-estimate {
+  $image-size: 350px;
+  .image-container {
+    margin: 0px 0 20px;
+    width: $image-size;
+    height: $image-size;
+    border-radius: 50%;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+  }
+  img {
+    width: $image-size;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid #FFF;
+    background-color: $border-color;
+  }
+  .image-overlay {
+    position: absolute;
+    background-color: #FFF;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+    .cool-border {
+      width: 30%;
+      margin-bottom: 20px;
+      opacity: 0;
+      &::after {
+        width: 33%;
+      }
+    }
+    span {
+      font-size: 2.3em;
+      font-family: $heading-font;
+      text-align: center;
+      text-align-last: center;
+      line-height: 30px;
+      letter-spacing: 2px;
+      opacity: 0;
+      color: $secondary-color;
+    }
+  }
+  &:hover {
+    .image-overlay {
+      opacity: 1;
+      & .cool-border {
+        opacity: 1;
+      }
+      & span {
+        opacity: 1;
+      }
+    }
+  }
+  &:hover .image-overlay,
+  &:hover .image-overlay .cool-border,
+  &:hover .image-overlay span,
+  .image-overlay,
+  .cool-border,
+  span {
+    transition: all 0.125s ease-out;
+  }
+  .image-overlay,
+  .cool-border,
+  span {
+    transition-delay: 1.5s;
+    transition-duration: 1s;
+  }
+}
+
+.form-block {
+  padding: 30px 0;
+  padding-left: 40px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  font-family: $nav-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: $cool-border-color;
+  input, textarea {
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 10px;
+    resize: none;
+  }
+  textarea {
+    height: 175px;
+  }
+  input[type=submit] {
+    max-width: 150px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
 }

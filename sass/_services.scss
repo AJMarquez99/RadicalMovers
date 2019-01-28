@@ -33,7 +33,7 @@
     margin: 0 auto;
     top: 3px;
     width: 100px;
-    border-bottom: 3px solid rgb(40,40,40);
+    border-bottom: 3px solid $cool-border-color;
     content: "";
   }
 }
@@ -65,7 +65,7 @@
 .service-card {
   $transition-time: 0.5s;
   $hover-color: $secondary-color;
-  $services-border: rgb(40,40,40);
+  $services-border: $cool-border-color;
   .service-title {
     border: 2px solid $border-color;
     padding: 40px 20px;

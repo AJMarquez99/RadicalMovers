@@ -331,8 +331,110 @@ z-index: 5;
 }
 
 #radical_estimate {
-  background-image: linear-gradient(to bottom right, #89f7fe, #26c9ff);
-  height: 500px;
+  background-image: linear-gradient(to bottom right, #89f7fe, #33ccff);
+}
+
+.radical-estimate .image-container {
+  margin: 0px 0 20px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+}
+.radical-estimate img {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  border: 10px solid #FFF;
+  background-color: rgba(179, 179, 179, 0.2);
+}
+.radical-estimate .image-overlay {
+  position: absolute;
+  background-color: #FFF;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+.radical-estimate .image-overlay .cool-border {
+  width: 30%;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+.radical-estimate .image-overlay .cool-border::after {
+  width: 33%;
+}
+.radical-estimate .image-overlay span {
+  font-size: 2.3em;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+  text-align-last: center;
+  line-height: 30px;
+  letter-spacing: 2px;
+  opacity: 0;
+  color: #f25a5a;
+}
+.radical-estimate:hover .image-overlay {
+  opacity: 1;
+}
+.radical-estimate:hover .image-overlay .cool-border {
+  opacity: 1;
+}
+.radical-estimate:hover .image-overlay span {
+  opacity: 1;
+}
+.radical-estimate:hover .image-overlay, .radical-estimate:hover .image-overlay .cool-border, .radical-estimate:hover .image-overlay span,
+.radical-estimate .image-overlay,
+.radical-estimate .cool-border,
+.radical-estimate span {
+  transition: all 0.125s ease-out;
+}
+.radical-estimate .image-overlay,
+.radical-estimate .cool-border,
+.radical-estimate span {
+  transition-delay: 1.5s;
+  transition-duration: 1s;
+}
+
+.form-block {
+  padding: 30px 0;
+  padding-left: 40px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #282828;
+}
+.input-block input, .input-block textarea {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 10px;
+  resize: none;
+}
+.input-block textarea {
+  height: 175px;
+}
+.input-block input[type=submit] {
+  max-width: 150px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=master.css.map */
