@@ -8,43 +8,36 @@
 }
 
 #radical_about {
-  display: none;
+  height: auto;
+  box-shadow: inset 0 0px 10px $cool-border-color;
 }
 
 .about-container {
-  background-color: #26c9ff;
-  max-height: 585px;
+  animation-fill-mode: forwards;
+  max-height: 0;
+  overflow: hidden;
   position: relative;
-  img {
-    padding: 60px 20px;
-    width: 100%;
-    height: auto;
-  }
-  border: {
-    $grey-scale: 105;
-    top: 3px solid rgba( $grey-scale, $grey-scale, $grey-scale, 0.8);
-    bottom: 3px solid rgba( $grey-scale, $grey-scale, $grey-scale, 0.8);
-  }
+  transition: all 2s ease-in-out;
+  max-width: 75%;
 }
 
 .about-content {
   position: relative;
-  bottom: 530px;
-  left: 550px;
-  width: 70%;
-  background-color: $tertiary-color;
   padding: 20px;
-  border: 4px solid rgba( 5, 5, 5, 1);
   border-radius: 5px;
-  height: 29em;
   font-family: $text-font;
   h2 {
-    font-size: 3em;
+    color: $secondary-color;
+    font-size: 4em;
     font-family: $heading-font;
+    margin: 30px 0;
+    &:nth-of-type(2) {
+      text-align: right;
+    }
   }
   p {
-    font-size: 1.4em;
-    line-height: 1.9em;
+    font-size: 1.7em;
+    line-height: 2.8em;
     text-align: justify;
   }
 }

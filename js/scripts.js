@@ -4,13 +4,6 @@ let radicalBlock = document.getElementById("radical_services");
 let heightChange = 250;
 
 //open and close card when clicked on card
-$cell.find('.js-expander').click(openSummary);
-
-function getSummaryHeight(nodeList) {
-  let summaryHeight = nodeList[0].childNodes[3].offsetHeight;
-  return summaryHeight;
-}
-
 function openSummary() {
 
   var $thisCell = $(this).closest('.service-card');
@@ -34,8 +27,6 @@ function openSummary() {
 }
 
 //close card when click on cross
-$cell.find('.js-collapser').click(closeSummary);
-
 function closeSummary() {
 
   var $thisCell = $(this).closest('.service-card');
@@ -46,8 +37,32 @@ function closeSummary() {
 
 }
 
+//Open and Close About section
 function openAbout() {
-  document.getElementById('radical_about').style.display = "block";
+  let delay = 1000;
+  setTimeout( function() {
+    document.getElementsByClassName('about-container')[0].style.maxHeight = "1000px";
+    document.getElementsByClassName('about-container')[0].style.padding = "50px 0 80px";
+  }, delay);
 }
 
-document.getElementsByTagName("a")[3].addEventListener("click", openAbout);
+function closeAbout() {
+  document.getElementsByClassName('about-container')[0].style.maxHeight = "0";
+    document.getElementsByClassName('about-container')[0].style.padding = "0";
+}
+
+//Sticky nav
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if(height  > $("#header_info_block").height()) {
+        $("#navigation_tab").addClass('navigation-tab');
+    } else if(height == 0) {
+          $("#navigation_tab").removeClass('navigation-tab');
+    }
+});
+
+//Scroll to section minus nav
+
+$("[href='#radical_about']").click(openAbout);
+$cell.find('.js-expander').click(openSummary);
+$cell.find('.js-collapser').click(closeSummary);
