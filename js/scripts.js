@@ -45,3 +45,9 @@ function closeSummary() {
   radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
 
 }
+
+function openAbout() {
+  document.getElementById('radical_about').style.display = "block";
+}
+
+document.getElementsByTagName("a")[3].addEventListener("click", openAbout);

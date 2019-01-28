@@ -1,5 +1,5 @@
 #radical_estimate {
-  background-image: linear-gradient(to bottom right, #89f7fe, $primary-color);
+  background-image: linear-gradient(to right, #89f7fe, $primary-color, #89f7fe);
   //#26c9ff
   //f14e4f
 }
@@ -103,13 +103,23 @@
     resize: none;
   }
   textarea {
-    height: 175px;
+    height: 150px;
   }
   input[type=submit] {
     max-width: 150px;
     font-weight: bold;
     font-size: 1.2em;
+    color: $cool-border-color;
     margin: 0 auto;
-    border-radius: 8px;
+    border-radius: 4px;
+    background-color: $secondary-color;
+    box-shadow: 0px 2px 4px lighten($cool-border-color, 15%);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &, &:hover {
+      transition: all 0.25s;
+    }
   }
 }

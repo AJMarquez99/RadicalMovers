@@ -2,6 +2,10 @@
   font-size: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
