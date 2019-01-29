@@ -13,11 +13,10 @@
 }
 
 .about-container {
-  animation-fill-mode: forwards;
   max-height: 0;
   overflow: hidden;
   position: relative;
-  transition: all 2s ease-in-out;
+  transition: all 1.25s ease-in-out;
   max-width: 75%;
 }
 
@@ -26,11 +25,13 @@
   padding: 20px;
   border-radius: 5px;
   font-family: $text-font;
+  text-align: center;
   h2 {
     color: $secondary-color;
     font-size: 4em;
     font-family: $heading-font;
     margin: 30px 0;
+    text-align: left;
     &:nth-of-type(2) {
       text-align: right;
     }
@@ -40,4 +41,45 @@
     line-height: 2.8em;
     text-align: justify;
   }
+}
+
+#more-arrows {
+  margin-top: 50px;
+	width: 75px;
+  height: 65px;
+  transform: rotate(180deg);
+  background-size: 39px 45px;
+  font-size: 1em;
+  cursor: pointer;
+  &:hover {
+
+    polygon {
+      fill: $primary-color/*opacify( $border-color, 1)*/;
+      transition: all .2s ease-out;
+
+      &.arrow-bottom {
+        transform: translateY(-18px);
+      }
+
+      &.arrow-top {
+        transform: translateY(18px);
+      }
+
+    }
+
+  }
+
+}
+
+polygon {
+  fill: transparentize($primary-color, 0.4)/*opacify($border-color, 0.2)*/;
+  transition: all .2s ease-out;
+  &.arrow-middle {
+	  opacity: 0.5;
+	}
+
+	&.arrow-top {
+	  opacity: 0.4;
+	}
+
 }

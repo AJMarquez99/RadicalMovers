@@ -161,11 +161,10 @@ header .underline-effect a:hover:after {
 }
 
 .about-container {
-  animation-fill-mode: forwards;
   max-height: 0;
   overflow: hidden;
   position: relative;
-  transition: all 2s ease-in-out;
+  transition: all 1.25s ease-in-out;
   max-width: 75%;
 }
 
@@ -174,12 +173,14 @@ header .underline-effect a:hover:after {
   padding: 20px;
   border-radius: 5px;
   font-family: "Noto Serif TC", serif;
+  text-align: center;
 }
 .about-content h2 {
   color: #f25a5a;
   font-size: 4em;
   font-family: "Cabin", sans-serif;
   margin: 30px 0;
+  text-align: left;
 }
 .about-content h2:nth-of-type(2) {
   text-align: right;
@@ -188,6 +189,37 @@ header .underline-effect a:hover:after {
   font-size: 1.7em;
   line-height: 2.8em;
   text-align: justify;
+}
+
+#more-arrows {
+  margin-top: 50px;
+  width: 75px;
+  height: 65px;
+  transform: rotate(180deg);
+  background-size: 39px 45px;
+  font-size: 1em;
+  cursor: pointer;
+}
+#more-arrows:hover polygon {
+  fill: #33ccff;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+
+polygon {
+  fill: rgba(51, 204, 255, 0.6);
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.5;
+}
+polygon.arrow-top {
+  opacity: 0.4;
 }
 
 #radical_services {
@@ -357,16 +389,25 @@ header .underline-effect a:hover:after {
   margin-top: 30px;
   opacity: 1;
 }
-.service-card.is-expanded:hover .service-title {
-  transform: scale(1);
-}
 .service-card.is-inactive .service-title {
+  z-index: -1;
   pointer-events: none;
   opacity: 0.5;
 }
+.service-card.is-inactive .service-summary {
+  padding: 0;
+}
 .service-card.is-inactive:hover .service-title {
   background-color: #f25a5a;
-  transform: scale(1);
+}
+.service-card.is-inactive:hover img {
+  border-color: #282828;
+}
+.service-card.is-inactive:hover .cool-border {
+  border-color: #282828;
+}
+.service-card.is-inactive:hover .cool-border::after {
+  border-color: #FFF;
 }
 
 #radical_estimate {

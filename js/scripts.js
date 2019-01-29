@@ -42,13 +42,16 @@ function openAbout() {
   let delay = 50;
   setTimeout( function() {
     document.getElementsByClassName('about-container')[0].style.maxHeight = "1000px";
-    document.getElementsByClassName('about-container')[0].style.padding = "50px 0 80px";
+    document.getElementsByClassName('about-container')[0].style.padding = "50px 0 10px";
   }, delay);
 }
 
 function closeAbout() {
-  document.getElementsByClassName('about-container')[0].style.maxHeight = "0";
-  document.getElementsByClassName('about-container')[0].style.padding = "0";
+  let delay = 10;
+  setTimeout( function() {
+    document.getElementsByClassName('about-container')[0].style.padding = "0";
+    document.getElementsByClassName('about-container')[0].style.maxHeight = "0";
+  }, delay);
 }
 
 //Sticky nav
@@ -62,7 +65,17 @@ $(window).scroll(function() {
 });
 
 //Scroll to section minus nav
+function scrollToSection() {
+  let targetLink = $(this).attr("href");
+  /*let navHeight = $("#navigation_tab").height();*/
+  $('html, body').animate({
+      scrollTop: $(targetLink).offset().top - 65
+    }, 50);
+}
 
+
+$("a").click(scrollToSection);
 $("[href='#radical_about']").click(openAbout);
+$("#more-arrows").click(closeAbout);
 $cell.find('.js-expander').click(openSummary);
 $cell.find('.js-collapser').click(closeSummary);
