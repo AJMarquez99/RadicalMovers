@@ -5,5 +5,6 @@
   include ('components/_estimate.html');
   include ('components/_testimonials.html');
   include ('components/_our-work.html');
+  include ('components/_map.html');
   include ('components/_footer.html');
 ?>

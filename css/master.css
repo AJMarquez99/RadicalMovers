@@ -414,6 +414,13 @@ polygon.arrow-top {
   background-image: linear-gradient(to right, #89f7fe, #33ccff, #89f7fe);
 }
 
+.image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+}
+
 .radical-estimate .image-container {
   margin: 0px 0 20px;
   width: 350px;
@@ -434,10 +441,6 @@ polygon.arrow-top {
   background-color: rgba(179, 179, 179, 0.2);
 }
 .radical-estimate .image-overlay {
-  position: absolute;
-  background-color: #FFF;
-  height: inherit;
-  width: inherit;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -525,6 +528,84 @@ polygon.arrow-top {
 }
 .input-block input[type=submit], .input-block input[type=submit]:hover {
   transition: all 0.25s;
+}
+
+#radical_testimonials {
+  padding: 40px 0;
+}
+#radical_testimonials a, #radical_testimonials a:hover {
+  color: #000;
+  text-decoration: none;
+  margin: 0 auto;
+}
+#radical_testimonials .row {
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+}
+.testimonial-profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.testimonial-score {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.testimonial-stars {
+  font-size: 1.8em;
+  color: #ffcc00;
+}
+.testimonial-length {
+  font-size: 1em;
+  color: #818181;
+}
+.testimonial-message {
+  font-size: 1.1em;
+  color: #5b5b5b;
+  text-align: center;
+  text-align-last: center;
+  margin-top: 10px;
+}
+.testimonial-name {
+  font-size: 1.3em;
+}
+.testimonial:hover {
+  transform: scale(1.1);
+}
+.testimonial, .testimonial:hover {
+  transition: all 0.5s;
+}
+
+#radical_map {
+  position: relative;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/map_boxes.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#radical_map .image-overlay {
+  background-color: rgba(34, 40, 49, 0.85);
+}
+#radical_map iframe {
+  z-index: 1;
+  width: 100%;
+  height: 450px;
 }
 
 /*# sourceMappingURL=master.css.map */

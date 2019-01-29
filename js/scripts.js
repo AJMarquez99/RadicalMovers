@@ -73,7 +73,83 @@ function scrollToSection() {
     }, 50);
 }
 
+function addStars() {
+  for (let stars of $(".testimonial").children(".testimonial-stars")) {
+    let numStars = $(stars).attr("class");
+    let notClass = "testimonial-stars ";
+    notClass = notClass.length;
+    let fullStar = '<i class="fas fa-star"></i>';
+    let halfStar = '<i class="fas fa-star-half-alt"></i>';
+    let emptyStar = '<i class="far fa-star"></i>';
+    switch (numStars.slice(notClass,-6)) {
+      case "one":
+        $(stars).append(fullStar);
+        for (i = 0; i < 4; i++) {
+          $(stars).append(emptyStar);
+        }
+        break;
+      case "two":
+        for (i = 0; i < 2; i++) {
+          $(stars).append(fullStar);
+        }
+        for (i = 0; i < 3; i++) {
+          $(stars).append(emptyStar);
+        }
+        break;
+      case "three":
+        for (i = 0; i < 3; i++) {
+          $(stars).append(fullStar);
+        }
+        for (i = 0; i < 2; i++) {
+          $(stars).append(emptyStar);
+        }
+        break;
+      case "four":
+        for (i = 0; i < 4; i++) {
+          $(stars).append(fullStar);
+        }
+        $(stars).append(emptyStar);
+        break;
+      case "five":
+        for (i = 0; i < 5; i++) {
+          $(stars).append(fullStar);
+        }
+        break;
+      case "one-half":
+        $(stars).append(fullStar);
+        $(stars).append(halfStar);
+        for (i = 0; i < 3; i++) {
+          $(stars).append(emptyStar);
+        }
+        break;
+      case "two-half":
+        for (i = 0; i < 2; i++) {
+          $(stars).append(fullStar);
+        }
+        $(stars).append(halfStar);
+        for (i = 0; i < 2; i++) {
+          $(stars).append(emptyStar);
+        }
+        break;
+      case "three-half":
+        for (i = 0; i < 3; i++) {
+          $(stars).append(fullStar);
+        }
+        $(stars).append(halfStar);
+        $(stars).append(emptyStar);
+        break;
+      case "four-half":
+        for (i = 0; i < 4; i++) {
+          $(stars).append(fullStar);
+        }
+        $(stars).append(halfStar);
+        break;
+    }
+  }
+}
 
+$(".testimonial").children(".testimonial-stars").ready(addStars);
+/*$(".testimonial").find(".testimonial-stars").ready(addStars);*/
 $("a").click(scrollToSection);
 $("[href='#radical_about']").click(openAbout);
 $("#more-arrows").click(closeAbout);
