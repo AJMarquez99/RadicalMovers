@@ -39,7 +39,7 @@ function closeSummary() {
 
 //Open and Close About section
 function openAbout() {
-  let delay = 1000;
+  let delay = 50;
   setTimeout( function() {
     document.getElementsByClassName('about-container')[0].style.maxHeight = "1000px";
     document.getElementsByClassName('about-container')[0].style.padding = "50px 0 80px";
@@ -48,7 +48,7 @@ function openAbout() {
 
 function closeAbout() {
   document.getElementsByClassName('about-container')[0].style.maxHeight = "0";
-    document.getElementsByClassName('about-container')[0].style.padding = "0";
+  document.getElementsByClassName('about-container')[0].style.padding = "0";
 }
 
 //Sticky nav

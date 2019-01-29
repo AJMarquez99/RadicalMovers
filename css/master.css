@@ -139,6 +139,13 @@ header .underline-effect a:hover:after {
   font-size: 1.7em;
 }
 
+/*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -66px; // Set the Appropriate Height
+  height: 66px; // Set the Appropriate Height
+  visibility: hidden;
+}*/
 .radical-intro {
   height: auto;
   position: relative;

@@ -132,5 +132,12 @@ header {
     margin: 5px 40px;
     font-size: 1.7em;
   }
-
 }
+
+/*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -66px; // Set the Appropriate Height
+  height: 66px; // Set the Appropriate Height
+  visibility: hidden;
+}*/
