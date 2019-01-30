@@ -154,8 +154,10 @@ $(document).ready(function() {
         gallery: true,
         item: 1,
         slideMargin: 0,
-        thumbItem: 4,
+        thumbItem: 5,
         galleryMargin: 30,
+        loop: true,
+        currentPagerPosition: 'right',
     });
   });
 

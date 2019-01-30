@@ -611,6 +611,30 @@ polygon.arrow-top {
 .myLightSlider li {
   display: flex !important;
   justify-content: center;
+  align-items: center;
+  background-color: #282828;
+  height: 320px;
+}
+.myLightSlider li img {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+.lSGallery {
+  height: 100px !important;
+}
+.lSGallery li {
+  height: inherit;
+}
+.lSGallery li a {
+  height: inherit;
+}
+.lSGallery li img {
+  width: auto !important;
+  height: inherit !important;
+  object-fit: cover;
+  margin: 0 auto !important;
 }
 
 /*# sourceMappingURL=master.css.map */

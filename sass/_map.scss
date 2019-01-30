@@ -23,5 +23,29 @@
   li {
     display: flex!important;
     justify-content: center;
+    align-items: center;
+    background-color: $cool-border-color;
+    height: 320px;
+    img {
+      width: auto;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+.lSGallery {
+  height: 100px!important;
+  li {
+    height: inherit;
+    a {
+      height: inherit;
+    }
+    img {
+      width: auto!important;
+      height: inherit!important;
+      object-fit: cover;
+      margin: 0 auto!important;
+    }
   }
 }
