@@ -55,24 +55,24 @@ function closeAbout() {
 }
 
 //Sticky nav
-$(window).scroll(function() {
+function stickyScroll() {
     var height = $(window).scrollTop();
     if(height  > $("#header_info_block").height()) {
         $("#navigation_tab").addClass('navigation-tab');
     } else if(height == 0) {
-          $("#navigation_tab").removeClass('navigation-tab');
+        $("#navigation_tab").removeClass('navigation-tab');
     }
-});
+}
 
 //Scroll to section minus nav
 function scrollToSection() {
   let targetLink = $(this).attr("href");
-  /*let navHeight = $("#navigation_tab").height();*/
   $('html, body').animate({
       scrollTop: $(targetLink).offset().top - 65
     }, 50);
 }
 
+//Adds Stars to Testimonials depending on class
 function addStars() {
   for (let stars of $(".testimonial").children(".testimonial-stars")) {
     let numStars = $(stars).attr("class");
@@ -148,8 +148,19 @@ function addStars() {
   }
 }
 
+//Call Lightslider
+$(document).ready(function() {
+    $("#lightSlider").lightSlider({
+        gallery: true,
+        item: 1,
+        slideMargin: 0,
+        thumbItem: 4,
+        galleryMargin: 30,
+    });
+  });
+
+$(window).scroll(stickyScroll);
 $(".testimonial").children(".testimonial-stars").ready(addStars);
-/*$(".testimonial").find(".testimonial-stars").ready(addStars);*/
 $("a").click(scrollToSection);
 $("[href='#radical_about']").click(openAbout);
 $("#more-arrows").click(closeAbout);

@@ -589,7 +589,7 @@ polygon.arrow-top {
 
 #radical_map {
   position: relative;
-  height: 800px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -606,6 +606,11 @@ polygon.arrow-top {
   z-index: 1;
   width: 100%;
   height: 450px;
+}
+
+.myLightSlider li {
+  display: flex !important;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=master.css.map */
