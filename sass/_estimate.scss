@@ -2,13 +2,9 @@
   background-image: linear-gradient(to right, #89f7fe, $primary-color, #89f7fe);
   //#26c9ff
   //f14e4f
-}
-
-.image-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #FFF;
+  .image-overlay {
+    background-color: #FFF;
+  }
 }
 
 .radical-estimate {

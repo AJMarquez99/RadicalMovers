@@ -155,9 +155,19 @@ header .underline-effect a:hover:after {
   height: auto;
 }
 
+.image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 #radical_about {
   height: auto;
   box-shadow: inset 0 0px 10px #282828;
+  background-image: url("../images/moving-truck2.jpg");
+}
+#radical_about .image-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .about-container {
@@ -271,8 +281,9 @@ polygon.arrow-top {
 .services-content img {
   box-sizing: content-box;
   display: block;
-  max-width: 140px;
-  height: auto;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
   border: 6px solid rgba(179, 179, 179, 0.2);
   border-radius: 50%;
   margin: 0 auto;
@@ -413,11 +424,7 @@ polygon.arrow-top {
 #radical_estimate {
   background-image: linear-gradient(to right, #89f7fe, #33ccff, #89f7fe);
 }
-
-.image-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+#radical_estimate .image-overlay {
   background-color: #FFF;
 }
 
@@ -589,16 +596,7 @@ polygon.arrow-top {
 }
 
 #radical_map {
-  position: relative;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../images/map_boxes.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #radical_map .image-overlay {
   background-color: rgba(34, 40, 49, 0.85);
@@ -651,11 +649,34 @@ polygon.arrow-top {
   /*margin: 0 auto!important;*/
 }
 
+.parallaxBg {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#radical_footer {
+  background-color: #222831;
+  color: #FFF;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.4em;
+  padding: 50px 0 20px;
+}
 #radical_footer .row {
   max-width: 1300px;
 }
+#radical_footer .row:last-child {
+  width: 100%;
+  padding: 0 20px;
+}
 #radical_footer h4 {
-  font-size: 3em;
+  font-size: 1.7em;
   font-family: "Cabin", sans-serif;
   text-align: center;
 }
@@ -663,11 +684,59 @@ polygon.arrow-top {
   width: 100px;
   height: auto;
 }
+#radical_footer .cool-border {
+  border-color: #33ccff;
+  width: 100%;
+  margin-top: 2px;
+}
+#radical_footer .cool-border:after {
+  width: 33%;
+  border-color: #FFF;
+}
+#radical_footer [class*=footer-]:not(.footer-copyrights) {
+  padding: 0 20px;
+}
+#radical_footer [class*=footer-]:not(.footer-copyrights):first-child h4 {
+  text-align: left;
+}
+#radical_footer [class*=footer-]:not(.footer-copyrights):last-child {
+  text-align: right;
+}
+#radical_footer [class*=footer-]:not(.footer-copyrights):last-child h4 {
+  text-align: right;
+}
 
-.footer-payments .col {
+.footer-payments .container {
+  padding-top: 10px;
+}
+.footer-payments .row {
+  padding-bottom: 10px;
+}
+.footer-payments .row:first-child {
+  border-bottom: 1px solid #FFF;
+}
+.footer-payments .col-4 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.footer-copyrights {
+  border-top: 1px solid #FFF;
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
+.contact-title, .hours-days, .company-name {
+  font-size: 1.15em;
+  margin-top: 10px;
+}
+
+.company-name {
+  margin-top: 0;
+}
+
+/*.contact-title:not(:first-child) {
+  margin-top: 10px;
+}*/
 
 /*# sourceMappingURL=master.css.map */

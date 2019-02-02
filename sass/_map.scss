@@ -1,14 +1,5 @@
 #radical_map {
-  position: relative;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../images/map_boxes.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   .image-overlay {
     background-color: rgba(34,40,49,0.85);
   }
@@ -61,4 +52,16 @@
       /*margin: 0 auto!important;*/
     }
   }
+}
+
+.parallaxBg {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

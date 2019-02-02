@@ -48,8 +48,9 @@
   img {
     box-sizing: content-box;
     display: block;
-    max-width: 140px;
-    height: auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
     border: 6px solid $border-color;
     border-radius: 50%;
     margin: 0 auto;

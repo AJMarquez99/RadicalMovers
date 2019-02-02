@@ -161,6 +161,7 @@ $(document).ready(function() {
     });
   });
 
+$(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
 $(".testimonial").children(".testimonial-stars").ready(addStars);
 $("a").click(scrollToSection);
