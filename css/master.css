@@ -576,6 +576,7 @@ polygon.arrow-top {
   text-align: center;
   text-align-last: center;
   margin-top: 10px;
+  font-style: italic;
 }
 .testimonial-name {
   font-size: 1.3em;
@@ -635,6 +636,25 @@ polygon.arrow-top {
   height: inherit !important;
   object-fit: cover;
   margin: 0 auto !important;
+}
+
+#radical_footer .row {
+  max-width: 1300px;
+}
+#radical_footer h4 {
+  font-size: 3em;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+}
+#radical_footer img {
+  width: 100px;
+  height: auto;
+}
+
+.footer-payments .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=master.css.map */
