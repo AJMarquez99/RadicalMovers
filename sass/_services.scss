@@ -45,6 +45,18 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 65px;
+  .image-container {
+    position: relative;
+    width: min-content;
+    margin: auto;
+  }
+  .image-overlay {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    top: 6px;
+    left: 6px;
+  }
   img {
     box-sizing: content-box;
     display: block;
@@ -67,6 +79,16 @@
   $transition-time: 0.5s;
   $hover-color: $secondary-color;
   $services-border: $cool-border-color;
+  &:nth-child(odd) {
+    .image-overlay {
+      background-color: transparentize($primary-color, 0.55);
+    }
+  }
+  &:nth-child(even) {
+    .image-overlay {
+      background-color: transparentize($secondary-color, 0.55);
+    }
+  }
   .service-title {
     border: 2px solid $border-color;
     padding: 40px 20px;

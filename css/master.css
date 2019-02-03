@@ -278,6 +278,18 @@ polygon.arrow-top {
   align-items: flex-start;
   margin-top: 65px;
 }
+.services-content .image-container {
+  position: relative;
+  width: min-content;
+  margin: auto;
+}
+.services-content .image-overlay {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  top: 6px;
+  left: 6px;
+}
 .services-content img {
   box-sizing: content-box;
   display: block;
@@ -295,6 +307,12 @@ polygon.arrow-top {
   width: 35px;
 }
 
+.service-card:nth-child(odd) .image-overlay {
+  background-color: rgba(51, 204, 255, 0.45);
+}
+.service-card:nth-child(even) .image-overlay {
+  background-color: rgba(242, 90, 90, 0.45);
+}
 .service-card .service-title {
   border: 2px solid rgba(179, 179, 179, 0.2);
   padding: 40px 20px;
@@ -668,10 +686,10 @@ polygon.arrow-top {
   font-size: 1.4em;
   padding: 50px 0 20px;
 }
-#radical_footer .row {
+#radical_footer .footer-main {
   max-width: 1300px;
 }
-#radical_footer .row:last-child {
+#radical_footer .footer-main:last-child {
   width: 100%;
   padding: 0 20px;
 }
