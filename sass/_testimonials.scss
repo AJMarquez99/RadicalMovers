@@ -5,6 +5,15 @@
     text-decoration: none;
     margin: 0 auto;
   }
+  a {
+    @media screen and (max-width: $sm-break) {
+      width: 100%;
+      margin-bottom: 80px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
   .row {
     justify-content: space-between;
     align-items: center;

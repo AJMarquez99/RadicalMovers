@@ -4,6 +4,9 @@
   font-family: $nav-font;
   font-size: 1.4em;
   padding: 50px 0 20px;
+  @media screen and (max-width: $sm-break) {
+    padding-top: 20px;
+  }
   .footer-main{
     max-width: 1300px;
     &:last-child {
@@ -40,6 +43,16 @@
       text-align: right;
       h4 {
         text-align: right;
+      }
+    }
+    @media screen and (max-width: $sm-break) {
+      padding: 0;
+      text-align: center!important;
+      h4 {
+        display: none;
+      }
+      .cool-border {
+        display: none;
       }
     }
   }
@@ -81,6 +94,11 @@
   margin-top: 0;
 }
 
+.contact-content, .hours-hours {
+  @media screen and (max-width: $sm-break) {
+    margin-bottom: 30px;
+  }
+}
 /*.contact-title:not(:first-child) {
   margin-top: 10px;
 }*/

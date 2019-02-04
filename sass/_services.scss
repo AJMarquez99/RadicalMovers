@@ -85,6 +85,14 @@
       margin: 0 auto;
     }
   }
+  @media screen and (max-width: $sm-break) {
+    .service-card {
+      min-width: 100%;
+    }
+    .service-title {
+      margin: 0 auto;
+    }
+  }
 }
 
 .service-card {

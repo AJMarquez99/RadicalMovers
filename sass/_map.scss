@@ -1,5 +1,8 @@
 #radical_map {
   background-image: url("../images/map_boxes.png");
+  @media screen and (max-width: $sm-break) {
+    padding: 50px 0;
+  }
   .image-overlay {
     background-color: rgba(34,40,49,0.85);
   }

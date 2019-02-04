@@ -20,6 +20,10 @@
     justify-content: center;
     position: relative;
     top: -10px;
+    @media screen and (max-width: $sm-break) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
   }
   img {
     width: $image-size;
@@ -98,6 +102,9 @@
   @media screen and (max-width: $md-break) {
     padding-left: 0;
     padding-right: 20px;
+  }
+  @media screen and (max-width: $sm-break) {
+    padding: 30px 0;
   }
 }
 
