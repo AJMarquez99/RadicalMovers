@@ -79,11 +79,26 @@
     transition-delay: 1.5s;
     transition-duration: 1s;
   }
+  @media screen and (max-width: $md-break) {
+    .image-overlay {
+      opacity: 1;
+      & .cool-border {
+        opacity: 1;
+      }
+      & span {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .form-block {
   padding: 30px 0;
   padding-left: 40px;
+  @media screen and (max-width: $md-break) {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 }
 
 .input-block {
@@ -120,5 +135,8 @@
     &, &:hover {
       transition: all 0.25s;
     }
+  }
+  @media screen and (max-width: $md-break) {
+    flex-basis: unset;
   }
 }

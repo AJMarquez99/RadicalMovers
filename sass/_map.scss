@@ -13,9 +13,17 @@
     font-family: $heading-font;
     margin: 30px 0;
     color: #FFF;
+    @media screen and (max-width: $md-break) {
+      display: none;
+    }
   }
   .container {
     z-index: 5;
+    @media screen and (max-width: $md-break) {
+      .row:first-child {
+        margin-bottom: 80px;
+      }
+    }
   }
   .container div:nth-child(2) h2 {
     margin-left: auto;

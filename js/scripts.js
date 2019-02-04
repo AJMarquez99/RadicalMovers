@@ -41,7 +41,7 @@ function closeSummary() {
 function openAbout() {
   let delay = 50;
   setTimeout( function() {
-    document.getElementsByClassName('about-container')[0].style.maxHeight = "1000px";
+    document.getElementsByClassName('about-container')[0].style.maxHeight = "1500px";
     document.getElementsByClassName('about-container')[0].style.padding = "50px 0 10px";
   }, delay);
 }
@@ -57,7 +57,7 @@ function closeAbout() {
 //Sticky nav
 function stickyScroll() {
     var height = $(window).scrollTop();
-    if(height  > $("#header_info_block").height()) {
+    if(height > $("#header_info_block").height()) {
         $("#navigation_tab").addClass('navigation-tab');
     } else if(height == 0) {
         $("#navigation_tab").removeClass('navigation-tab');
@@ -161,6 +161,31 @@ $(document).ready(function() {
     });
   });
 
+//Services slider
+function slideServices() {
+  let cardList = $(".service-card");
+  if ($(this).hasClass('right-arrow')) {
+    for (let orderNum of cardList) {
+      let orderPlace = getComputedStyle(orderNum).getPropertyValue("order");
+      orderNum.style.order = parseInt(orderPlace) - 1;
+      if (getComputedStyle(orderNum).getPropertyValue("order") == "0") {
+        orderNum.style.order = 5;
+      }
+    }
+  }
+  if ($(this).hasClass('left-arrow')) {
+    for (let orderNum of cardList) {
+      let orderPlace = getComputedStyle(orderNum).getPropertyValue("order");
+      orderNum.style.order = parseInt(orderPlace) + 1;
+      if (getComputedStyle(orderNum).getPropertyValue("order") == "6") {
+        orderNum.style.order = 1;
+      }
+    }
+  }
+  $cell.find('.js-collapser').closeSummary;
+}
+
+$(".arrow").click(slideServices);
 $(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
 $(".testimonial").children(".testimonial-stars").ready(addStars);

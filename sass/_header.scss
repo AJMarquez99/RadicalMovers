@@ -7,11 +7,18 @@ header {
   position: sticky;
   top: -59px;
   z-index: 100;
+  @media screen and (max-width: $sm-break) {
+    top: 0;
+    .row:first-child {
+      display: none;
+    }
+  }
   .row:last-child {
     border-top: 1px solid $border-color;
   }
   .header-info-block {
     max-width: 1140px;
+    justify-content: center;
     div {
       max-width: 35%;
       width: auto;
@@ -19,6 +26,11 @@ header {
       padding: 20px;
       border: {
         left: 1px solid $border-color;
+      }
+      &:first-child {
+        @media screen and (max-width: $md-break) {
+          display: none;
+        }
       }
     }
     div:first-child, div:last-child {
@@ -28,9 +40,24 @@ header {
         left: 1px solid $border-color;
       }
     }
+    @media screen and (max-width: $md-break) {
+      div:nth-last-child(2) {
+        margin-left: 0;
+        border: {
+          right: 1px solid $border-color;
+          left: 1px solid $border-color;
+        }
+      }
+      div:last-child {
+        border-right: none;
+      }
+    }
     .header-info {
       color: $header-color;
       font-size: 1.3em;
+      /*@media screen and (max-width: $md-break) {
+        font-size: 1em;
+      }*/
       i {
         margin-right: 5px;
         color: $text-color;
@@ -51,10 +78,23 @@ header {
     }
   }
   nav {
-    max-width: 1140px;
+    width: 1140px;
+    @media screen and (max-width: $md-break) and (min-width: $sm-break) {
+      max-width: 1140px;
+      width: min-content;
+      ul {
+        margin-right: 0;
+      }
+    }
     &, &.navigation-tab, ul,li {
       transition: all 0.5s;
     }
+    /*button {
+      position: absolute;
+      @media screen and (max-width: $sm-break){
+        position: relative;
+      }
+    }*/
   }
   ul {
     margin-left: auto;
@@ -131,9 +171,34 @@ header {
   li {
     margin: 5px 40px;
     font-size: 1.7em;
+    @media screen and (max-width: $md-break) {
+      margin: 5px 20px;
+    }
   }
 }
 
+.navbar {
+  padding: 0!important;
+}
+
+.navbar-toggler {
+  font-size: 3rem;
+}
+
+.navbar-toggler-icon {
+  width: auto;
+  height: auto;
+}
+
+.container {
+  @media screen and (max-width: $md-break) {
+    width: 100%;
+    max-width: none;
+    & > .row {
+      padding: 0 10px;
+    }
+  }
+}
 /*[id]:before {
   display: block;
   content: " ";

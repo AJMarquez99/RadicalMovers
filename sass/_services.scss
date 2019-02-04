@@ -6,6 +6,10 @@
   .container {
     max-width: 1200px;
   }
+  @media screen and (max-width: $md-break) {
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
 }
 
 .services-container {
@@ -73,6 +77,14 @@
       width: 35px;
     }
   }
+  @media screen and (max-width: $md-break) {
+    .service-card {
+      min-width: 50%;
+    }
+    .service-title {
+      margin: 0 auto;
+    }
+  }
 }
 
 .service-card {
@@ -88,6 +100,21 @@
     .image-overlay {
       background-color: transparentize($secondary-color, 0.55);
     }
+  }
+  &:nth-child(1) {
+    order: 1;
+  }
+  &:nth-child(2) {
+    order: 2;
+  }
+  &:nth-child(3) {
+    order: 3;
+  }
+  &:nth-child(4) {
+    order: 4;
+  }
+  &:nth-child(5) {
+    order: 5;
   }
   .service-title {
     border: 2px solid $border-color;
@@ -231,4 +258,20 @@
       }
     }
   }
+}
+
+[class$="arrow"] {
+  display: none;
+  position: absolute;
+  font-size: 4em;
+  top: 50%;
+  margin-top: -40px;
+  color: transparentize($cool-border-color, 0.5);
+  cursor: pointer;
+  @media screen and (max-width: $md-break) {
+    display: block;
+  }
+}
+.right-arrow {
+  right: 0;
 }
