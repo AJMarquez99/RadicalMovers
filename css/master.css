@@ -11,19 +11,18 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-html {
-  overflow: visible;
-}
-
 header {
   font-family: "Work Sans", sans-serif;
   position: sticky;
   top: -59px;
   z-index: 100;
+  background-color: #FFF;
 }
 @media screen and (max-width: 767.98px) {
   header {
-    top: 0;
+    top: 0px;
+    transition: none;
+    box-shadow: 0px 0px 5px #282828;
   }
   header .row:first-child {
     display: none;
@@ -31,6 +30,11 @@ header {
 }
 header .row:last-child {
   border-top: 1px solid rgba(179, 179, 179, 0.2);
+}
+@media screen and (max-width: 767.98px) {
+  header .row:last-child {
+    border: none;
+  }
 }
 header .header-info-block {
   max-width: 1140px;
@@ -105,6 +109,28 @@ header nav {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 767.98px) {
+  header nav {
+    height: 60px;
+  }
+  header nav .navbar-brand {
+    font-size: 2em !important;
+    color: #da0b0b;
+    font-weight: bold;
+  }
+  header nav img {
+    box-sizing: border-box;
+    width: 2.3em;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    padding: 3px;
+  }
+  header nav .img-logo {
+    display: flex !important;
+    background-color: #2e3192;
+    height: 100%;
+  }
+}
 header nav, header nav.navigation-tab, header nav ul, header nav li {
   transition: all 0.5s;
 }
@@ -116,6 +142,16 @@ header ul {
   margin-right: 40px;
   margin-bottom: 0;
   padding: 10px 10px;
+}
+@media screen and (max-width: 767.98px) {
+  header ul {
+    margin: 0 auto;
+    padding: 10px 0 0;
+    width: 86%;
+  }
+  header ul li:not(:first-child) {
+    border-top: 1px solid rgba(179, 179, 179, 0.4);
+  }
 }
 header li {
   margin: 5px 10px;
@@ -131,14 +167,14 @@ header a {
 header a, header a:after, header a:before {
   transition: all 0.5s;
 }
-header a:hover {
+header a:hover:not(.navbar-brand) {
   color: gray;
   text-decoration: none;
 }
-header .underline-effect a {
+header .underline-effect a:not(.navbar-brand) {
   position: relative;
 }
-header .underline-effect a:after {
+header .underline-effect a:not(.navbar-brand):after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -150,7 +186,7 @@ header .underline-effect a:after {
   background: #aaa;
   height: 1px;
 }
-header .underline-effect a:hover:after {
+header .underline-effect a:not(.navbar-brand):hover:after {
   width: 100%;
 }
 
@@ -165,7 +201,6 @@ header .underline-effect a:hover:after {
   }
 }
 .navigation-tab {
-  background-color: #FFF;
   animation-name: dropDownNav;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
@@ -207,6 +242,14 @@ header .underline-effect a:hover:after {
   .container > .row {
     padding: 0 10px;
   }
+}
+
+.navbar-toggler {
+  height: 60px;
+  width: 60px;
+  border-radius: 0;
+  background-color: #2e3192;
+  color: #fff;
 }
 
 /*[id]:before {
@@ -254,6 +297,11 @@ header .underline-effect a:hover:after {
   transition: all 1.25s ease-in-out;
   max-width: 75%;
 }
+@media screen and (max-width: 767.98px) {
+  .about-container {
+    max-width: 95%;
+  }
+}
 
 .about-content {
   position: relative;
@@ -276,6 +324,14 @@ header .underline-effect a:hover:after {
   font-size: 1.7em;
   line-height: 2.8em;
   text-align: justify;
+}
+@media screen and (max-width: 767.98px) {
+  .about-content h2 {
+    font-size: 2.8em;
+  }
+  .about-content p {
+    font-size: 1.3em;
+  }
 }
 
 #more-arrows {
@@ -351,6 +407,14 @@ polygon.arrow-top {
   width: 100px;
   border-bottom: 3px solid #282828;
   content: "";
+}
+@media screen and (max-width: 575.98px) {
+  .cool-border {
+    width: 100%;
+  }
+  .cool-border::after {
+    width: 30%;
+  }
 }
 
 .services-content {
@@ -572,6 +636,32 @@ polygon.arrow-top {
   right: 0;
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.slide-Left {
+  animation: slideInLeft 0.5s linear 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.slide-Right {
+  animation: slideInRight 0.5s linear 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+
 #radical_estimate {
   background-image: linear-gradient(to right, #89f7fe, #33ccff, #89f7fe);
 }
@@ -595,6 +685,17 @@ polygon.arrow-top {
   .radical-estimate .image-container {
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .radical-estimate .image-container {
+    width: 100%;
+    height: auto;
+    max-width: 315px;
+    max-height: 315px;
+  }
+  .radical-estimate .image-container img {
+    width: 100%;
   }
 }
 .radical-estimate img {
@@ -818,7 +919,7 @@ polygon.arrow-top {
 #radical_map .container {
   z-index: 5;
 }
-@media screen and (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) and (min-width: 767.98px) {
   #radical_map .container .row:first-child {
     margin-bottom: 80px;
   }

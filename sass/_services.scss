@@ -40,6 +40,12 @@
     border-bottom: 3px solid $cool-border-color;
     content: "";
   }
+  @media screen and (max-width: $xs-break) {
+    width: 100%;
+    &::after {
+      width: 30%;
+    }
+  }
 }
 
 .services-content {
@@ -282,4 +288,32 @@
 }
 .right-arrow {
   right: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slide-Left {
+  animation: slideInLeft 0.5s linear 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slide-Right {
+  animation: slideInRight 0.5s linear 0s 1 normal;
+  animation-fill-mode: forwards;
 }

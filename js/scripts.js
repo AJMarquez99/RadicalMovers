@@ -40,10 +40,17 @@ function closeSummary() {
 //Open and Close About section
 function openAbout() {
   let delay = 50;
-  setTimeout( function() {
-    document.getElementsByClassName('about-container')[0].style.maxHeight = "1500px";
-    document.getElementsByClassName('about-container')[0].style.padding = "50px 0 10px";
-  }, delay);
+  if ($(window).width() > 767.98) {
+    setTimeout( function() {
+      document.getElementsByClassName('about-container')[0].style.maxHeight = "1500px";
+      document.getElementsByClassName('about-container')[0].style.padding = "50px 0 10px";
+    }, delay);
+  } else {
+    setTimeout( function() {
+      document.getElementsByClassName('about-container')[0].style.maxHeight = "1500px";
+      document.getElementsByClassName('about-container')[0].style.padding = "10px 0 10px";
+    }, delay);
+  }
 }
 
 function closeAbout() {
@@ -54,22 +61,44 @@ function closeAbout() {
   }, delay);
 }
 
+function scrollDirection() {
+  // print "false" if direction is down and "true" if up
+  let scrollDir = this.oldScroll > this.scrollY;
+  this.oldScroll = this.scrollY;
+  return scrollDir;
+}
+
 //Sticky nav
 function stickyScroll() {
     var height = $(window).scrollTop();
-    if(height > $("#header_info_block").height()) {
-        $("#navigation_tab").addClass('navigation-tab');
-    } else if(height == 0) {
-        $("#navigation_tab").removeClass('navigation-tab');
+    if ($(window).width() > 767.98) {
+      if(height > $("#header_info_block").height()) {
+          $("#navigation_tab").addClass('navigation-tab');
+      } else if(height == 0) {
+          $("#navigation_tab").removeClass('navigation-tab');
+      }
+    } else {
+      if (scrollDirection() == false) {
+        $('header').css('top', '8px');
+      } else {
+        $('header').css('top', '0px');
+      }
     }
 }
 
 //Scroll to section minus nav
 function scrollToSection() {
+  let navHeight = $('header').height();
   let targetLink = $(this).attr("href");
-  $('html, body').animate({
-      scrollTop: $(targetLink).offset().top - 65
-    }, 50);
+  if ($(window).width() > 767.98) {
+    $('html, body').animate({
+        scrollTop: $(targetLink).offset().top - 65
+      }, 50);
+  } else {
+    $('html, body').animate({
+        scrollTop: $(targetLink).offset().top - navHeight
+      }, 50);
+  }
 }
 
 //Adds Stars to Testimonials depending on class
@@ -164,6 +193,7 @@ $(document).ready(function() {
 //Services slider
 function slideServices() {
   let cardList = $(".service-card");
+  let delay = 600;
   if ($(this).hasClass('right-arrow')) {
     for (let orderNum of cardList) {
       let orderPlace = getComputedStyle(orderNum).getPropertyValue("order");
@@ -171,6 +201,10 @@ function slideServices() {
       if (getComputedStyle(orderNum).getPropertyValue("order") == "0") {
         orderNum.style.order = 5;
       }
+      $(orderNum).addClass('slide-Left');
+      setTimeout( function() {
+        $(orderNum).removeClass('slide-Left');
+      }, delay);
     }
   }
   if ($(this).hasClass('left-arrow')) {
@@ -180,6 +214,10 @@ function slideServices() {
       if (getComputedStyle(orderNum).getPropertyValue("order") == "6") {
         orderNum.style.order = 1;
       }
+      $(orderNum).addClass('slide-Right');
+      setTimeout( function() {
+        $(orderNum).removeClass('slide-Right');
+      }, delay);
     }
   }
   $cell.find('.js-collapser').closeSummary;

@@ -24,6 +24,15 @@
       margin: 0 auto;
       margin-bottom: 20px;
     }
+    @media screen and (max-width: $xs-break) {
+      width: 100%;
+      height: auto;
+      max-width: 315px;
+      max-height: 315px;
+      img {
+        width: 100%;
+      }
+    }
   }
   img {
     width: $image-size;

@@ -22,7 +22,7 @@
   }
   .container {
     z-index: 5;
-    @media screen and (max-width: $md-break) {
+    @media screen and (max-width: $md-break) and (min-width: $sm-break) {
       .row:first-child {
         margin-bottom: 80px;
       }
