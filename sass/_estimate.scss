@@ -125,11 +125,15 @@
   text-transform: uppercase;
   font-size: 1.3em;
   color: $cool-border-color;
+  input {
+    border-width: 2px;
+  }
   input, textarea {
-    border: none;
+    border-color: rgba(255,255,255,0);
+    border-style: solid;
     outline: none;
     border-radius: 2px;
-    padding: 10px;
+    padding: 5px 10px;
     resize: none;
   }
   textarea {

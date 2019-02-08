@@ -233,8 +233,14 @@ header {
   height: 60px;
   width: 60px;
   border-radius: 0;
-  background-color: rgb(46, 49, 146);
-  color: #fff;
+  color: rgb(46, 49, 146);
+}
+
+#mobileNav {
+  background-color: #FFF;
+  @media screen and (max-width: $sm-break) {
+    box-shadow: 0px 1px 2px $cool-border-color;
+  }
 }
 /*[id]:before {
   display: block;

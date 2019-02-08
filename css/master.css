@@ -248,8 +248,16 @@ header .underline-effect a:not(.navbar-brand):hover:after {
   height: 60px;
   width: 60px;
   border-radius: 0;
-  background-color: #2e3192;
-  color: #fff;
+  color: #2e3192;
+}
+
+#mobileNav {
+  background-color: #FFF;
+}
+@media screen and (max-width: 767.98px) {
+  #mobileNav {
+    box-shadow: 0px 1px 2px #282828;
+  }
 }
 
 /*[id]:before {
@@ -789,11 +797,15 @@ polygon.arrow-top {
   font-size: 1.3em;
   color: #282828;
 }
+.input-block input {
+  border-width: 2px;
+}
 .input-block input, .input-block textarea {
-  border: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-style: solid;
   outline: none;
   border-radius: 2px;
-  padding: 10px;
+  padding: 5px 10px;
   resize: none;
 }
 .input-block textarea {
