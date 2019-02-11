@@ -236,7 +236,6 @@ function slideServices() {
       }, delay);
     }
   }
-  $cell.find('.js-collapser').closeSummary;
 }
 
 //Form Validation
@@ -269,7 +268,7 @@ function formValidation() {
       }
       break;
     case "phone_number":
-      if ( !inputBlock.val() ) {
+      if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
         inputBlock[0].style.border = "2px solid red";
         inputBlock[0].style.boxShadow = "0px 0px 5px red";
       } else {
