@@ -274,6 +274,15 @@
   }
 }
 
+@keyframes meldInOut {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
 [class$="arrow"] {
   display: none;
   position: absolute;
@@ -282,6 +291,7 @@
   margin-top: -40px;
   color: transparentize($cool-border-color, 0.5);
   cursor: pointer;
+  animation: meldInOut 1s ease-in-out 0s infinite alternate;
   @media screen and (max-width: $md-break) {
     display: block;
   }
@@ -292,10 +302,10 @@
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(300px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -306,10 +316,10 @@
 
 @keyframes slideInRight {
   from {
-    transform: translateX(-300px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 

@@ -625,6 +625,14 @@ polygon.arrow-top {
   border-color: #FFF;
 }
 
+@keyframes meldInOut {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
 [class$=arrow] {
   display: none;
   position: absolute;
@@ -633,6 +641,7 @@ polygon.arrow-top {
   margin-top: -40px;
   color: rgba(40, 40, 40, 0.5);
   cursor: pointer;
+  animation: meldInOut 1s ease-in-out 0s infinite alternate;
 }
 @media screen and (max-width: 991.98px) {
   [class$=arrow] {
@@ -646,10 +655,10 @@ polygon.arrow-top {
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(300px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 .slide-Left {
@@ -659,10 +668,10 @@ polygon.arrow-top {
 
 @keyframes slideInRight {
   from {
-    transform: translateX(-300px);
+    opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 .slide-Right {

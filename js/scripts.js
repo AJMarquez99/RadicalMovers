@@ -3,6 +3,22 @@ var $cell = $('.service-card');
 let radicalBlock = document.getElementById("radical_services");
 let heightChange = 250;
 
+// Keeps functions from running too often
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 //open and close card when clicked on card
 function openSummary() {
 
