@@ -2,6 +2,7 @@ var $cell = $('.service-card');
 
 let radicalBlock = document.getElementById("radical_services");
 let heightChange = 250;
+let functionDone = false;
 
 // Keeps functions from running too often
 function debounce(func, wait, immediate) {
@@ -35,10 +36,20 @@ function openSummary() {
       $cell.not($thisCell).addClass('is-inactive');
     }
 
+    setTimeout( function() {
+      functionDone = true;
+    }, 500)
+
   } else {
-    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-    $cell.not($thisCell).removeClass('is-inactive');
-    radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
+    if ( functionDone == true ) {
+      $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+      $cell.not($thisCell).removeClass('is-inactive');
+      radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
+
+      setTimeout( function() {
+        functionDone = false;
+      }, 500)
+    }
   }
 }
 
@@ -47,10 +58,15 @@ function closeSummary() {
 
   var $thisCell = $(this).closest('.service-card');
 
-  $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-  $cell.not($thisCell).removeClass('is-inactive');
-  radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
+  if ( functionDone == true ) {
+    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+    $cell.not($thisCell).removeClass('is-inactive');
+    radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
 
+    setTimeout( function() {
+      functionDone = false;
+    }, 500)
+  }
 }
 
 //Open and Close About section
@@ -93,13 +109,13 @@ function stickyScroll() {
       } else if(height == 0) {
           $("#navigation_tab").removeClass('navigation-tab');
       }
-    } else {
+    } /*else {
       if (scrollDirection() == false) {
         $('header').css('top', '8px');
       } else {
         $('header').css('top', '0px');
       }
-    }
+    }*/
 }
 
 //Scroll to section minus nav
@@ -236,7 +252,6 @@ function slideServices() {
       }, delay);
     }
   }
-  $cell.find('.js-collapser').closeSummary;
 }
 
 //Form Validation
@@ -269,7 +284,7 @@ function formValidation() {
       }
       break;
     case "phone_number":
-      if ( !inputBlock.val() ) {
+      if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
         inputBlock[0].style.border = "2px solid red";
         inputBlock[0].style.boxShadow = "0px 0px 5px red";
       } else {
