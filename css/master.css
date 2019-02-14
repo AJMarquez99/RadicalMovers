@@ -1,0 +1,200 @@
+:root {
+  font-size: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  position: relative;
+}
+
+.main-nav {
+  width: min-content;
+  padding: 0 50px;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+.main-nav .aesthetic-block {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  background-color: #FFF;
+}
+.main-nav .aesthetic-block:nth-child(1) {
+  right: -20px;
+  transform: rotate(-45deg);
+  height: 100px;
+}
+.main-nav .aesthetic-block:nth-child(3) {
+  left: -20px;
+  transform: rotate(45deg);
+  height: 100px;
+}
+.main-nav .aesthetic-block:nth-child(2) {
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-nav ul {
+  margin: auto;
+  padding: 15px 0 15px;
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  font-size: 2.2em;
+}
+.main-nav li {
+  width: 150px;
+  height: 50px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav li:first-child, .main-nav li:last-child {
+  font-size: 0.88em;
+}
+.main-nav li:nth-child(3) {
+  width: 120px;
+}
+.main-nav li:hover {
+  font-size: 1.1em;
+}
+.main-nav li, .main-nav li:hover {
+  transition: font-size 0.25s;
+}
+.main-nav li a {
+  display: block;
+  color: inherit;
+  letter-spacing: 1.5px;
+  z-index: 5;
+}
+.main-nav li a:hover {
+  text-decoration: none;
+}
+
+.nav-logo {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 5;
+}
+.nav-logo img {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  padding: 2px;
+  border: 4px solid #2e3192;
+  background-color: #FFF;
+}
+.nav-logo img:hover {
+  width: 95px;
+}
+.nav-logo img, .nav-logo img:hover {
+  transition: width 0.25s;
+}
+
+#estimate_form {
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 85%;
+}
+section .aesthetic {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  height: 200px;
+  width: 60%;
+}
+section div:nth-child(3) {
+  background-color: #FFF;
+}
+
+/*# sourceMappingURL=master.css.map */
