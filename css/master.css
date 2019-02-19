@@ -184,9 +184,13 @@ header {
 section {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   height: 85%;
   overflow: hidden;
+  font-size: 1.7em;
+  font-family: "Noto Serif TC", serif;
 }
 section .aesthetic {
   background-color: white;
@@ -207,7 +211,30 @@ section div:nth-child(3) {
   background-color: white;
   position: relative;
   top: 90px;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
+}
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  font-family: "Cabin", sans-serif;
+}
+section h3 {
+  font-size: 1.7em;
+}
+section .content-container {
+  overflow-y: visible;
+}
+
+#radical_about h3 {
+  width: 100%;
+  margin: 20px 10px;
+}
+#radical_about .row p {
+  text-align: justify;
+  text-align-last: center;
+  line-height: 2em;
+}
+#radical_about .row:nth-child(2) {
+  text-align: right;
 }
 
 /*# sourceMappingURL=master.css.map */
