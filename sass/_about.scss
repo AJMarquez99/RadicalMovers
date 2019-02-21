@@ -1,52 +1,3 @@
-section {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 85%;
-  overflow: hidden;
-  font-size: 1.7em;
-  font-family: $text-font;
-  .aesthetic {
-    background-color: rgba(255,255,255, 1);
-    /*background-image: linear-gradient(-5deg, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0),  rgba(255,255,255,0.5), rgba(255,255,255,0.5));*/
-    position: absolute;
-    height: 300px;
-    width: 100%;
-    transform: rotate(5deg);
-    left: 49%;
-    top: 85px;
-    &:nth-child(2) {
-      /*background-image: linear-gradient(5deg, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0),  rgba(255,255,255,0.5), rgba(255,255,255,0.5));*/
-      transform: rotate(-5deg);
-      left: -49%;
-    }
-    &:before {
-
-    }
-  }
-  div:nth-child(3) {
-    background-color: rgba(255,255,255,1);
-    position: relative;
-    top: 90px;
-    min-height: 100%;
-    height: auto;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font;
-  }
-
-  h3 {
-    font-size: 1.7em;
-  }
-
-  .content-container {
-    overflow-y: visible;
-  }
-}
-
 #radical_about {
   h3 {
     width: 100%;
@@ -57,7 +8,7 @@ section {
     p {
       text-align: justify;
       text-align-last: center;
-      line-height: 2em;
+      line-height: 2.5em;
     }
     &:nth-child(2) {
       text-align: right;

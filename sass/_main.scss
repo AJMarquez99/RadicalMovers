@@ -10,11 +10,22 @@ header {
   position: relative;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .main-nav {
+  animation: $main-duration 1 forwards slideDown;
   width: min-content;
   padding: 0 50px;
   margin: 0 auto;
-  //color: #000;
   font-family: $nav-font;
   font-weight: 500;
   position: relative;
@@ -80,6 +91,7 @@ header {
 }
 
 .nav-logo {
+  //animation: $main-duration 1 slideDown;
   position: absolute;
   top: 2px;
   left: 50%;
@@ -101,8 +113,75 @@ header {
   }
 }
 
+#welcome_mat {
+  position: absolute;
+  width: 55%;
+  height: 200px;
+  svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+  }
+}
+
 #estimate_form {
   position: absolute;
   padding: 20px;
   background-color: rgba(255,255,255,0.5);
+}
+
+section {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 0%;
+  font-size: 1.7em;
+  font-family: $text-font;
+  z-index: 0;
+  transition: height $main-duration;
+  svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    &.section_background {
+      z-index: 0;
+    }
+    /*&.section_outer {
+      position: absolute;
+      height: 120px;
+      width: 100%;
+      top: 0;
+      z-index: 3;
+      fill: rgba(255,255,255,1);
+    }*/
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+  }
+
+  h3 {
+    font-size: 2.2em;
+  }
+  .content-container {
+    position: relative;
+    z-index: 1;
+    top: 120px;
+    padding-bottom: 120px;
+    height: 100%;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .container {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.active-page {
+  height: 85%;
 }

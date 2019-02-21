@@ -85,7 +85,18 @@ header {
   position: relative;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .main-nav {
+  animation: 1s 1 forwards slideDown;
   width: min-content;
   padding: 0 50px;
   margin: 0 auto;
@@ -175,6 +186,18 @@ header {
   transition: width 0.25s;
 }
 
+#welcome_mat {
+  position: absolute;
+  width: 55%;
+  height: 200px;
+}
+#welcome_mat svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
 #estimate_form {
   position: absolute;
   padding: 20px;
@@ -182,46 +205,56 @@ header {
 }
 
 section {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  height: 85%;
-  overflow: hidden;
+  height: 0%;
   font-size: 1.7em;
   font-family: "Noto Serif TC", serif;
+  z-index: 0;
+  transition: height 1s;
 }
-section .aesthetic {
-  background-color: white;
-  /*background-image: linear-gradient(-5deg, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0),  rgba(255,255,255,0.5), rgba(255,255,255,0.5));*/
+section svg {
   position: absolute;
-  height: 300px;
   width: 100%;
-  transform: rotate(5deg);
-  left: 49%;
-  top: 85px;
-}
-section .aesthetic:nth-child(2) {
-  /*background-image: linear-gradient(5deg, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0),  rgba(255,255,255,0.5), rgba(255,255,255,0.5));*/
-  transform: rotate(-5deg);
-  left: -49%;
-}
-section div:nth-child(3) {
-  background-color: white;
-  position: relative;
-  top: 90px;
-  min-height: 100%;
   height: auto;
+  /*&.section_outer {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    fill: rgba(255,255,255,1);
+  }*/
+}
+section svg.section_background {
+  z-index: 0;
 }
 section h1, section h2, section h3, section h4, section h5, section h6 {
   font-family: "Cabin", sans-serif;
 }
 section h3 {
-  font-size: 1.7em;
+  font-size: 2.2em;
 }
 section .content-container {
-  overflow-y: visible;
+  position: relative;
+  z-index: 1;
+  top: 120px;
+  padding-bottom: 120px;
+  height: 100%;
+  overflow: auto;
+}
+section .content-container::-webkit-scrollbar {
+  display: none;
+}
+section .content-container .container {
+  padding-bottom: 50px;
+}
+
+.active-page {
+  height: 85%;
 }
 
 #radical_about h3 {
@@ -231,7 +264,7 @@ section .content-container {
 #radical_about .row p {
   text-align: justify;
   text-align-last: center;
-  line-height: 2em;
+  line-height: 2.5em;
 }
 #radical_about .row:nth-child(2) {
   text-align: right;
