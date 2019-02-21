@@ -45,3 +45,10 @@ $(".nav-tab").click(sectionCall);
 $(".nav-logo").click( function() {
   findOtherSections();
 });
+
+$("aside.header-info").on("mouseover", function() {
+  this.classList.add("aside-hover");
+});
+$("aside.header-info").on("mouseout", function() {
+  this.classList.remove("aside-hover");
+});
