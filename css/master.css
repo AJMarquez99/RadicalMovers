@@ -137,6 +137,7 @@ section .content-container {
   padding-bottom: 120px;
   height: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 section .content-container::-webkit-scrollbar {
   display: none;
@@ -147,6 +148,41 @@ section .content-container .container {
 
 .active-page {
   height: 85%;
+}
+
+.section-nav {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  padding: 30px 40px;
+  background-color: #f47272;
+  border-radius: 5px;
+  z-index: 5;
+  font-size: 1.1em;
+}
+.section-nav:hover {
+  background-color: #f04242;
+}
+.section-nav, .section-nav:hover {
+  transition: background-color calc(1s/2);
+}
+.section-nav li {
+  margin-bottom: 15px;
+}
+.section-nav li:last-of-type {
+  margin-bottom: 0;
+}
+.section-nav a {
+  font-family: "Oswald", sans-serif;
+  color: #FFF;
+  opacity: 0.5;
+}
+.section-nav a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+.section-nav a, .section-nav a:hover {
+  transition: opacity calc(1s/2);
 }
 
 @keyframes slideDown {
@@ -373,6 +409,32 @@ header span.contact-info a, header span.contact-info a:hover {
 .gallery-container .next {
   left: unset;
   right: 0;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.testimonial-content {
+  text-align: center;
+  text-align-last: center;
+  font-style: italic;
+  line-height: 3em;
+}
+.testimonial-author {
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.testimonial-author:nth-of-type(2) {
+  text-align: left;
+  margin-left: 225px;
+}
+.testimonial-author:last-of-type {
+  text-align: right;
+  margin-right: 225px;
 }
 
 /*# sourceMappingURL=master.css.map */

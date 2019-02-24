@@ -63,6 +63,7 @@ section {
     padding-bottom: 120px;
     height: 100%;
     overflow: auto;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -74,4 +75,39 @@ section {
 
 .active-page {
   height: 85%;
+}
+
+.section-nav {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  padding: 30px 40px;
+  background-color: lighten($secondary-color, 5%);
+  border-radius: 5px;
+  z-index: 5;
+  font-size: 1.1em;
+  &:hover {
+    background-color: darken($secondary-color, 5%);
+  }
+  &, &:hover {
+    transition: background-color calc(#{$main-duration}/2);
+  }
+  li {
+    margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    font-family: $nav-font;
+    color: #FFF;
+    opacity: 0.5;
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+    &, &:hover {
+      transition: opacity calc(#{$main-duration}/2);
+    }
+  }
 }
