@@ -156,6 +156,9 @@
       transition: all 0.25s;
     }
   }
+  .error {
+    border: 2px solid red;
+  }
   @media screen and (max-width: $md-break) {
     flex-basis: unset;
   }

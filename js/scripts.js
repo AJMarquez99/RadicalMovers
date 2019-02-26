@@ -261,39 +261,70 @@ function validateEmail(email) {
 }
 
 function formValidation() {
-  let inputBlock = $(this);
-  let inputName = $(this).attr("id");
-  switch (inputName) {
-    case "name":
-      if ( !inputBlock.val() ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.textTransform = "Capitalize";
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
-    case "email":
-      if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
-    case "phone_number":
-      if ( !inputBlock.val() || inputBlock.val().length != 9 ) {
-        inputBlock[0].style.border = "2px solid red";
-        inputBlock[0].style.boxShadow = "0px 0px 5px red";
-      } else {
-        inputBlock[0].style.border = "2px solid #008000";
-        inputBlock[0].style.boxShadow = "0px 0px 5px #009900";
-      }
-      break;
-  }
+	for ( let inputBlock of $("input") ) {
+		console.log(inputBlock);
+		/*console.log(inputBlock.attr("id"));
+		console.log(inputBlock);*/
+		/*let inputName = inputBlock.attr("id");
+		switch (inputName) {
+	    case "name":
+	      if ( !inputBlock.val() ) {
+					inputBlock[0].classList.add("error");
+	      } else {
+	        inputBlock[0].style.textTransform = "Capitalize";
+					inputBlock[0].classList.remove("error");
+	      }
+	      break;
+	    case "email":
+	      if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
+	        inputBlock[0].classList.add("error");
+	      } else {
+	        inputBlock[0].classList.remove("error");
+	      }
+	      break;
+	    case "phone_number":
+	      if ( !inputBlock.val() || inputBlock.val().length != 14 ) {
+	        inputBlock[0].classList.add("error");
+	      } else {
+	        inputBlock[0].classList.remove("error");
+	      }
+	      break;
+	  }*/
+	}
 }
+
+$("input[name='phone_number']").keyup(function() {
+  var val_old = $(this).val();
+  var val = val_old.replace(/\D/g, '');
+  var len = val.length;
+  if (len >= 1)
+    val = '(' + val.substring(0);
+  if (len >= 3)
+    val = val.substring(0, 4) + ') ' + val.substring(4);
+  if (len >= 6)
+    val = val.substring(0, 9) + '-' + val.substring(9);
+	if (len > 10)
+		val = val.substring(0, 14);
+  if (val != val_old)
+    $(this).focus().val('').val(val);
+});
+
+$("input[name='phone_number']").on("keypress keyup blur",function (event) {
+	$(this).val($(this).val().replace(/[^\d()-\s].+/, ""));
+	if ((event.which < 48 || event.which > 57)) {
+		 event.preventDefault();
+	}
+	if ($(this).val().length > 13) {
+		 event.preventDefault();
+	}
+});
+
+$("input[name='name']").on("keypress keyup blur",function (event) {
+	$(this).val($(this).val().replace(/[^A-Za-z-'\s]+/, ""));
+	if ((event.which < 65)) {
+		 event.preventDefault();
+	}
+});
 
 $("input").blur(formValidation);
 $(".arrow").click(slideServices);
