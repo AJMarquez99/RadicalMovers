@@ -430,15 +430,12 @@ header span.contact-info a, header span.contact-info a:hover {
 }
 .testimonial-author {
   font-style: normal;
-  text-align: center;
   margin-bottom: 50px;
-}
-.testimonial-author:nth-of-type(2) {
-  text-align: left;
   margin-left: 225px;
 }
-.testimonial-author:last-of-type {
+.testimonial-author:nth-child(even) {
   text-align: right;
+  margin-left: 0;
   margin-right: 225px;
 }
 
@@ -451,7 +448,7 @@ header span.contact-info a, header span.contact-info a:hover {
   z-index: 15;
 }
 #our_story p {
-  box-shadow: 0px -5px 5px -3px #595959;
+  box-shadow: 0px -5px 20px -3px #595959;
   padding: 30px 30px 200px;
   background-color: #FFF;
   z-index: 10;
@@ -470,7 +467,7 @@ header span.contact-info a, header span.contact-info a:hover {
 }
 #our_image .gallery-aesthetic {
   width: 100%;
-  box-shadow: 0px -5px 5px -3px #595959;
+  box-shadow: 0px -5px 20px -3px #595959;
   background-color: #FFF;
   z-index: 10;
 }
@@ -490,20 +487,8 @@ header span.contact-info a, header span.contact-info a:hover {
 }
 #our_reviews .testimonial-container {
   background-color: #FFF;
-  box-shadow: 0px -5px 5px -3px #595959;
+  box-shadow: 0px -5px 20px -3px #595959;
   z-index: 10;
-}
-
-.content-container {
-  background-color: #f1d592;
-  border-radius: 10px;
-  width: max-content;
-  padding: 60px 50px;
-  margin: 0 auto 50px;
-}
-.content-container border {
-  left: 3px solid #f1d592;
-  right: 3px solid #f1d592;
 }
 
 /*# sourceMappingURL=master.css.map */
