@@ -60,10 +60,20 @@ section {
     position: relative;
     z-index: 1;
     top: 120px;
-    padding-bottom: 120px;
     height: 100%;
     overflow: auto;
     scroll-behavior: smooth;
+
+    border {
+      left:  3px solid #f1d592;
+      right:  3px solid #f1d592;
+    }
+    background-color: #f1d592;
+    border-radius: 10px;
+    width: max-content;
+    padding: 60px 50px 120px;
+    margin: 0 auto 50px;
+
     &::-webkit-scrollbar {
       display: none;
     }

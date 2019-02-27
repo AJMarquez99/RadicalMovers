@@ -134,10 +134,18 @@ section .content-container {
   position: relative;
   z-index: 1;
   top: 120px;
-  padding-bottom: 120px;
   height: 100%;
   overflow: auto;
   scroll-behavior: smooth;
+  background-color: #f1d592;
+  border-radius: 10px;
+  width: max-content;
+  padding: 60px 50px 120px;
+  margin: 0 auto 50px;
+}
+section .content-container border {
+  left: 3px solid #f1d592;
+  right: 3px solid #f1d592;
 }
 section .content-container::-webkit-scrollbar {
   display: none;
@@ -353,19 +361,16 @@ header span.contact-info a, header span.contact-info a:hover {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+#radical_about .row {
+  position: relative;
+}
 #radical_about .row p {
   text-align: justify;
   text-align-last: center;
   line-height: 2.5em;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 #radical_about .row:nth-child(2) {
   text-align: right;
-}
-
-#our_image {
-  z-index: 5;
 }
 
 .gallery-container {
@@ -415,7 +420,7 @@ header span.contact-info a, header span.contact-info a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .testimonial-content {
   text-align: center;
@@ -435,6 +440,70 @@ header span.contact-info a, header span.contact-info a:hover {
 .testimonial-author:last-of-type {
   text-align: right;
   margin-right: 225px;
+}
+
+#our_story {
+  padding: 0;
+}
+#our_story h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: 15;
+}
+#our_story p {
+  box-shadow: 0px -5px 5px -3px #595959;
+  padding: 30px 30px 200px;
+  background-color: #FFF;
+  z-index: 10;
+}
+#our_story .row:not(:first-of-type) h3 {
+  margin-top: -100px;
+}
+
+#our_image {
+  padding: 0;
+}
+#our_image h3 {
+  z-index: 11;
+  margin-bottom: 0;
+  margin-top: -100px;
+}
+#our_image .gallery-aesthetic {
+  width: 100%;
+  box-shadow: 0px -5px 5px -3px #595959;
+  background-color: #FFF;
+  z-index: 10;
+}
+#our_image .gallery-container {
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+#our_reviews {
+  padding: 0;
+  margin-bottom: 70px;
+}
+#our_reviews h3 {
+  z-index: 11;
+  margin-bottom: 0;
+  margin-top: -100px;
+}
+#our_reviews .testimonial-container {
+  background-color: #FFF;
+  box-shadow: 0px -5px 5px -3px #595959;
+  z-index: 10;
+}
+
+.content-container {
+  background-color: #f1d592;
+  border-radius: 10px;
+  width: max-content;
+  padding: 60px 50px;
+  margin: 0 auto 50px;
+}
+.content-container border {
+  left: 3px solid #f1d592;
+  right: 3px solid #f1d592;
 }
 
 /*# sourceMappingURL=master.css.map */
