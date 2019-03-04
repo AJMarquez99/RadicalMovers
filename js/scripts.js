@@ -261,36 +261,39 @@ function validateEmail(email) {
 }
 
 function formValidation() {
-	for ( let inputBlock of $("input") ) {
-		console.log(inputBlock);
-		/*console.log(inputBlock.attr("id"));
-		console.log(inputBlock);*/
-		/*let inputName = inputBlock.attr("id");
-		switch (inputName) {
-	    case "name":
-	      if ( !inputBlock.val() ) {
-					inputBlock[0].classList.add("error");
-	      } else {
-	        inputBlock[0].style.textTransform = "Capitalize";
-					inputBlock[0].classList.remove("error");
-	      }
-	      break;
-	    case "email":
-	      if ( !inputBlock.val() || !validateEmail( inputBlock.val() )  ) {
-	        inputBlock[0].classList.add("error");
-	      } else {
-	        inputBlock[0].classList.remove("error");
-	      }
-	      break;
-	    case "phone_number":
-	      if ( !inputBlock.val() || inputBlock.val().length != 14 ) {
-	        inputBlock[0].classList.add("error");
-	      } else {
-	        inputBlock[0].classList.remove("error");
-	      }
-	      break;
-	  }*/
-	}
+  let formOk = true;
+  let errorMessage = "";
+  for ( let inputBlock of $("input") ) {
+    let inputValueType = inputBlock.id;
+    switch (inputValueType) {
+      case "name":
+        if ( !inputBlock.value ) {
+          formOk = false;
+          errorMessage += "Please Enter your Name\n";
+        }
+        break;
+      case "phone_number":
+        if ( !inputBlock.value || inputBlock.value.length != 14 ) {
+          formOk = false;
+          errorMessage += "Please Enter a valid Phone Number\n";
+        }
+        break;
+      case "email":
+        if ( !inputBlock.value || !validateEmail( inputBlock.value )  ) {
+          formOk = false;
+          errorMessage += "Please Enter a valid Email\n";
+        }
+        break;
+    }
+  }
+  if ( !$("#message").val() ) {
+    formOk = false;
+    errorMessage += "Please Enter a Message\n";
+  }
+  if ( formOk == false ) {
+    event.preventDefault();
+    alert(errorMessage);
+  }
 }
 
 $("input[name='phone_number']").keyup(function() {
@@ -320,13 +323,17 @@ $("input[name='phone_number']").on("keypress keyup blur",function (event) {
 });
 
 $("input[name='name']").on("keypress keyup blur",function (event) {
-	$(this).val($(this).val().replace(/[^A-Za-z-'\s]+/, ""));
-	if ((event.which < 65)) {
-		 event.preventDefault();
-	}
+	$(this).val($(this).val().replace(/[^A-Za-z'-\s]+/, ""));
+  let inputValue = event.which;
+  if ( !(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0 && inputValue != 45 && inputValue != 39)) {
+      event.preventDefault();
+  }
+  if ($(this).val().length > 30 ) {
+    event.preventDefault();
+  }
 });
 
-$("input").blur(formValidation);
+$("#estimate_form").submit( formValidation );
 $(".arrow").click(slideServices);
 $(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
