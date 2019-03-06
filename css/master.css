@@ -994,6 +994,49 @@ polygon.arrow-top {
   background-size: cover;
 }
 
+.gallery-container {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding-bottom: 0;
+}
+.gallery-container .mySlides {
+  display: none;
+  background-color: #323232;
+}
+.gallery-container .active {
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-container .active img {
+  width: auto;
+  height: 100%;
+}
+.gallery-container button {
+  background: unset;
+  border: none;
+  font-size: 3em;
+  color: #FFF;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  height: 100%;
+  width: 80px;
+}
+.gallery-container button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.gallery-container .next {
+  left: unset;
+  right: 0;
+}
+
 #radical_footer {
   background-color: #222831;
   color: #FFF;
