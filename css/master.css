@@ -201,9 +201,9 @@ header .underline-effect a:not(.navbar-brand):hover:after {
   }
 }
 .navigation-tab {
-  animation-name: dropDownNav;
+  /*animation-name: dropDownNav;
   animation-duration: 0.8s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
   box-shadow: 0px 0px 5px #282828;
 }
 .navigation-tab ul {

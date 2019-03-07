@@ -209,19 +209,6 @@ function addStars() {
   }
 }
 
-//Call Lightslider
-$(document).ready(function() {
-    $("#lightSlider").lightSlider({
-        gallery: true,
-        item: 1,
-        slideMargin: 0,
-        thumbItem: 5,
-        galleryMargin: 30,
-        loop: true,
-        currentPagerPosition: 'right',
-    });
-  });
-
 //Services slider
 function slideServices() {
   let cardList = $(".service-card");
@@ -390,6 +377,13 @@ function showSlides(n) {
 $(".mySlides").ready(createGallery);
 //End new Stuff
 
+function closeMobileNav(){
+	let links = $(".nav-link");
+	//if ()
+	console.log(window.innerWidth);
+}
+
+$("#mobileNav").ready(closeMobileNav);
 $("#estimate_form").submit( formValidation );
 $(".arrow").click(slideServices);
 $(window).one("load",stickyScroll);
