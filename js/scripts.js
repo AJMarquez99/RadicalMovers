@@ -377,12 +377,27 @@ function showSlides(n) {
 $(".mySlides").ready(createGallery);
 //End new Stuff
 
-function closeMobileNav(){
+function closeMobileNav() {
 	let links = $(".nav-link");
 	//if ()
 	console.log(window.innerWidth);
 }
 
+function backgroundChanger() {
+	let bgImages = ["file-2.jpeg", "file2.jpeg", "file5.jpeg", "file16.jpeg", "file14.jpeg"];
+	let arrayLength = bgImages.length;
+	let currentPosition = 0;
+	setInterval( function() {
+		// Get the next index.  If at end, restart to the beginning.
+		currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
+		// Show the next image.
+		$("#banner_background").attr("src", "images/" + bgImages[currentPosition]);
+	}, 5000)
+}
+
+$(function () {
+	backgroundChanger();
+});
 $("#mobileNav").ready(closeMobileNav);
 $("#estimate_form").submit( formValidation );
 $(".arrow").click(slideServices);

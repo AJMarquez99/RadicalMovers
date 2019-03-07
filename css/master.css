@@ -267,19 +267,27 @@ header .underline-effect a:not(.navbar-brand):hover:after {
   height: 66px; // Set the Appropriate Height
   visibility: hidden;
 }*/
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .radical-intro {
-  height: auto;
+  height: 700px;
   position: relative;
 }
 .radical-intro img {
   width: 100%;
-  height: auto;
+  height: inherit;
+  object-fit: cover;
 }
 @media screen and (max-width: 767.98px) {
   .radical-intro img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
   }
 }
 
