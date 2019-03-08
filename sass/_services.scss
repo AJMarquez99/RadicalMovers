@@ -192,6 +192,13 @@
         opacity: 0.9;
       }
     }
+    p {
+      font-size: 1.1em;
+      text-align: justify;
+      text-align-last: center;
+      font-family: $text-font;
+      line-height: 2.3em;
+    }
   }
   &.is-collapsed {
 

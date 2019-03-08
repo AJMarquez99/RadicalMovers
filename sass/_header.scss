@@ -56,7 +56,7 @@ header {
     }
     .header-info {
       color: $header-color;
-      font-size: 1.3em;
+      font-size: 1.35em;
       /*@media screen and (max-width: $md-break) {
         font-size: 1em;
       }*/
@@ -136,7 +136,7 @@ header {
     }
   }
   li {
-    margin: 5px 10px;
+    margin: 8px 15px;
     font-size: 1.8em;
   }
   a {
@@ -188,9 +188,9 @@ header {
 }
 
 .navigation-tab {
-  /*animation-name: dropDownNav;
+  animation-name: dropDownNav;
   animation-duration: 0.8s;
-  animation-fill-mode: forwards;*/
+  animation-fill-mode: forwards;
   box-shadow: 0px 0px 5px $cool-border-color;
   ul {
     padding: 5px 0px;

@@ -12,8 +12,8 @@ body::-webkit-scrollbar {
 }
 
 //Colors of the Website
-$primary-color: #33ccff;
-$secondary-color: #f25a5a;
+$primary-color: rgb(46, 49, 146); //#33ccff
+$secondary-color: rgb(218, 11, 11); //#f25a5a
 $tertiary-color: #F2F2F2;
 $text-color: #000;
 $header-color: darken(#ffffff, 30%);

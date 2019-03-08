@@ -24,7 +24,7 @@
      return $data;
   }
 
-  include ('components/_header.html');
+  include ('components/_newHeader.html');
   include ('components/_intro.html');
   include ('components/_services.html');
   include ('components/_estimate.html');
