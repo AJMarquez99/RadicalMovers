@@ -11,111 +11,139 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-header {
+.parallaxBgTwo {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-header {
+  z-index: 5;
   width: 100%;
   position: absolute;
   top: 0;
-  padding-top: 100px;
+  padding-top: 40px;
 }
-header .header-block {
+.nav-header .header-block {
   display: flex;
 }
-header .header-logo {
+.nav-header .header-logo {
   float: left;
-  margin-left: 100px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-header .header-logo img {
-  width: 60px;
+.nav-header .header-logo .header-logo-container {
+  display: flex;
+  width: 125px;
+  height: 125px;
+}
+.nav-header .header-logo img {
+  width: 100%;
   height: auto;
-  border: 1px solid #FFF;
   border-radius: 50%;
   padding: 3px;
   background-color: #2e3192;
 }
-header .header-logo .company-name {
-  font-style: "Cabin", sans-serif;
-  font-size: 3em;
-  text-shadow: 0px 0px 1px 3px #2e3192;
+.nav-header .header-logo .header-logo-content {
+  padding-top: 10px;
+  padding-left: 20px;
 }
-header .header-logo .company-name::before {
+.nav-header .header-logo .company-name {
+  font-style: "Cabin", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4.3em;
+  text-shadow: -2px -2px 0 #2e3192, -2px -1px 0 #2e3192, -2px 0px 0 #2e3192, -2px 1px 0 #2e3192, -2px 2px 0 #2e3192, -1px -2px 0 #2e3192, -1px -1px 0 #2e3192, -1px 0px 0 #2e3192, -1px 1px 0 #2e3192, -1px 2px 0 #2e3192, 0px -2px 0 #2e3192, 0px -1px 0 #2e3192, 0px 0px 0 #2e3192, 0px 1px 0 #2e3192, 0px 2px 0 #2e3192, 1px -2px 0 #2e3192, 1px -1px 0 #2e3192, 1px 0px 0 #2e3192, 1px 1px 0 #2e3192, 1px 2px 0 #2e3192, 2px -2px 0 #2e3192, 2px -1px 0 #2e3192, 2px 0px 0 #2e3192, 2px 1px 0 #2e3192, 2px 2px 0 #2e3192;
+}
+.nav-header .header-logo .company-name::before {
   content: "Radical";
   color: #da0b0b;
 }
-header .header-logo .company-name::after {
+.nav-header .header-logo .company-name::after {
   content: "Movers";
   color: #FFF;
 }
-header .header-logo .company-line {
+.nav-header .header-logo .company-line {
   color: #FFF;
-  font-size: 1.2em;
+  font-size: 1.9em;
+  text-shadow: 1px 0 5px #282828, 0 1px 5px #282828, -1px 0 5px #282828, 0 -1px 5px #282828;
+  padding-left: 10px;
 }
-header .header-nav {
+.nav-header .header-nav {
   float: right;
-  margin-right: 100px;
+  margin-right: 150px;
 }
-header .header-nav ul {
+.nav-header .header-nav ul {
   width: fit-content;
   display: flex;
 }
-header .header-nav li {
+.nav-header .header-nav li {
   margin: 8px 15px;
-  font-size: 1.8em;
+  font-size: 2em;
 }
-header .header-nav a {
+.nav-header .header-nav a {
   color: #FFF;
+  text-shadow: 1px 0 5px #282828, 2px 0 5px #282828, 0 1px 5px #282828, 0 2px 5px #282828, -1px 0 5px #282828, -2px 0 5px #282828, 0 -1px 5px #282828, 0 -2px 5px #282828;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 10px;
-  /*&:hover:not(.navbar-brand) {
-    color: lighten($text-color, 50%);
-    text-decoration: none;
-  }*/
 }
-header .header-nav a, header .header-nav a:after, header .header-nav a:before {
-  transition: all 0.5s;
-}
-header .header-nav a:hover {
-  color: gray;
+.nav-header .header-nav a:hover {
+  background-color: rgba(46, 49, 146, 0.5);
   text-decoration: none;
 }
-
-.underline-effect a:not(.navbar-brand) {
-  position: relative;
-}
-.underline-effect a:not(.navbar-brand):after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
-.underline-effect a:not(.navbar-brand):hover:after {
-  width: 100%;
+.nav-header .header-nav a, .nav-header .header-nav a:hover {
+  transition: background-color 0.5s;
 }
 
 .radical-intro {
   position: relative;
-}
-.radical-intro img {
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-  /*@media screen and (max-width: $sm-break) {
-    width: 100%;
-    height: 400px;
-  }*/
+  height: 1000px;
+  max-height: 100%;
+  background-image: url(../images/file-2.jpeg);
+  opacity: 1;
+  z-index: 0;
 }
 
 .image-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.banner-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 20px solid rgba(255, 255, 255, 0.8);
+  color: #3c3c3c;
+  font-family: "Cabin", sans-serif;
+  font-size: 3.7em;
+}
+.banner-header .banner-text-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 1100px;
+}
+.banner-header .banner-text {
+  text-align: center;
+}
+.banner-header .banner-sub-text {
+  font-size: 0.5em;
+  text-align: justify;
+  text-align-last: center;
+  width: 85%;
+  padding: 20px 0 0;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {

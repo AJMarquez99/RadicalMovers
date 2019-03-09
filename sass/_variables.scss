@@ -11,6 +11,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.parallaxBgTwo {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 //Colors of the Website
 $primary-color: rgb(46, 49, 146); //#33ccff
 $secondary-color: rgb(218, 11, 11); //#f25a5a
@@ -19,6 +26,14 @@ $text-color: #000;
 $header-color: darken(#ffffff, 30%);
 $border-color: rgba($header-color, 0.2);
 $cool-border-color: rgb(40,40,40);
+$text-contrast: 1px 0 5px $cool-border-color,
+             2px 0 5px $cool-border-color,
+             0 1px 5px $cool-border-color,
+             0 2px 5px $cool-border-color,
+             -1px 0 5px $cool-border-color,
+             -2px 0 5px $cool-border-color,
+             0 -1px 5px $cool-border-color,
+             0 -2px 5px $cool-border-color;
 
 $nav-font: 'Work Sans', sans-serif;
 $heading-font: 'Cabin', sans-serif;

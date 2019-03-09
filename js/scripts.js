@@ -388,10 +388,34 @@ function backgroundChanger() {
 	let arrayLength = bgImages.length;
 	let currentPosition = 0;
 	setInterval( function() {
+		/*currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
+		$('#radical_intro').animate({ opacity: 1 }, 500,function(){
+
+	        //finished animating, minifade out and fade new back in
+	        $('#radical_intro').animate({ opacity: 0.7 }, 100,function(){
+
+	            $('#radical_intro').css("background-image", "url(images/" + bgImages[currentPosition] + ")");
+
+	            //animate fully back in
+	            $('#radical_intro').animate({ opacity: 1 }, 400,function(){
+
+	                //set timer for next
+	                setTimeout(loadimg,5000);
+
+	            });
+
+	        });
+
+	    })*/
+
+
+		setTimeout(function() { $("#radical_intro").animate( {opacity: "0.5"}, 500 ); }, 500);
 		// Get the next index.  If at end, restart to the beginning.
 		currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
 		// Show the next image.
-		$("#banner_background").attr("src", "images/" + bgImages[currentPosition]);
+		$("#radical_intro").css("background-image", "url(images/" + bgImages[currentPosition] + ")");
+		setTimeout(function() { $("#radical_intro").animate( {opacity: "1"}, 500 ); }, 500);
+
 	}, 5000)
 }
 
