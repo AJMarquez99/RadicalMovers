@@ -383,7 +383,7 @@ function closeMobileNav() {
 	console.log(window.innerWidth);
 }
 
-function backgroundChanger() {
+/*function backgroundChanger() {
 	let bgImages = ["file-2.jpeg", "file2.jpeg", "file5.jpeg", "file16.jpeg", "file14.jpeg"];
 	let arrayLength = bgImages.length;
 	let currentPosition = 0;
@@ -406,10 +406,10 @@ function backgroundChanger() {
 
 	        });
 
-	    })*/
+	    })
 
 
-		setTimeout(function() { $("#radical_intro").animate( {opacity: "0.5"}, 500 ); }, 500);
+		//setTimeout(function() { $("#radical_intro").animate( {opacity: "0.5"}, 500 ); }, 500);
 		// Get the next index.  If at end, restart to the beginning.
 		currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
 		// Show the next image.
@@ -417,7 +417,7 @@ function backgroundChanger() {
 		setTimeout(function() { $("#radical_intro").animate( {opacity: "1"}, 500 ); }, 500);
 
 	}, 5000)
-}
+}*/
 
 $(function () {
 	backgroundChanger();
