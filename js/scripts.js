@@ -380,7 +380,7 @@ $(".mySlides").ready(createGallery);
 function closeMobileNav() {
 	let links = $(".nav-link");
 	//if ()
-	console.log(window.innerWidth);
+	//console.log(window.innerWidth);
 }
 
 /*function backgroundChanger() {
@@ -417,11 +417,11 @@ function closeMobileNav() {
 		setTimeout(function() { $("#radical_intro").animate( {opacity: "1"}, 500 ); }, 500);
 
 	}, 5000)
-}*/
+}
 
 $(function () {
 	backgroundChanger();
-});
+}); */
 $("#mobileNav").ready(closeMobileNav);
 $("#estimate_form").submit( formValidation );
 $(".arrow").click(slideServices);
