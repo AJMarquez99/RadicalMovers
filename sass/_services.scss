@@ -152,6 +152,18 @@
         margin-bottom: 10px;
       }
     }
+    &:hover {
+      background-color: $primary-color;
+      i, p {
+        color: #FFF;
+      }
+    }
+    &, &:hover {
+      transition: background-color 0.5s;
+      i, p {
+        transition: color 0.5s;
+      }
+    }
   }
   .person-container {
     .person-container-second {
@@ -199,12 +211,20 @@
       font-size: 2.6em;
       color: $primary-color;
     }
+    &:hover {
+      i {
+        color: $secondary-color;
+      }
+    }
+    i, &:hover i {
+      transition: color 0.5s;
+    }
   }
 }
 
 .tips-container {
   $circle-dimension: 300px;
-  padding-top: 160px;
+  padding-top: 90px;
   padding-bottom: 70px;
   ul {
     width: 80%;

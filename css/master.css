@@ -18,6 +18,12 @@ body::-webkit-scrollbar {
   background-size: cover;
 }
 
+.image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .nav-header {
   z-index: 5;
   width: 100%;
@@ -91,7 +97,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 .nav-header .header-nav a:hover {
   background-color: rgba(212, 17, 17, 0.75);
@@ -100,7 +106,7 @@ body::-webkit-scrollbar {
   box-shadow: 0 0 5px 2px #4b4b4b;
 }
 .nav-header .header-nav a, .nav-header .header-nav a:hover {
-  transition: all 0.75s;
+  transition: all 0.5s;
 }
 
 .radical-intro {
@@ -111,11 +117,8 @@ body::-webkit-scrollbar {
   opacity: 1;
   z-index: 0;
 }
-
-.image-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+.radical-intro .image-overlay {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .banner-header {
@@ -414,6 +417,18 @@ polygon.arrow-top {
 .pricing-container .truck-pricing p:last-of-type {
   margin-bottom: 10px;
 }
+.pricing-container .truck-pricing:hover {
+  background-color: #2e3192;
+}
+.pricing-container .truck-pricing:hover i, .pricing-container .truck-pricing:hover p {
+  color: #FFF;
+}
+.pricing-container .truck-pricing, .pricing-container .truck-pricing:hover {
+  transition: background-color 0.5s;
+}
+.pricing-container .truck-pricing i, .pricing-container .truck-pricing p, .pricing-container .truck-pricing:hover i, .pricing-container .truck-pricing:hover p {
+  transition: color 0.5s;
+}
 .pricing-container .person-container .person-container-second {
   position: relative;
   display: flex;
@@ -459,9 +474,15 @@ polygon.arrow-top {
   font-size: 2.6em;
   color: #2e3192;
 }
+.pricing-container .person-pricing:hover i {
+  color: #d41111;
+}
+.pricing-container .person-pricing i, .pricing-container .person-pricing:hover i {
+  transition: color 0.5s;
+}
 
 .tips-container {
-  padding-top: 160px;
+  padding-top: 90px;
   padding-bottom: 70px;
 }
 .tips-container ul {
@@ -504,14 +525,15 @@ polygon.arrow-top {
 }
 
 #radical_estimate {
-  background-image: linear-gradient(to right, #89f7fe, #2e3192, #89f7fe);
+  background-image: url(../images/map_boxes.png);
+  padding: 30px 0;
 }
 #radical_estimate .image-overlay {
   background-color: #FFF;
 }
 
 .radical-estimate .image-container {
-  margin: 0px 0 20px;
+  margin: 0px 0 0px;
   width: 350px;
   height: 350px;
   border-radius: 50%;
@@ -520,7 +542,6 @@ polygon.arrow-top {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -10px;
 }
 @media screen and (max-width: 767.98px) {
   .radical-estimate .image-container {
@@ -541,7 +562,8 @@ polygon.arrow-top {
 }
 .radical-estimate img {
   width: 350px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
   border: 10px solid #FFF;
   background-color: rgba(179, 179, 179, 0.2);
@@ -630,6 +652,12 @@ polygon.arrow-top {
   font-size: 1.3em;
   color: #282828;
 }
+.input-block label {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
 .input-block input {
   border-width: 2px;
 }
@@ -648,7 +676,7 @@ polygon.arrow-top {
   max-width: 150px;
   font-weight: bold;
   font-size: 1.2em;
-  color: #282828;
+  color: #FFF;
   margin: 0 auto;
   border-radius: 4px;
   background-color: #d41111;
@@ -671,12 +699,11 @@ polygon.arrow-top {
 }
 
 #radical_testimonials {
-  padding: 40px 0;
+  padding: 100px 0;
 }
 #radical_testimonials a, #radical_testimonials a:hover {
   color: #000;
   text-decoration: none;
-  margin: 0 auto;
 }
 @media screen and (max-width: 767.98px) {
   #radical_testimonials a {
@@ -696,7 +723,7 @@ polygon.arrow-top {
 .testimonial {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   align-items: center;
   font-family: "Work Sans", sans-serif;
 }
@@ -720,7 +747,8 @@ polygon.arrow-top {
   color: #818181;
 }
 .testimonial-message {
-  font-size: 1.1em;
+  font-size: 1.5em;
+  line-height: 2em;
   color: #5b5b5b;
   text-align: center;
   text-align-last: center;
@@ -728,7 +756,7 @@ polygon.arrow-top {
   font-style: italic;
 }
 .testimonial-name {
-  font-size: 1.3em;
+  font-size: 1.7em;
 }
 .testimonial:hover {
   transform: scale(1.1);
@@ -738,7 +766,7 @@ polygon.arrow-top {
 }
 
 #radical_map {
-  background-image: url("../images/map_boxes.png");
+  background-image: url("../images/usMap3.jpg");
 }
 @media screen and (max-width: 767.98px) {
   #radical_map {
@@ -746,7 +774,7 @@ polygon.arrow-top {
   }
 }
 #radical_map .image-overlay {
-  background-color: rgba(34, 40, 49, 0.85);
+  background-color: rgba(34, 40, 49, 0.5);
 }
 #radical_map iframe {
   z-index: 1;

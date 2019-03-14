@@ -1,9 +1,9 @@
 #radical_testimonials {
-  padding: 40px 0;
+  padding: 100px 0;
   a, a:hover {
     color: $text-color;
     text-decoration: none;
-    margin: 0 auto;
+    //margin: 0 auto;
   }
   a {
     @media screen and (max-width: $sm-break) {
@@ -25,7 +25,7 @@
   $review-color: lighten($cool-border-color, 35%);
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   align-items: center;
   font-family: $nav-font;
   &-profile-pic {
@@ -49,7 +49,8 @@
     color: $review-color;
   }
   &-message {
-    font-size: 1.1em;
+    font-size: 1.5em;
+    line-height: 2em;
     color: darken($review-color, 15%);
     text-align: center;
     text-align-last: center;
@@ -57,7 +58,7 @@
     font-style: italic;
   }
   &-name {
-    font-size: 1.3em;
+    font-size: 1.7em;
   }
   &:hover {
     transform: scale(1.1);

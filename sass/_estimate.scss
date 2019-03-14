@@ -1,7 +1,6 @@
 #radical_estimate {
-  background-image: linear-gradient(to right, #89f7fe, $primary-color, #89f7fe);
-  //#26c9ff
-  //f14e4f
+  background-image: url(../images/map_boxes.png);
+  padding: 30px 0;
   .image-overlay {
     background-color: #FFF;
   }
@@ -10,7 +9,7 @@
 .radical-estimate {
   $image-size: 350px;
   .image-container {
-    margin: 0px 0 20px;
+    margin: 0px 0 0px;
     width: $image-size;
     height: $image-size;
     border-radius: 50%;
@@ -19,7 +18,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -10px;
     @media screen and (max-width: $sm-break) {
       margin: 0 auto;
       margin-bottom: 20px;
@@ -36,7 +34,8 @@
   }
   img {
     width: $image-size;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
     border: 10px solid #FFF;
     background-color: $border-color;
@@ -125,6 +124,12 @@
   text-transform: uppercase;
   font-size: 1.3em;
   color: $cool-border-color;
+  label {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
   input {
     border-width: 2px;
   }
@@ -143,7 +148,7 @@
     max-width: 150px;
     font-weight: bold;
     font-size: 1.2em;
-    color: $cool-border-color;
+    color: #FFF;
     margin: 0 auto;
     border-radius: 4px;
     background-color: $secondary-color;

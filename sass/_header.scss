@@ -97,7 +97,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 20px;
+      padding: 5px 10px;
       &:hover {
         background-color: transparentize($secondary-color, 0.25); //rgba(255, 255, 255, 0.5);//transparentize($primary-color, 0.5);
         text-decoration: none;
@@ -105,7 +105,7 @@
         box-shadow: 0 0 5px 2px rgb(75, 75, 75);
       }
       &, &:hover {
-        transition: all 0.75s;
+        transition: all 0.5s;
       }
     }
   }
@@ -118,12 +118,9 @@
   background-image: url(../images/test-background.jpg);
   opacity: 1;
   z-index: 0;
-}
-
-.image-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  .image-overlay {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 }
 
 .banner-header {

@@ -18,6 +18,12 @@ body::-webkit-scrollbar {
   background-size: cover;
 }
 
+.image-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 //Colors of the Website
 $primary-color: rgb(46, 49, 146); //#33ccff
 $secondary-color: #d41111; //#f25a5a
