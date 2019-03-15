@@ -236,7 +236,7 @@
   }
   li {
     position: relative;
-    background-color: $primary-color;
+    background-color: rgb(100, 100, 100);
     border-radius: 50%;
     font-size: 1.7em;
     padding: 30px;
@@ -259,9 +259,10 @@
     }
     &:hover {
       transform: scale(1.1);
+      background-color: $primary-color;
     }
     &, &:hover {
-      transition: transform 0.5s;
+      transition: background-color 0.5s, transform 0.5s;
     }
   }
 }
