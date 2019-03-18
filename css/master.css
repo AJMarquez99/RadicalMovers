@@ -510,12 +510,12 @@ polygon.arrow-top {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.tips-container li:nth-of-type(odd) {
-  top: -10px;
-}
-.tips-container li:nth-of-type(even) {
-  top: 30px;
+  /*&:nth-of-type(odd) {
+    top: -10px;
+  }
+  &:nth-of-type(even) {
+    top: 30px;
+  }*/
 }
 .tips-container li:hover {
   transform: scale(1.1);
@@ -720,6 +720,67 @@ polygon.arrow-top {
   align-items: center;
   margin: 35px 0;
 }
+#radical_testimonials h3 {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+#radical_testimonials h3 + span {
+  color: #999999;
+  font-size: 2em;
+  font-family: "Work Sans", sans-serif;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.gallery-container {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 120px;
+}
+.gallery-container .mySlides {
+  display: none;
+  background-color: #323232;
+  border-radius: 5px;
+}
+.gallery-container .active {
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-container .active img {
+  width: auto;
+  height: 100%;
+}
+.gallery-container button {
+  background: unset;
+  border: none;
+  font-size: 3em;
+  color: #FFF;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  height: 100%;
+  width: 80px;
+  border-radius: 5px;
+}
+.gallery-container button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.gallery-container .next {
+  left: unset;
+  right: 0;
+}
 
 .testimonial {
   display: flex;
@@ -818,6 +879,75 @@ polygon.arrow-top {
   font-style: italic;
 }
 
+.testimonial-message-new {
+  width: 100%;
+  font-size: 2em;
+  font-family: "Work Sans", sans-serif;
+  color: #323232;
+  text-align: left;
+  padding-right: 30px;
+}
+.testimonial-message-new p {
+  font-style: italic;
+  line-height: 2em;
+}
+.testimonial-message-new span {
+  font-size: 0.8em;
+  font-weight: 600;
+  padding-left: 20px;
+}
+.testimonial-message-new:nth-of-type(even) {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 30px;
+}
+.testimonial-message-new:nth-of-type(even) span {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.testimonial-message-new:not(:last-of-type) {
+  padding-bottom: 40px;
+}
+
+.testimonial-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  margin-top: 70px;
+}
+.testimonial-links a {
+  width: auto;
+  margin: 0 20px;
+}
+.testimonial-links a:hover i {
+  box-shadow: 0px 0px 7px 0px #969696;
+  transform: translateY(5px);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.testimonial-links i {
+  display: block;
+  color: #FFF;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 7px 0px #969696;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.testimonial-links i[class$=google] {
+  background-color: #4285f4;
+}
+.testimonial-links i[class$=yelp] {
+  background-color: #d32323;
+}
+.testimonial-links i[class$=facebook-f] {
+  background-color: #3b5998;
+}
+
 #radical_map {
   background-image: url("../images/usMap3.jpg");
 }
@@ -897,49 +1027,6 @@ polygon.arrow-top {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.gallery-container {
-  width: 100%;
-  margin: 30px auto;
-  position: relative;
-  padding-bottom: 0;
-}
-.gallery-container .mySlides {
-  display: none;
-  background-color: #323232;
-}
-.gallery-container .active {
-  display: flex;
-  height: 450px;
-  justify-content: center;
-  align-items: center;
-}
-.gallery-container .active img {
-  width: auto;
-  height: 100%;
-}
-.gallery-container button {
-  background: unset;
-  border: none;
-  font-size: 3em;
-  color: #FFF;
-  opacity: 0.5;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  outline: none;
-  height: 100%;
-  width: 80px;
-}
-.gallery-container button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-}
-.gallery-container .next {
-  left: unset;
-  right: 0;
 }
 
 #radical_footer {

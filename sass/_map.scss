@@ -78,47 +78,5 @@
 }
 
 //New Stuff
-.gallery-container {
-  width: 100%;
-  margin: 30px auto;
-  position: relative;
-  padding-bottom: 0;
-  .mySlides {
-    display: none;
-    background-color: rgb( 50, 50, 50)
-  }
-  .active {
-    display: flex;
-    height: 450px;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: auto;
-      height: 100%;
-    }
-  }
-  button {
-    //animation: calc(#{$main-duration}*2) infinite alternate glow;
-    background: unset;
-    border: none;
-    font-size: 3em;
-    color: #FFF;
-    opacity: 0.5;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    outline: none;
-    height: 100%;
-    width: 80px;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
-      opacity: 1;
-    }
-  }
-  .next {
-    left: unset;
-    right: 0;
-  }
-}
+
 //End new stuf
