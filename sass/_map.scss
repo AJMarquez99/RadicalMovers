@@ -33,38 +33,6 @@
   }
 }
 
-.myLightSlider {
-  li {
-    display: flex!important;
-    justify-content: center;
-    align-items: center;
-    background-color: $cool-border-color;
-    height: 500px;
-    img {
-      width: auto;
-      height: 500px;
-      object-fit: cover;
-    }
-  }
-}
-
-.lSGallery {
-  height: 100px!important;
-  li {
-    height: inherit;
-    width: auto!important;
-    a {
-      height: inherit;
-    }
-    img {
-      width: auto!important;
-      height: inherit!important;
-      object-fit: cover;
-      /*margin: 0 auto!important;*/
-    }
-  }
-}
-
 .parallaxBg {
   position: relative;
   height: auto;
@@ -76,7 +44,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-//New Stuff
-
-//End new stuf

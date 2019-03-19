@@ -3,7 +3,6 @@
   a, a:hover {
     color: $text-color;
     text-decoration: none;
-    //margin: 0 auto;
   }
   a {
     @media screen and (max-width: $sm-break) {
@@ -83,105 +82,6 @@
   }
 }
 
-.testimonial {
-  $review-color: lighten($cool-border-color, 35%);
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  align-items: center;
-  font-family: $nav-font;
-  &-profile-pic {
-    $profile-dimension: 150px;
-    width: $profile-dimension;
-    height: $profile-dimension;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  &-score {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  &-stars {
-    font-size: 1.8em;
-    color: #ffcc00;
-  }
-  &-length {
-    font-size: 1em;
-    color: $review-color;
-  }
-  &-message {
-    font-size: 1.5em;
-    line-height: 2em;
-    color: darken($review-color, 15%);
-    text-align: center;
-    text-align-last: center;
-    margin-top: 10px;
-    font-style: italic;
-  }
-  &-name {
-    font-size: 1.7em;
-  }
-  &:hover {
-    transform: scale(1.1);
-  }
-  &, &:hover {
-    transition: all 0.5s;
-  }
-}
-
-.new-testimonial-container {
-  max-height: 500px;
-  min-height: 500px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px 2px rgba(100, 100, 100, 0.6);
-  position: relative;
-  font-family: $nav-font;
-  overflow: hidden;
-  padding: 0;
-  &:hover {
-    box-shadow: 0 5px 5px 3px rgba(100, 100, 100, 0.6);
-    transform: translateY(-5px);
-  }
-  &, &:hover {
-    transition: box-shadow 0.5s, transform 0.5s;
-  }
-  .image-container {
-    display: flex;
-    height: 40%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: $secondary-color;
-    padding: 15px 0;
-    img {
-      width: 50%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #FFF;
-    }
-  }
-  .review {
-    width: auto;
-    font-size: 1.4em;
-    text-align: center;
-    background-color: #FFF;
-    .reviewer {
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #FFF;
-      padding: 10px;
-      font-size: 1.2em;
-    }
-    p {
-      padding: 10px 10px;
-      line-height: 1.7em;
-      font-style: italic;
-    }
-  }
-}
-
 .testimonial-message-new {
   width: 100%;
   font-size: 2em;
@@ -198,7 +98,7 @@
     font-weight: 600;
     padding-left: 20px;
   }
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     text-align: right;
     padding-right: 0;
     padding-left: 30px;

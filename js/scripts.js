@@ -1,5 +1,3 @@
-var $cell = $('.service-card');
-
 let radicalBlock = document.getElementById("radical_services");
 let heightChange = 250;
 let functionDone = false;
@@ -19,55 +17,6 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
-
-//open and close card when clicked on card
-function openSummary() {
-
-  var $thisCell = $(this).closest('.service-card');
-
-  if ($thisCell.hasClass('is-collapsed')) {
-    $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
-    $thisCell.removeClass('is-collapsed').addClass('is-expanded');
-    radicalBlock.style.height = (radicalBlock.offsetHeight + heightChange) + "px";
-
-    if ($cell.not($thisCell).hasClass('is-inactive')) {
-      //do nothing
-    } else {
-      $cell.not($thisCell).addClass('is-inactive');
-    }
-
-    setTimeout( function() {
-      functionDone = true;
-    }, 500)
-
-  } else {
-    if ( functionDone == true ) {
-      $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-      $cell.not($thisCell).removeClass('is-inactive');
-      radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
-
-      setTimeout( function() {
-        functionDone = false;
-      }, 500)
-    }
-  }
-}
-
-//close card when click on cross
-function closeSummary() {
-
-  var $thisCell = $(this).closest('.service-card');
-
-  if ( functionDone == true ) {
-    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-    $cell.not($thisCell).removeClass('is-inactive');
-    radicalBlock.style.height = (radicalBlock.offsetHeight - heightChange) + "px";
-
-    setTimeout( function() {
-      functionDone = false;
-    }, 500)
-  }
-}
 
 //Open and Close About section
 function openAbout() {
@@ -93,13 +42,6 @@ function closeAbout() {
   }, delay);
 }
 
-function scrollDirection() {
-  // print "false" if direction is down and "true" if up
-  let scrollDir = this.oldScroll > this.scrollY;
-  this.oldScroll = this.scrollY;
-  return scrollDir;
-}
-
 //Sticky nav
 function stickyScroll() {
     var height = $(window).scrollTop();
@@ -109,13 +51,7 @@ function stickyScroll() {
       } else if(height == 0) {
           $("#navigation_tab").removeClass('navigation-tab');
       }
-    } /*else {
-      if (scrollDirection() == false) {
-        $('header').css('top', '8px');
-      } else {
-        $('header').css('top', '0px');
-      }
-    }*/
+    }
 }
 
 //Scroll to section minus nav
@@ -130,114 +66,6 @@ function scrollToSection() {
     $('html, body').animate({
         scrollTop: $(targetLink).offset().top - navHeight
       }, 50);
-  }
-}
-
-//Adds Stars to Testimonials depending on class
-function addStars() {
-  for (let stars of $(".testimonial").children(".testimonial-stars")) {
-    let numStars = $(stars).attr("class");
-    let notClass = "testimonial-stars ";
-    notClass = notClass.length;
-    let fullStar = '<i class="fas fa-star"></i>';
-    let halfStar = '<i class="fas fa-star-half-alt"></i>';
-    let emptyStar = '<i class="far fa-star"></i>';
-    switch (numStars.slice(notClass,-6)) {
-      case "one":
-        $(stars).append(fullStar);
-        for (i = 0; i < 4; i++) {
-          $(stars).append(emptyStar);
-        }
-        break;
-      case "two":
-        for (i = 0; i < 2; i++) {
-          $(stars).append(fullStar);
-        }
-        for (i = 0; i < 3; i++) {
-          $(stars).append(emptyStar);
-        }
-        break;
-      case "three":
-        for (i = 0; i < 3; i++) {
-          $(stars).append(fullStar);
-        }
-        for (i = 0; i < 2; i++) {
-          $(stars).append(emptyStar);
-        }
-        break;
-      case "four":
-        for (i = 0; i < 4; i++) {
-          $(stars).append(fullStar);
-        }
-        $(stars).append(emptyStar);
-        break;
-      case "five":
-        for (i = 0; i < 5; i++) {
-          $(stars).append(fullStar);
-        }
-        break;
-      case "one-half":
-        $(stars).append(fullStar);
-        $(stars).append(halfStar);
-        for (i = 0; i < 3; i++) {
-          $(stars).append(emptyStar);
-        }
-        break;
-      case "two-half":
-        for (i = 0; i < 2; i++) {
-          $(stars).append(fullStar);
-        }
-        $(stars).append(halfStar);
-        for (i = 0; i < 2; i++) {
-          $(stars).append(emptyStar);
-        }
-        break;
-      case "three-half":
-        for (i = 0; i < 3; i++) {
-          $(stars).append(fullStar);
-        }
-        $(stars).append(halfStar);
-        $(stars).append(emptyStar);
-        break;
-      case "four-half":
-        for (i = 0; i < 4; i++) {
-          $(stars).append(fullStar);
-        }
-        $(stars).append(halfStar);
-        break;
-    }
-  }
-}
-
-//Services slider
-function slideServices() {
-  let cardList = $(".service-card");
-  let delay = 600;
-  if ($(this).hasClass('right-arrow')) {
-    for (let orderNum of cardList) {
-      let orderPlace = getComputedStyle(orderNum).getPropertyValue("order");
-      orderNum.style.order = parseInt(orderPlace) - 1;
-      if (getComputedStyle(orderNum).getPropertyValue("order") == "0") {
-        orderNum.style.order = 5;
-      }
-      $(orderNum).addClass('slide-Left');
-      setTimeout( function() {
-        $(orderNum).removeClass('slide-Left');
-      }, delay);
-    }
-  }
-  if ($(this).hasClass('left-arrow')) {
-    for (let orderNum of cardList) {
-      let orderPlace = getComputedStyle(orderNum).getPropertyValue("order");
-      orderNum.style.order = parseInt(orderPlace) + 1;
-      if (getComputedStyle(orderNum).getPropertyValue("order") == "6") {
-        orderNum.style.order = 1;
-      }
-      $(orderNum).addClass('slide-Right');
-      setTimeout( function() {
-        $(orderNum).removeClass('slide-Right');
-      }, delay);
-    }
   }
 }
 
@@ -377,59 +205,10 @@ function showSlides(n) {
 $(".mySlides").ready(createGallery);
 //End new Stuff
 
-function closeMobileNav() {
-	let links = $(".nav-link");
-	//if ()
-	//console.log(window.innerWidth);
-}
-
-/*function backgroundChanger() {
-	let bgImages = ["file-2.jpeg", "file2.jpeg", "file5.jpeg", "file16.jpeg", "file14.jpeg"];
-	let arrayLength = bgImages.length;
-	let currentPosition = 0;
-	setInterval( function() {
-		/*currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
-		$('#radical_intro').animate({ opacity: 1 }, 500,function(){
-
-	        //finished animating, minifade out and fade new back in
-	        $('#radical_intro').animate({ opacity: 0.7 }, 100,function(){
-
-	            $('#radical_intro').css("background-image", "url(images/" + bgImages[currentPosition] + ")");
-
-	            //animate fully back in
-	            $('#radical_intro').animate({ opacity: 1 }, 400,function(){
-
-	                //set timer for next
-	                setTimeout(loadimg,5000);
-
-	            });
-
-	        });
-
-	    })
-
-
-		//setTimeout(function() { $("#radical_intro").animate( {opacity: "0.5"}, 500 ); }, 500);
-		// Get the next index.  If at end, restart to the beginning.
-		currentPosition = currentPosition + 1 < arrayLength ? currentPosition + 1 : 0;
-		// Show the next image.
-		$("#radical_intro").css("background-image", "url(images/" + bgImages[currentPosition] + ")");
-		setTimeout(function() { $("#radical_intro").animate( {opacity: "1"}, 500 ); }, 500);
-
-	}, 5000)
-}
-
-$(function () {
-	backgroundChanger();
-}); */
-$("#mobileNav").ready(closeMobileNav);
 $("#estimate_form").submit( formValidation );
 $(".arrow").click(slideServices);
 $(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
-$(".testimonial").children(".testimonial-stars").ready(addStars);
 $("a").click(scrollToSection);
 $("[href='#radical_about']").click(openAbout);
 $("#more-arrows").click(closeAbout);
-$cell.find('.js-expander').click(openSummary);
-$cell.find('.js-collapser').click(closeSummary);

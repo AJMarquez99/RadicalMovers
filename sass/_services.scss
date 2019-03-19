@@ -17,28 +17,6 @@
   }
 }
 
-.cool-border {
-  margin: 25px auto 5px;
-  width: 370px;
-  border-bottom: 3px solid $secondary-color;
-  position: relative;
-  &::after {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    top: 3px;
-    width: 100px;
-    border-bottom: 3px solid $cool-border-color;
-    content: "";
-  }
-  @media screen and (max-width: $xs-break) {
-    width: 100%;
-    &::after {
-      width: 30%;
-    }
-  }
-}
-
 .service-content {
   margin-top: 90px;
   width: 100%;
