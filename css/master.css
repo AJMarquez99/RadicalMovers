@@ -24,6 +24,14 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .nav-header {
   z-index: 5;
   width: 100%;
@@ -82,6 +90,7 @@ body::-webkit-scrollbar {
 .nav-header .header-nav {
   float: right;
   margin-right: 150px;
+  margin-top: 25px;
 }
 .nav-header .header-nav ul {
   width: fit-content;
@@ -98,6 +107,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   padding: 5px 10px;
+  min-width: 100px;
 }
 .nav-header .header-nav a:hover {
   background-color: rgba(212, 17, 17, 0.75);
@@ -107,6 +117,40 @@ body::-webkit-scrollbar {
 }
 .nav-header .header-nav a, .nav-header .header-nav a:hover {
   transition: all 0.5s;
+}
+.nav-header li .sub-nav-dropdown {
+  display: none;
+}
+
+li:hover > .sub-nav-dropdown {
+  display: flex;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  flex-direction: column;
+  background-color: #FFF;
+  font-size: 0.9rem;
+  width: 100%;
+}
+li:hover > .sub-nav-dropdown li {
+  margin: 0;
+}
+li:hover > .sub-nav-dropdown li:last-of-type {
+  margin-top: 0;
+}
+li:hover > .sub-nav-dropdown li:last-of-type a {
+  padding-bottom: 10px;
+}
+li:hover > .sub-nav-dropdown a {
+  text-shadow: none;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 15px 0;
+}
+li:hover > .sub-nav-dropdown a:hover {
+  box-shadow: none;
+  background-color: unset;
 }
 
 .radical-intro {
@@ -118,12 +162,12 @@ body::-webkit-scrollbar {
   z-index: 0;
 }
 .radical-intro .image-overlay {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .banner-header {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
@@ -151,97 +195,49 @@ body::-webkit-scrollbar {
   padding: 20px 0 0;
   margin: 0 auto;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#radical_about {
-  height: auto;
-  box-shadow: inset 0 0px 10px #282828;
-  background-image: url("../images/moving-truck2.jpg");
-}
-#radical_about .image-overlay {
-  background-color: rgba(255, 255, 255, 0.85);
+.banner-header img {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+  width: 150px;
 }
 
-.about-container {
-  max-height: 0;
-  overflow: hidden;
+.nav-scroll-active {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  position: fixed !important;
+  top: 0;
+  width: 100% !important;
+  background-color: #2e3192 !important;
+  margin-top: 0 !important;
+}
+.nav-scroll-active div {
+  margin: 0 auto !important;
+}
+.nav-scroll-active ul {
+  margin-bottom: 0;
+}
+.nav-scroll-active li {
+  margin: 0 !important;
   position: relative;
-  transition: all 1.25s ease-in-out;
-  max-width: 75%;
 }
-@media screen and (max-width: 767.98px) {
-  .about-container {
-    max-width: 95%;
-  }
+.nav-scroll-active a {
+  padding: 20px 15px !important;
+  text-shadow: none !important;
 }
-
-.about-content {
-  position: relative;
-  padding: 20px;
-  border-radius: 5px;
-  font-family: "Noto Serif TC", serif;
-  text-align: center;
+.nav-scroll-active a:hover {
+  box-shadow: none !important;
 }
-.about-content h2 {
-  color: #d41111;
-  font-size: 4em;
-  font-family: "Cabin", sans-serif;
-  margin: 30px 0;
-  text-align: left;
+.nav-scroll-active li .sub-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 2px 10px 2px #7d7d7d;
 }
-.about-content h2:nth-of-type(2) {
-  text-align: right;
-}
-.about-content p {
-  font-size: 1.7em;
-  line-height: 2.8em;
-  text-align: justify;
-}
-@media screen and (max-width: 767.98px) {
-  .about-content h2 {
-    font-size: 2.8em;
-  }
-  .about-content p {
-    font-size: 1.3em;
-  }
-}
-
-#more-arrows {
-  margin-top: 50px;
-  width: 75px;
-  height: 65px;
-  transform: rotate(180deg);
-  background-size: 39px 45px;
-  font-size: 1em;
-  cursor: pointer;
-}
-#more-arrows:hover polygon {
-  fill: #2e3192;
-  transition: all 0.2s ease-out;
-}
-#more-arrows:hover polygon.arrow-bottom {
-  transform: translateY(-18px);
-}
-#more-arrows:hover polygon.arrow-top {
-  transform: translateY(18px);
-}
-
-polygon {
-  fill: rgba(46, 49, 146, 0.6);
-  transition: all 0.2s ease-out;
-}
-polygon.arrow-middle {
-  opacity: 0.5;
-}
-polygon.arrow-top {
-  opacity: 0.4;
+.nav-scroll-active li .sub-nav-dropdown a {
+  padding: 10px 15px !important;
 }
 
 #radical_services {
@@ -677,11 +673,19 @@ polygon.arrow-top {
   align-items: center;
   margin: 35px 0;
 }
-#radical_testimonials h3 {
+#radical_testimonials h3, #radical_testimonials h2 {
   font-family: "Cabin", sans-serif;
   font-weight: bold;
   font-size: 3em;
   text-align: center;
+}
+#radical_testimonials h2 + p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.8em;
+  line-height: 2.2em;
+  text-align: justify;
+  text-align-last: center;
+  margin: 30px 0;
 }
 #radical_testimonials h3 + span {
   color: #999999;
@@ -809,7 +813,11 @@ polygon.arrow-top {
 }
 
 #radical_map {
+  position: relative;
   background-image: url("../images/usMap3.jpg");
+  color: #FFF;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.4em;
 }
 @media screen and (max-width: 767.98px) {
   #radical_map {
@@ -817,113 +825,48 @@ polygon.arrow-top {
   }
 }
 #radical_map .image-overlay {
-  background-color: rgba(34, 40, 49, 0.5);
+  background-color: rgba(34, 40, 49, 0.7);
 }
 #radical_map iframe {
   z-index: 1;
   width: 100%;
+  max-width: 1100px;
   height: 450px;
-}
-#radical_map h2 {
-  font-size: 4em;
-  font-family: "Cabin", sans-serif;
-  margin: 30px 0;
-  color: #FFF;
-}
-@media screen and (max-width: 991.98px) {
-  #radical_map h2 {
-    display: none;
-  }
+  margin: 60px auto;
 }
 #radical_map .container {
   z-index: 5;
 }
-@media screen and (max-width: 991.98px) and (min-width: 767.98px) {
-  #radical_map .container .row:first-child {
-    margin-bottom: 80px;
-  }
-}
-#radical_map .container div:nth-child(2) h2 {
-  margin-left: auto;
-}
-
-.parallaxBg {
-  position: relative;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#radical_footer {
-  background-color: #222831;
-  color: #FFF;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.4em;
-  padding: 50px 0 20px;
-}
-@media screen and (max-width: 767.98px) {
-  #radical_footer {
-    padding-top: 20px;
-  }
-}
-#radical_footer .footer-main {
+#radical_map .footer-main {
   max-width: 1300px;
 }
-#radical_footer .footer-main:last-child {
+#radical_map .footer-main:last-child {
   width: 100%;
   padding: 0 20px;
 }
-#radical_footer h4 {
-  font-size: 1.7em;
+#radical_map h4 {
+  font-size: 2em;
   font-family: "Cabin", sans-serif;
   text-align: center;
+  margin-bottom: 20px;
 }
-#radical_footer img {
+#radical_map img {
   width: 100px;
   height: auto;
 }
-#radical_footer .cool-border {
-  border-color: #2e3192;
-  width: 100%;
-  margin-top: 2px;
-}
-#radical_footer .cool-border:after {
-  width: 33%;
-  border-color: #FFF;
-}
-#radical_footer [class*=footer-]:not(.footer-copyrights) {
+#radical_map [class*=footer-]:not(.footer-copyrights) {
   padding: 0 20px;
 }
-#radical_footer [class*=footer-]:not(.footer-copyrights):first-child h4 {
+#radical_map [class*=footer-]:not(.footer-copyrights):first-child h4 {
   text-align: left;
 }
-#radical_footer [class*=footer-]:not(.footer-copyrights):last-child {
+#radical_map [class*=footer-]:not(.footer-copyrights):last-child {
   text-align: right;
 }
-#radical_footer [class*=footer-]:not(.footer-copyrights):last-child h4 {
+#radical_map [class*=footer-]:not(.footer-copyrights):last-child h4 {
   text-align: right;
-}
-@media screen and (max-width: 767.98px) {
-  #radical_footer [class*=footer-]:not(.footer-copyrights) {
-    padding: 0;
-    text-align: center !important;
-  }
-  #radical_footer [class*=footer-]:not(.footer-copyrights) h4 {
-    display: none;
-  }
-  #radical_footer [class*=footer-]:not(.footer-copyrights) .cool-border {
-    display: none;
-  }
 }
 
-.footer-payments .container {
-  padding-top: 10px;
-}
 .footer-payments .row {
   padding-bottom: 10px;
 }
@@ -938,7 +881,7 @@ polygon.arrow-top {
 .footer-copyrights {
   border-top: 1px solid #FFF;
   text-align: center;
-  padding: 30px 0 10px;
+  padding: 30px 0;
 }
 
 .contact-title, .hours-days, .company-name {
@@ -955,9 +898,5 @@ polygon.arrow-top {
     margin-bottom: 30px;
   }
 }
-
-/*.contact-title:not(:first-child) {
-  margin-top: 10px;
-}*/
 
 /*# sourceMappingURL=master.css.map */

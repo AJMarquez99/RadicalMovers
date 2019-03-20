@@ -46,10 +46,10 @@ function closeAbout() {
 function stickyScroll() {
     var height = $(window).scrollTop();
     if ($(window).width() > 767.98) {
-      if(height > $("#header_info_block").height()) {
-          $("#navigation_tab").addClass('navigation-tab');
+      if(height > 300) {
+          $("#navigation_tab").addClass('nav-scroll-active');
       } else if(height == 0) {
-          $("#navigation_tab").removeClass('navigation-tab');
+          $("#navigation_tab").removeClass('nav-scroll-active');
       }
     }
 }
@@ -206,7 +206,6 @@ $(".mySlides").ready(createGallery);
 //End new Stuff
 
 $("#estimate_form").submit( formValidation );
-$(".arrow").click(slideServices);
 $(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
 $("a").click(scrollToSection);
