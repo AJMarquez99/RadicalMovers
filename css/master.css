@@ -45,7 +45,6 @@ body::-webkit-scrollbar {
 .nav-header .header-logo {
   float: left;
   margin-left: 150px;
-  display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 10px;
@@ -240,6 +239,32 @@ li:hover > .sub-nav-dropdown a:hover {
   padding: 10px 15px !important;
 }
 
+@media screen and (max-width: 991.98px) {
+  .nav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-header .header-logo, .nav-header .header-nav {
+    margin: 0;
+  }
+
+  .header-nav {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .banner-header {
+    max-width: 80%;
+    font-size: 3em;
+  }
+  .banner-header .banner-text-container {
+    max-width: 100%;
+  }
+  .banner-header img {
+    top: 90%;
+  }
+}
 #radical_services {
   text-align: center;
   padding: 60px 0;
@@ -260,7 +285,6 @@ li:hover > .sub-nav-dropdown a:hover {
 .service-content {
   margin-top: 90px;
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -269,6 +293,7 @@ li:hover > .sub-nav-dropdown a:hover {
 .service-flip-card {
   flex: 25%;
   background-color: transparent;
+  min-height: 400px;
 }
 .service-flip-card .service-card-inner {
   width: 100%;
@@ -478,6 +503,30 @@ li:hover > .sub-nav-dropdown a:hover {
   transition: background-color 0.5s, transform 0.5s;
 }
 
+@media screen and (max-width: 991.98px) {
+  .service-flip-card {
+    flex: 50%;
+  }
+
+  .pricing-container .truck-container {
+    padding: 0;
+    justify-content: center;
+  }
+  .pricing-container .person-container {
+    margin-top: 50px;
+  }
+  .pricing-container .person-container .person-container-second {
+    margin: 0 auto !important;
+  }
+
+  .tips-container ul {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  .tips-container ul li {
+    margin-top: 25px;
+  }
+}
 #radical_estimate {
   background-image: url(../images/map_boxes.png);
   padding: 30px 0;
@@ -496,23 +545,6 @@ li:hover > .sub-nav-dropdown a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-}
-@media screen and (max-width: 767.98px) {
-  .radical-estimate .image-container {
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .radical-estimate .image-container {
-    width: 100%;
-    height: auto;
-    max-width: 315px;
-    max-height: 315px;
-  }
-  .radical-estimate .image-container img {
-    width: 100%;
-  }
 }
 .radical-estimate img {
   width: 350px;
@@ -569,32 +601,10 @@ li:hover > .sub-nav-dropdown a:hover {
   transition-delay: 1.5s;
   transition-duration: 1s;
 }
-@media screen and (max-width: 991.98px) {
-  .radical-estimate .image-overlay {
-    opacity: 1;
-  }
-  .radical-estimate .image-overlay .cool-border {
-    opacity: 1;
-  }
-  .radical-estimate .image-overlay span {
-    opacity: 1;
-  }
-}
 
 .form-block {
   padding: 30px 0;
   padding-left: 40px;
-}
-@media screen and (max-width: 991.98px) {
-  .form-block {
-    padding-left: 0;
-    padding-right: 20px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .form-block {
-    padding: 30px 0;
-  }
 }
 
 .input-block {
@@ -646,27 +656,22 @@ li:hover > .sub-nav-dropdown a:hover {
 .input-block .error {
   border: 2px solid red;
 }
+
 @media screen and (max-width: 991.98px) {
-  .input-block {
-    flex-basis: unset;
+  .form-block {
+    padding: 0 10px;
+    max-width: 300px;
+  }
+  .form-block label {
+    margin-top: 10px;
   }
 }
-
 #radical_testimonials {
   padding: 100px 0;
 }
 #radical_testimonials a, #radical_testimonials a:hover {
   color: #000;
   text-decoration: none;
-}
-@media screen and (max-width: 767.98px) {
-  #radical_testimonials a {
-    width: 100%;
-    margin-bottom: 80px;
-  }
-  #radical_testimonials a:last-child {
-    margin-bottom: 0;
-  }
 }
 #radical_testimonials .row {
   justify-content: space-between;
@@ -748,26 +753,18 @@ li:hover > .sub-nav-dropdown a:hover {
   font-size: 2em;
   font-family: "Work Sans", sans-serif;
   color: #323232;
-  text-align: left;
-  padding-right: 30px;
-}
-.testimonial-message-new p {
-  font-style: italic;
-  line-height: 2em;
-}
-.testimonial-message-new span {
-  font-size: 0.8em;
-  font-weight: 600;
-  padding-left: 20px;
-}
-.testimonial-message-new:nth-of-type(odd) {
   text-align: right;
   padding-right: 0;
   padding-left: 30px;
 }
-.testimonial-message-new:nth-of-type(odd) span {
-  padding-left: 0;
+.testimonial-message-new span {
+  font-size: 0.8em;
+  font-weight: 600;
   padding-right: 20px;
+}
+.testimonial-message-new p {
+  font-style: italic;
+  line-height: 2em;
 }
 .testimonial-message-new:not(:last-of-type) {
   padding-bottom: 40px;
@@ -818,11 +815,6 @@ li:hover > .sub-nav-dropdown a:hover {
   color: #FFF;
   font-family: "Work Sans", sans-serif;
   font-size: 1.4em;
-}
-@media screen and (max-width: 767.98px) {
-  #radical_map {
-    padding: 50px 0;
-  }
 }
 #radical_map .image-overlay {
   background-color: rgba(34, 40, 49, 0.7);
@@ -891,12 +883,6 @@ li:hover > .sub-nav-dropdown a:hover {
 
 .company-name {
   margin-top: 0;
-}
-
-@media screen and (max-width: 767.98px) {
-  .contact-content, .hours-hours {
-    margin-bottom: 30px;
-  }
 }
 
 /*# sourceMappingURL=master.css.map */

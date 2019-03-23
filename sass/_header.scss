@@ -39,7 +39,6 @@
   .header-logo {
     float: left;
     margin-left: $header-boundery;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 10px;
@@ -234,6 +233,32 @@
     box-shadow: 0 2px 10px 2px rgb(125, 125, 125);
     a {
       padding: 10px 15px!important;
+    }
+  }
+}
+
+
+@media screen and (max-width: $md-break) {
+  .nav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .header-logo, .header-nav {
+      margin: 0;
+    }
+  }
+  .header-nav {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .banner-header {
+    max-width: 80%;
+    font-size: 3em;
+    .banner-text-container {
+      max-width: 100%;
+    }
+    img {
+      top: 90%;
     }
   }
 }
