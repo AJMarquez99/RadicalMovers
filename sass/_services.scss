@@ -245,7 +245,7 @@
   }
 }
 
-@media screen and (max-width: $md-break) {
+@media screen and (max-width: $lg-break) {
   .service-flip-card {
     flex: 50%;
   }
@@ -266,7 +266,7 @@
       flex-wrap: wrap;
       width: 90%;
       li {
-        margin-top: 25px; 
+        margin-top: 25px;
       }
     }
   }
