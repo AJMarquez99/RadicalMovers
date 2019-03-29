@@ -76,11 +76,28 @@
     .company-line {
       color: #FFF;
       font-size: 1.9em;
+      font-family: $nav-font;
       text-shadow: 1px 0 5px $cool-border-color,
                    0 1px 5px $cool-border-color,
                    -1px 0 5px $cool-border-color,
                    0 -1px 5px $cool-border-color;
       padding-left: 10px;
+    }
+    .company-info {
+      font-size: 1.3em;
+      margin-top: 15px;
+      font-family: $nav-font;
+      a {
+        color: #FFF;
+        text-shadow: 1px 0 5px $cool-border-color,
+                     0 1px 5px $cool-border-color,
+                     -1px 0 5px $cool-border-color,
+                     0 -1px 5px $cool-border-color;
+        margin-right: 10px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
   .header-nav {

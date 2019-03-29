@@ -82,8 +82,22 @@ body::-webkit-scrollbar {
 .nav-header .header-logo .company-line {
   color: #FFF;
   font-size: 1.9em;
+  font-family: "Work Sans", sans-serif;
   text-shadow: 1px 0 5px #282828, 0 1px 5px #282828, -1px 0 5px #282828, 0 -1px 5px #282828;
   padding-left: 10px;
+}
+.nav-header .header-logo .company-info {
+  font-size: 1.3em;
+  margin-top: 15px;
+  font-family: "Work Sans", sans-serif;
+}
+.nav-header .header-logo .company-info a {
+  color: #FFF;
+  text-shadow: 1px 0 5px #282828, 0 1px 5px #282828, -1px 0 5px #282828, 0 -1px 5px #282828;
+  margin-right: 10px;
+}
+.nav-header .header-logo .company-info a:hover {
+  text-decoration: none;
 }
 .nav-header .header-nav {
   float: right;
