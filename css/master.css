@@ -364,112 +364,148 @@ li:hover > .sub-nav-dropdown a:hover {
 }
 
 .pricing-container {
-  padding: 90px 0;
+  padding: 90px 0 0;
+  /*.truck-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 100px;
+  }
+  .truck-pricing {
+    margin-top: 30px;
+    position: relative;
+    font-size: 2em;
+    font-family: $nav-font;
+    flex-basis: min-content;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    border: 7px solid $secondary-color;
+    padding: 40px;
+    i {
+      font-size: 3em;
+      color: $primary-color;
+    }
+    &:first-of-type {
+      margin-right: 30px;
+      top: -30px;
+    }
+    &:nth-of-type(2) {
+      top: 30px;
+      i:nth-of-type(2) {
+        position: relative;
+        top: 10px;
+      }
+    }
+    p {
+      &:first-of-type {
+        margin-top: 10px;
+      }
+      &:last-of-type {
+        margin-bottom: 10px;
+      }
+    }
+    &:hover {
+      background-color: $primary-color;
+      i, p {
+        color: #FFF;
+      }
+    }
+    &, &:hover {
+      transition: background-color 0.5s;
+      i, p {
+        transition: color 0.5s;
+      }
+    }
+  }
+  .person-container {
+    .person-container-second {
+      position: relative;
+      display: flex;
+      height: 300px;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 200px;
+      span {
+        position: relative;
+        color: darken($header-color, 10%);
+        font-size: 2em;
+        font-family: $nav-font;
+        top: 315px;
+      }
+    }
+  }
+  .person-pricing {
+    position: absolute;
+    font-size: 1.8em;
+    font-family: $nav-font;
+    flex-basis: min-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &:first-of-type {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:nth-of-type(2) {
+      bottom: 0;
+      left: 25%;
+      transform: translateX(-50%);
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+      left: 75%;
+      transform: translateX(-50%);
+    }
+    i {
+      font-size: 2.6em;
+      color: $primary-color;
+    }
+    &:hover {
+      i {
+        color: $secondary-color;
+      }
+    }
+    i, &:hover i {
+      transition: color 0.5s;
+    }
+  }*/
 }
-.pricing-container .truck-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 100px;
-}
-.pricing-container .truck-pricing {
-  margin-top: 30px;
+.pricing-container .pricing-content {
+  padding: 90px 0 0;
+  min-height: 380px;
   position: relative;
-  font-size: 2em;
-  font-family: "Work Sans", sans-serif;
-  flex-basis: min-content;
-  height: min-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 50%;
-  border: 7px solid #d41111;
-  padding: 40px;
 }
-.pricing-container .truck-pricing i {
-  font-size: 3em;
+.pricing-container .pricing-content i {
+  font-size: 6em;
   color: #2e3192;
 }
-.pricing-container .truck-pricing:first-of-type {
-  margin-right: 30px;
-  top: -30px;
-}
-.pricing-container .truck-pricing:nth-of-type(2) {
-  top: 30px;
-}
-.pricing-container .truck-pricing:nth-of-type(2) i:nth-of-type(2) {
+.pricing-container .pricing-content i:nth-of-type(odd) {
   position: relative;
-  top: 10px;
+  top: 0;
 }
-.pricing-container .truck-pricing p:first-of-type {
-  margin-top: 10px;
-}
-.pricing-container .truck-pricing p:last-of-type {
-  margin-bottom: 10px;
-}
-.pricing-container .truck-pricing:hover {
-  background-color: #2e3192;
-}
-.pricing-container .truck-pricing:hover i, .pricing-container .truck-pricing:hover p {
-  color: #FFF;
-}
-.pricing-container .truck-pricing, .pricing-container .truck-pricing:hover {
-  transition: background-color 0.5s;
-}
-.pricing-container .truck-pricing i, .pricing-container .truck-pricing p, .pricing-container .truck-pricing:hover i, .pricing-container .truck-pricing:hover p {
-  transition: color 0.5s;
-}
-.pricing-container .person-container .person-container-second {
+.pricing-container .pricing-content i:nth-of-type(even) {
   position: relative;
-  display: flex;
-  height: 300px;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-right: 200px;
+  top: -75px;
 }
-.pricing-container .person-container .person-container-second span {
-  position: relative;
-  color: #999999;
+.pricing-container .pricing-content i:last-of-type {
+  right: 25px;
+}
+.pricing-container .pricing-content i:first-of-type {
+  left: 25px;
+}
+.pricing-container .pricing-content p {
+  max-width: 1000px;
   font-size: 2em;
   font-family: "Work Sans", sans-serif;
-  top: 315px;
-}
-.pricing-container .person-pricing {
-  position: absolute;
-  font-size: 1.8em;
-  font-family: "Work Sans", sans-serif;
-  flex-basis: min-content;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.pricing-container .person-pricing:first-of-type {
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.pricing-container .person-pricing:nth-of-type(2) {
-  bottom: 0;
-  left: 25%;
-  transform: translateX(-50%);
-}
-.pricing-container .person-pricing:nth-of-type(3) {
-  bottom: 0;
-  left: 75%;
-  transform: translateX(-50%);
-}
-.pricing-container .person-pricing i {
-  font-size: 2.6em;
-  color: #2e3192;
-}
-.pricing-container .person-pricing:hover i {
-  color: #d41111;
-}
-.pricing-container .person-pricing i, .pricing-container .person-pricing:hover i {
-  transition: color 0.5s;
+  margin: 30px auto 0;
+  line-height: 2em;
 }
 
 .tips-container {

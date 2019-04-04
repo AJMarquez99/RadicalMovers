@@ -86,8 +86,38 @@
 }
 
 .pricing-container {
-  padding: 90px 0;
-  .truck-container {
+  padding: 90px 0 0;
+  .pricing-content {
+    padding: 90px 0 0;
+    min-height: 380px;
+    position: relative;
+    i {
+      font-size: 6em;
+      color: $primary-color;
+      &:nth-of-type(odd) {
+        position: relative;
+        top: 0;
+      }
+      &:nth-of-type(even) {
+        position: relative;
+        top: -75px;
+      }
+      &:last-of-type {
+        right: 25px;
+      }
+      &:first-of-type {
+        left: 25px;
+      }
+    }
+    p {
+      max-width: 1000px;
+      font-size: 2em;
+      font-family: $nav-font;
+      margin: 30px auto 0;
+      line-height: 2em;
+    }
+  }
+  /*.truck-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -197,7 +227,7 @@
     i, &:hover i {
       transition: color 0.5s;
     }
-  }
+  }*/
 }
 
 .tips-container {
