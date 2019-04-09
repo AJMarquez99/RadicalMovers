@@ -88,7 +88,7 @@
   color: rgb(50,50,50);
   text-align: right;
   padding-right: 0;
-  padding-left: 30px;
+  padding-left: 0px;
   span {
     font-size: 0.8em;
     font-weight: 600;
@@ -138,6 +138,37 @@
     }
     &[class$="facebook-f"] {
       background-color: #3b5998;
+    }
+  }
+}
+
+@media screen and (max-width: $sm-break) {
+  .gallery-container {
+    margin-bottom: 80px;
+    .active {
+      img {
+        max-width: 100%!important;
+        height: auto!important;
+        max-height: 100%!important;
+      }
+    }
+  }
+  .testimonial-message-new {
+    text-align: center!important;
+    span {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $xs-break) {
+  #radical_testimonials {
+    h3, h2 {
+      font-size: 2.8em;
+    }
+    h2 + p {
+      font-size: 1.6em;
+      line-height: 2em;
     }
   }
 }

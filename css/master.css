@@ -23,6 +23,11 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  :root {
+    font-size: 8px !important;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -278,6 +283,21 @@ li:hover > .sub-nav-dropdown a:hover {
     top: 90%;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .nav-header {
+    display: none !important;
+  }
+
+  .banner-header {
+    max-width: 90%;
+  }
+  .banner-header .banner-text-container {
+    padding: 20px 15px;
+  }
+  .banner-header .banner-text-container img {
+    top: 92%;
+  }
+}
 #radical_services {
   text-align: center;
   padding: 60px 0;
@@ -356,15 +376,15 @@ li:hover > .sub-nav-dropdown a:hover {
   margin-bottom: 20px;
 }
 .service-flip-card .service-card-back p {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-family: "Cabin", sans-serif;
   text-align: justify;
   text-align-last: center;
-  line-height: 2.3em;
+  line-height: 2em;
 }
 
 .pricing-container {
-  padding: 90px 0 0;
+  padding: 90px 20px 0;
   /*.truck-container {
     display: flex;
     flex-direction: row;
@@ -478,7 +498,7 @@ li:hover > .sub-nav-dropdown a:hover {
   }*/
 }
 .pricing-container .pricing-content {
-  padding: 90px 0 0;
+  padding: 90px 0px 0;
   min-height: 380px;
   position: relative;
 }
@@ -574,6 +594,24 @@ li:hover > .sub-nav-dropdown a:hover {
   }
   .tips-container ul li {
     margin-top: 25px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .service-flip-card {
+    flex: 100%;
+  }
+
+  .service-card-back p {
+    font-size: 1.7em !important;
+    line-height: 2.1em !important;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .tips-container li {
+    height: 275px;
+    width: 275px;
+    max-height: 275px;
+    max-width: 275px;
   }
 }
 #radical_estimate {
@@ -710,9 +748,19 @@ li:hover > .sub-nav-dropdown a:hover {
   .form-block {
     padding: 0 10px;
     max-width: 300px;
+    margin: 0 auto;
   }
   .form-block label {
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .radical-estimate .image-container {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .radical-estimate img {
+    width: 250px !important;
   }
 }
 #radical_testimonials {
@@ -804,7 +852,7 @@ li:hover > .sub-nav-dropdown a:hover {
   color: #323232;
   text-align: right;
   padding-right: 0;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 .testimonial-message-new span {
   font-size: 0.8em;
@@ -858,6 +906,32 @@ li:hover > .sub-nav-dropdown a:hover {
   background-color: #3b5998;
 }
 
+@media screen and (max-width: 767.98px) {
+  .gallery-container {
+    margin-bottom: 80px;
+  }
+  .gallery-container .active img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+  }
+
+  .testimonial-message-new {
+    text-align: center !important;
+  }
+  .testimonial-message-new span {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  #radical_testimonials h3, #radical_testimonials h2 {
+    font-size: 2.8em;
+  }
+  #radical_testimonials h2 + p {
+    font-size: 1.6em;
+    line-height: 2em;
+  }
+}
 #radical_map {
   position: relative;
   background-image: url("../images/usMap3.jpg");
@@ -932,6 +1006,19 @@ li:hover > .sub-nav-dropdown a:hover {
 
 .company-name {
   margin-top: 0;
+}
+
+@media screen and (max-width: 767.98px) {
+  #radical_map h4 {
+    text-align: center !important;
+    font-size: 2.5em;
+  }
+  #radical_map [class*=footer-]:not(.footer-copyrights) {
+    text-align: center !important;
+  }
+  #radical_map [class*=footer-]:not(.footer-copyrights):last-child {
+    padding-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=master.css.map */

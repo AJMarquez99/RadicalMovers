@@ -279,3 +279,22 @@
     }
   }
 }
+
+@media screen and (max-width: $sm-break) {
+  .nav-header {
+    display: none!important;
+  }
+  .banner-header {
+    //font-size: 2.5em;
+    max-width: 90%;
+    .banner-text-container {
+      padding: 20px 15px;
+      img {
+        top: 92%;
+      }
+    }
+    .banner-sub-text {
+      //font-size: 0.6em;
+    }
+  }
+}

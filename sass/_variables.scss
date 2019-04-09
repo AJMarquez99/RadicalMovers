@@ -48,3 +48,9 @@ $xs-break: 575.98px;
 $sm-break: 767.98px;
 $md-break: 991.98px;
 $lg-break: 1199.98px;
+
+@media screen and (max-width: $sm-break) {
+  :root {
+    font-size: 8px!important;
+  }
+}

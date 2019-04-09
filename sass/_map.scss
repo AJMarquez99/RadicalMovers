@@ -79,3 +79,18 @@
 .company-name {
   margin-top: 0;
 }
+
+@media screen and (max-width: $sm-break) {
+  #radical_map {
+    h4 {
+      text-align: center!important;
+      font-size: 2.5em;
+    }
+    [class*="footer-"]:not(.footer-copyrights) {
+      text-align: center!important;
+      &:last-child {
+        padding-top: 20px;
+      }
+    }
+  }
+}

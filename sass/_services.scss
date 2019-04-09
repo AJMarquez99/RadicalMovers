@@ -76,19 +76,19 @@
       margin-bottom: 20px;
     }
     p {
-      font-size: 1.5em;
+      font-size: 1.6em;
       font-family: $heading-font;
       text-align: justify;
       text-align-last: center;
-      line-height: 2.3em;
+      line-height: 2em;
     }
   }
 }
 
 .pricing-container {
-  padding: 90px 0 0;
+  padding: 90px 20px 0;
   .pricing-content {
-    padding: 90px 0 0;
+    padding: 90px 0px 0;
     min-height: 380px;
     position: relative;
     i {
@@ -298,6 +298,28 @@
       li {
         margin-top: 25px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $sm-break) {
+  .service-flip-card {
+    flex: 100%;
+  }
+  .service-card-back p {
+    font-size: 1.7em!important;
+    line-height: 2.1em!important;
+  }
+}
+
+@media screen and (max-width: $xs-break) {
+  .tips-container {
+    $circle-dimension: 275px;
+    li {
+      height: $circle-dimension;
+      width: $circle-dimension;
+      max-height: $circle-dimension;
+      max-width: $circle-dimension;
     }
   }
 }

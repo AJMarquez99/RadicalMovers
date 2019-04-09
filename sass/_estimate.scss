@@ -136,12 +136,25 @@
 }
 
 @media screen and (max-width: $md-break) {
-  $image-size: 250px;
   .form-block {
     padding: 0 10px;
     max-width: 300px;
+    margin: 0 auto;
     label {
       margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $sm-break) {
+  $image-size: 250px;
+  .radical-estimate {
+    .image-container {
+      width: $image-size!important;
+      height: $image-size!important;
+    }
+    img {
+      width: $image-size!important;
     }
   }
 }
