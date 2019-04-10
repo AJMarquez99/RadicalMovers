@@ -254,6 +254,10 @@
   }
 }
 
+#mobile-nav {
+  display: none;
+}
+
 
 @media screen and (max-width: $lg-break) {
   .nav-header {
@@ -287,6 +291,9 @@
   .banner-header {
     //font-size: 2.5em;
     max-width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .banner-text-container {
       padding: 20px 15px;
       img {
@@ -296,5 +303,78 @@
     .banner-sub-text {
       //font-size: 0.6em;
     }
+  }
+  #mobile_nav {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0px 0px 5px 2px rgb(75,75,75);
+    [class|="mobile"] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .mobile {
+    &-logo {
+      float: left;
+      width: 50px;
+      height: 50px;
+      background-color: $primary-color;
+      img {
+        width: 80%;
+        object-fit: contain;
+        border-radius: 50%;
+        background-color: $primary-color;
+        border: 1px solid #FFF;
+      }
+    }
+    &-banner {
+      width: auto;
+      height: 50px;
+      span {
+        font-style: $heading-font;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1em;
+        &::before {
+          content: "Radical";
+          color: $secondary-color;
+        }
+        &::after {
+          content: "Movers";
+          color: $primary-color;
+        }
+      }
+    }
+    &-links {
+      float: right;
+      width: 50px;
+      height: 50px;
+      background-color: $secondary-color;
+      button {
+        background: none;
+        border: none;
+      }
+      i {
+        color: white;
+        font-size: 3.5em;
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+  .radical-intro {
+    min-height: 500px;
+    max-height: 850px;
+    height: max-content;
   }
 }

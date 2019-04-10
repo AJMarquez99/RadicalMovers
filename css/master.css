@@ -257,6 +257,10 @@ li:hover > .sub-nav-dropdown a:hover {
   padding: 10px 15px !important;
 }
 
+#mobile-nav {
+  display: none;
+}
+
 @media screen and (max-width: 1199.98px) {
   .nav-header {
     display: flex;
@@ -290,12 +294,88 @@ li:hover > .sub-nav-dropdown a:hover {
 
   .banner-header {
     max-width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .banner-header .banner-text-container {
     padding: 20px 15px;
   }
   .banner-header .banner-text-container img {
     top: 92%;
+  }
+  #mobile_nav {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0px 0px 5px 2px #4b4b4b;
+  }
+  #mobile_nav [class|=mobile] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #2e3192;
+  }
+  .mobile-logo img {
+    width: 80%;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #2e3192;
+    border: 1px solid #FFF;
+  }
+  .mobile-banner {
+    width: auto;
+    height: 50px;
+  }
+  .mobile-banner span {
+    font-style: "Cabin", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .mobile-banner span::before {
+    content: "Radical";
+    color: #d41111;
+  }
+  .mobile-banner span::after {
+    content: "Movers";
+    color: #2e3192;
+  }
+  .mobile-links {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-color: #d41111;
+  }
+  .mobile-links button {
+    background: none;
+    border: none;
+  }
+  .mobile-links i {
+    color: white;
+    font-size: 3.5em;
+  }
+  .mobile-links ul {
+    display: none;
+  }
+
+  .radical-intro {
+    min-height: 500px;
+    max-height: 850px;
+    height: max-content;
   }
 }
 #radical_services {
