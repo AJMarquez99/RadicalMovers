@@ -174,7 +174,7 @@ li:hover > .sub-nav-dropdown a:hover {
   position: relative;
   height: 1000px;
   max-height: 100%;
-  background-image: url(../images/test-background.jpg);
+  background-image: url(../images/background-new.jpeg);
   opacity: 1;
   z-index: 0;
 }
@@ -257,7 +257,7 @@ li:hover > .sub-nav-dropdown a:hover {
   padding: 10px 15px !important;
 }
 
-#mobile-nav {
+#mobile_nav {
   display: none;
 }
 
@@ -311,7 +311,8 @@ li:hover > .sub-nav-dropdown a:hover {
     max-width: 100%;
     position: fixed;
     top: 0;
-    background-color: #FFF;
+    background-color: #2e3192;
+    opacity: 0.95;
     justify-content: space-between;
     align-items: center;
     z-index: 5;
@@ -352,7 +353,7 @@ li:hover > .sub-nav-dropdown a:hover {
   }
   .mobile-banner span::after {
     content: "Movers";
-    color: #2e3192;
+    color: #FFF;
   }
   .mobile-links {
     float: right;
@@ -374,10 +375,44 @@ li:hover > .sub-nav-dropdown a:hover {
 
   .radical-intro {
     min-height: 500px;
-    max-height: 850px;
-    height: max-content;
+    max-height: 900px;
+    height: 650px;
   }
 }
+.active-mobile-links {
+  position: absolute;
+  display: flex !important;
+  background-color: #FFF;
+  top: 50px;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-style: "Work Sans", sans-serif;
+}
+.active-mobile-links li {
+  font-size: 2em;
+  width: 100%;
+  border-bottom: 1px solid #afafaf;
+}
+.active-mobile-links li a {
+  color: #000;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-mobile-links li:hover > .sub-nav-dropdown a:hover {
+  text-decoration: none;
+}
+.active-mobile-links li:hover > .sub-nav-dropdown:first-of-type {
+  border-top: 1px solid #afafaf;
+}
+
 #radical_services {
   text-align: center;
   padding: 60px 0;

@@ -204,10 +204,46 @@ function showSlides(n) {
 
 $(".mySlides").ready(createGallery);
 //End new Stuff
+let navOpen = false;
+const MOBILENAV = $("#mobile_nav").find("ul")[0];
+let navDelay = 100;
 
-$("#estimate_form").submit( formValidation );
+function openMobileNav() {
+	MOBILENAV.classList.add("active-mobile-links");
+	setTimeout(function() {
+		navOpen = true;
+	}, navDelay)
+}
+
+function closeMobileNav() {
+	MOBILENAV.classList.remove("active-mobile-links");
+	setTimeout(function() {
+		navOpen = false;
+	}, navDelay)
+}
+
+function buttonActive() {
+	if ( navOpen == false ) {
+		openMobileNav();
+	} else if ( navOpen == true ) {
+		closeMobileNav();
+	}
+}
+
+/*function closeNavClick() {
+		let mobileLinks = $("#mobile_nav").find("a");
+		for (let link of mobileLinks) {
+			console.log(link);
+			link.click(closeMobileNav);
+		}
+		debugger;
+}*/
+
+$("#mobile_nav_button").click(buttonActive);
+$("#estimate_form").submit(formValidation);
 $(window).one("load",stickyScroll);
 $(window).scroll(stickyScroll);
 $("a").click(scrollToSection);
 $("[href='#radical_about']").click(openAbout);
 $("#more-arrows").click(closeAbout);
+//$(window).one("load", closeNavClick);
