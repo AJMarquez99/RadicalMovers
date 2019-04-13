@@ -485,9 +485,6 @@ li:hover > .sub-nav-dropdown a:hover {
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.service-flip-card:hover .service-card-front h3 {
-  display: none;
-}
 .service-flip-card .service-card-back {
   transform: rotateY(180deg);
   background-color: #FFF;

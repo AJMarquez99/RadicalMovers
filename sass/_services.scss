@@ -67,9 +67,6 @@
       background-color: rgba(255, 255, 255, 0.5);
     }
   }
-  &:hover .service-card-front h3 {
-    display: none;
-  }
   .service-card-back {
     transform: rotateY(180deg);
     background-color: #FFF;
