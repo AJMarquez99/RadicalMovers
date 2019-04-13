@@ -9,7 +9,7 @@
       $email = secure_input($_POST["email"]);
       $phone_number = secure_input($_POST["phone_number"]);
       $message = secure_input($_POST["message"]);
-      $subject = "Estimate - " .$subject;
+      $subject = "Estimate - " .secure_input($_POST["name"]);
 
       $mailBody = "Name: $name \n Phone Number: $phone_number \n \n $message";
 
