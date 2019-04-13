@@ -463,6 +463,7 @@ li:hover > .sub-nav-dropdown a:hover {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .service-flip-card .service-card-front {
   background-color: #000;
