@@ -39,10 +39,6 @@
   &:hover .service-card-inner {
     transform: rotateY(180deg);
   }
-  &:hover .service-card-inner, .service-card-inner {
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
-  }
   .service-card-front, .service-card-back {
     position: absolute;
     width: 100%;
