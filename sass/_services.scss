@@ -38,9 +38,6 @@
   }
   &:hover .service-card-inner, &:active .service-card-inner {
     transform: rotateY(180deg);
-    .service-card-front h3 {
-      display: hidden;
-    }
   }
   .service-card-front, .service-card-back {
     position: absolute;
@@ -69,6 +66,9 @@
       padding: 10px 20px;
       background-color: rgba(255, 255, 255, 0.5);
     }
+  }
+  &:hover .service-card-front h3 {
+    display: none;
   }
   .service-card-back {
     transform: rotateY(180deg);

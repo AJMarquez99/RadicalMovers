@@ -458,9 +458,6 @@ li:hover > .sub-nav-dropdown a:hover {
 .service-flip-card:hover .service-card-inner, .service-flip-card:active .service-card-inner {
   transform: rotateY(180deg);
 }
-.service-flip-card:hover .service-card-inner .service-card-front h3, .service-flip-card:active .service-card-inner .service-card-front h3 {
-  display: hidden;
-}
 .service-flip-card .service-card-front, .service-flip-card .service-card-back {
   position: absolute;
   width: 100%;
@@ -488,6 +485,9 @@ li:hover > .sub-nav-dropdown a:hover {
   text-shadow: 1px 0 5px #282828, 2px 0 5px #282828, 0 1px 5px #282828, 0 2px 5px #282828, -1px 0 5px #282828, -2px 0 5px #282828, 0 -1px 5px #282828, 0 -2px 5px #282828;
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.service-flip-card:hover .service-card-front h3 {
+  display: none;
 }
 .service-flip-card .service-card-back {
   transform: rotateY(180deg);
