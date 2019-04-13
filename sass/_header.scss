@@ -130,6 +130,9 @@
         transition: all 0.5s;
       }
     }
+    .sub-nav-dropdown:hover + a {
+      background-color: #FFF;
+    }
   }
   li .sub-nav-dropdown {
     display: none;

@@ -140,6 +140,9 @@ body::-webkit-scrollbar {
 .nav-header .header-nav a, .nav-header .header-nav a:hover {
   transition: all 0.5s;
 }
+.nav-header .header-nav .sub-nav-dropdown:hover + a {
+  background-color: #FFF;
+}
 .nav-header li .sub-nav-dropdown {
   display: none;
 }
