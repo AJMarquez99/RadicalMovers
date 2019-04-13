@@ -1,6 +1,6 @@
 #radical_testimonials {
   padding: 100px 0;
-  a, a:hover, a {
+  a, a:hover {
     color: $text-color;
     text-decoration: none;
   }
@@ -70,7 +70,7 @@
     height: 100%;
     width: 80px;
     border-radius: 5px;
-    &:hover, & {
+    &:hover {
       background-color: rgba(0, 0, 0, 0.2);
       opacity: 1;
     }
@@ -113,7 +113,7 @@
   a {
     width: auto;
     margin: 0 20px;
-    &:hover i, & i {
+    &:hover i {
       box-shadow: 0px 0px 7px 0px rgb(150, 150, 150);
       transform: translateY(5px);
       transition: box-shadow 0.5s, transform 0.5s;
