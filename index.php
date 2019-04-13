@@ -14,6 +14,8 @@
       $mailBody = "Name: $name \n Phone Number: $phone_number \n \n $message";
 
       mail($recipient, $subject, $mailBody, "From: $name <$email>");
+
+      echo "<p>Hi</p>"
     }
   }
 
