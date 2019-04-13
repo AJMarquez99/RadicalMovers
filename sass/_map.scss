@@ -52,7 +52,7 @@
     a {
       color: inherit;
       text-decoration: none;
-      &:hover, &:active {
+      &:hover, & {
         text-decoration: underline;
       }
     }

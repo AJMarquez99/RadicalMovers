@@ -455,7 +455,7 @@ li:hover > .sub-nav-dropdown a:hover {
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.service-flip-card:hover .service-card-inner, .service-flip-card:active .service-card-inner {
+.service-flip-card:hover .service-card-inner, .service-flip-card .service-card-inner {
   transform: rotateY(180deg);
 }
 .service-flip-card .service-card-front, .service-flip-card .service-card-back {
@@ -688,12 +688,13 @@ li:hover > .sub-nav-dropdown a:hover {
     top: 30px;
   }*/
 }
-.tips-container li:hover, .tips-container li:active {
+.tips-container li:hover, .tips-container li {
   transform: scale(1.1);
   background-color: #2e3192;
 }
-.tips-container li, .tips-container li:hover, .tips-container li:active {
+.tips-container li, .tips-container li:hover, .tips-container li {
   transition: background-color 0.5s, transform 0.5s;
+  -webkit-transition: background-color 0.5s, transform 0.5s;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -791,16 +792,16 @@ li:hover > .sub-nav-dropdown a:hover {
   opacity: 0;
   color: #d41111;
 }
-.radical-estimate:hover .image-overlay, .radical-estimate:active .image-overlay {
+.radical-estimate:hover .image-overlay, .radical-estimate .image-overlay {
   opacity: 1;
 }
-.radical-estimate:hover .image-overlay .cool-border, .radical-estimate:active .image-overlay .cool-border {
+.radical-estimate:hover .image-overlay .cool-border, .radical-estimate .image-overlay .cool-border {
   opacity: 1;
 }
-.radical-estimate:hover .image-overlay span, .radical-estimate:active .image-overlay span {
+.radical-estimate:hover .image-overlay span, .radical-estimate .image-overlay span {
   opacity: 1;
 }
-.radical-estimate:hover .image-overlay, .radical-estimate:hover .image-overlay .cool-border, .radical-estimate:hover .image-overlay span, .radical-estimate:active .image-overlay, .radical-estimate:active .image-overlay .cool-border, .radical-estimate:active .image-overlay span,
+.radical-estimate:hover .image-overlay, .radical-estimate:hover .image-overlay .cool-border, .radical-estimate:hover .image-overlay span, .radical-estimate .image-overlay, .radical-estimate .image-overlay .cool-border, .radical-estimate .image-overlay span,
 .radical-estimate .image-overlay,
 .radical-estimate .cool-border,
 .radical-estimate span {
@@ -858,10 +859,10 @@ li:hover > .sub-nav-dropdown a:hover {
   box-shadow: 0px 2px 4px #4e4e4e;
   cursor: pointer;
 }
-.input-block input[type=submit]:hover, .input-block input[type=submit]:active {
+.input-block input[type=submit]:hover, .input-block input[type=submit] {
   transform: scale(1.05);
 }
-.input-block input[type=submit], .input-block input[type=submit]:hover, .input-block input[type=submit]:active {
+.input-block input[type=submit], .input-block input[type=submit]:hover, .input-block input[type=submit] {
   transition: all 0.25s;
 }
 .input-block .error {
@@ -890,7 +891,7 @@ li:hover > .sub-nav-dropdown a:hover {
 #radical_testimonials {
   padding: 100px 0;
 }
-#radical_testimonials a, #radical_testimonials a:hover, #radical_testimonials a:active {
+#radical_testimonials a, #radical_testimonials a:hover, #radical_testimonials a {
   color: #000;
   text-decoration: none;
 }
@@ -960,7 +961,7 @@ li:hover > .sub-nav-dropdown a:hover {
   width: 80px;
   border-radius: 5px;
 }
-.gallery-container button:hover, .gallery-container button:active {
+.gallery-container button:hover, .gallery-container button {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
@@ -1003,7 +1004,7 @@ li:hover > .sub-nav-dropdown a:hover {
   width: auto;
   margin: 0 20px;
 }
-.testimonial-links a:hover i, .testimonial-links a:active i {
+.testimonial-links a:hover i, .testimonial-links a i {
   box-shadow: 0px 0px 7px 0px #969696;
   transform: translateY(5px);
   transition: box-shadow 0.5s, transform 0.5s;
@@ -1109,7 +1110,7 @@ li:hover > .sub-nav-dropdown a:hover {
   color: inherit;
   text-decoration: none;
 }
-#radical_map .footer-contact a:hover, #radical_map .footer-contact a:active {
+#radical_map .footer-contact a:hover, #radical_map .footer-contact a {
   text-decoration: underline;
 }
 

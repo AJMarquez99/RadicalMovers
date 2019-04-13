@@ -53,7 +53,7 @@
       color: $secondary-color;
     }
   }
-  &:hover, &:active {
+  &:hover, & {
     .image-overlay {
       opacity: 1;
       & .cool-border {
@@ -67,9 +67,9 @@
   &:hover .image-overlay,
   &:hover .image-overlay .cool-border,
   &:hover .image-overlay span,
-  &:active .image-overlay,
-  &:active .image-overlay .cool-border,
-  &:active .image-overlay span,
+  & .image-overlay,
+  & .image-overlay .cool-border,
+  & .image-overlay span,
   .image-overlay,
   .cool-border,
   span {
@@ -126,10 +126,10 @@
     background-color: $secondary-color;
     box-shadow: 0px 2px 4px lighten($cool-border-color, 15%);
     cursor: pointer;
-    &:hover, &:active {
+    &:hover, & {
       transform: scale(1.05);
     }
-    &, &:hover, &:active {
+    &, &:hover, & {
       transition: all 0.25s;
     }
   }
