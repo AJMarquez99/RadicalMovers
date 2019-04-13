@@ -317,10 +317,9 @@ li:hover > .sub-nav-dropdown a:hover {
     position: fixed;
     top: 0;
     background-color: #2e3192;
-    opacity: 0.95;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    z-index: 25;
     box-shadow: 0px 0px 5px 2px #4b4b4b;
   }
   #mobile_nav [class|=mobile] {
