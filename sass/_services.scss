@@ -36,7 +36,7 @@
     transition: transform 1s;
     transform-style: preserve-3d;
   }
-  &:hover .service-card-inner {
+  &:hover .service-card-inner, &:active .service-card-inner {
     transform: rotateY(180deg);
   }
   .service-card-front, .service-card-back {
@@ -265,11 +265,11 @@
     &:nth-of-type(even) {
       top: 30px;
     }*/
-    &:hover {
+    &:hover, &:active {
       transform: scale(1.1);
       background-color: $primary-color;
     }
-    &, &:hover {
+    &, &:hover, &:active {
       transition: background-color 0.5s, transform 0.5s;
     }
   }

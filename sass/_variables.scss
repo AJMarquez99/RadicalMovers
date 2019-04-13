@@ -10,16 +10,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.parallaxBgTwo {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media screen and (max-width: $md-break) {
-
-  }
-}
-
 .image-overlay {
   position: absolute;
   height: 100%;
@@ -55,5 +45,15 @@ $lg-break: 1199.98px;
 @media screen and (max-width: $sm-break) {
   :root {
     font-size: 8px!important;
+  }
+}
+
+.parallaxBgTwo {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: $md-break) {
+    background-attachment: local;
   }
 }

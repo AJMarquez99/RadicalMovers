@@ -52,7 +52,7 @@
     a {
       color: inherit;
       text-decoration: none;
-      &:hover {
+      &:hover, &:active {
         text-decoration: underline;
       }
     }
@@ -80,13 +80,26 @@
   }
 }
 
-.contact-title, .hours-days, .company-name {
+.contact-title, .hours-days {
   font-size: 1.15em;
   margin-top: 10px;
+  @media screen and (max-width: $md-break) {
+    font-size: 1.6em;
+  }
 }
 
 .company-name {
   margin-top: 0;
+}
+
+
+@media screen and (max-width: $md-break) {
+  .contact-content, .footer-hours p {
+    font-size: 1.3em;
+  }
+  #radical_map h4:first-of-type {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: $sm-break) {
