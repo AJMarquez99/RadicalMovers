@@ -457,6 +457,10 @@ li:hover > .sub-nav-dropdown a:hover {
 .service-flip-card:hover .service-card-inner {
   transform: rotateY(180deg);
 }
+.service-flip-card:hover .service-card-inner, .service-flip-card .service-card-inner {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+}
 .service-flip-card .service-card-front, .service-flip-card .service-card-back {
   position: absolute;
   width: 100%;
@@ -693,6 +697,7 @@ li:hover > .sub-nav-dropdown a:hover {
 }
 .tips-container li, .tips-container li:hover {
   transition: background-color 0.5s, transform 0.5s;
+  -webkit-transition: background-color 0.5s, transform 0.5s;
 }
 
 @media screen and (max-width: 1199.98px) {
