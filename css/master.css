@@ -458,6 +458,9 @@ li:hover > .sub-nav-dropdown a:hover {
 .service-flip-card:hover .service-card-inner, .service-flip-card:active .service-card-inner {
   transform: rotateY(180deg);
 }
+.service-flip-card:hover .service-card-inner .service-card-front h3, .service-flip-card:active .service-card-inner .service-card-front h3 {
+  display: hidden;
+}
 .service-flip-card .service-card-front, .service-flip-card .service-card-back {
   position: absolute;
   width: 100%;

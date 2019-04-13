@@ -38,6 +38,9 @@
   }
   &:hover .service-card-inner, &:active .service-card-inner {
     transform: rotateY(180deg);
+    .service-card-front h3 {
+      display: hidden;
+    }
   }
   .service-card-front, .service-card-back {
     position: absolute;
