@@ -2,7 +2,7 @@
 
   $subject = $name = $email = $message = "";
 
-  /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ( isset($_POST['name'], $_POST['email'], $_POST['phone_number'], $_POST['message']) ) {
       $recipient = "alejandromarquez7711@gmail.com";
       $name = secure_input($_POST["name"]);
@@ -15,7 +15,7 @@
 
       mail($recipient, $subject, $mailBody, "From: $name <$email>");
     }
-  }*/
+  }
 
   function secure_input($data) {
      $data = trim($data);
