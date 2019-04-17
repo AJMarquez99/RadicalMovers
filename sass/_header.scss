@@ -345,6 +345,9 @@
           text-decoration: none;
         }
       }
+      h1 {
+        margin-bottom: 0;
+      }
       span {
         font-style: $heading-font;
         text-transform: uppercase;
