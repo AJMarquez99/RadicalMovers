@@ -164,14 +164,11 @@ li:hover > .sub-nav-dropdown li {
 li:hover > .sub-nav-dropdown li:last-of-type {
   margin-top: 0;
 }
-li:hover > .sub-nav-dropdown li:last-of-type a {
-  padding-bottom: 10px;
-}
 li:hover > .sub-nav-dropdown a {
   text-shadow: none;
   color: #000;
   font-weight: 600;
-  padding: 10px 15px 0;
+  padding: 10px 15px;
 }
 li:hover > .sub-nav-dropdown a:hover {
   box-shadow: none;
