@@ -164,7 +164,7 @@
       padding: 10px 15px 0;
       &:hover {
         box-shadow: none;
-        background-color: unset;
+        background-color: darken(#FFF, 15%);
       }
     }
   }
