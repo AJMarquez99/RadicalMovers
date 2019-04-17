@@ -345,6 +345,12 @@ li:hover > .sub-nav-dropdown a:hover {
     width: auto;
     height: 50px;
   }
+  .mobile-banner a {
+    text-decoration: none;
+  }
+  .mobile-banner a:hover, .mobile-banner a:active {
+    text-decoration: none;
+  }
   .mobile-banner span {
     font-style: "Cabin", sans-serif;
     text-transform: uppercase;

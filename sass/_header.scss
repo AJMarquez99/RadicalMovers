@@ -339,6 +339,12 @@
     &-banner {
       width: auto;
       height: 50px;
+      a {
+        text-decoration: none;
+        &:hover, &:active {
+          text-decoration: none;
+        }
+      }
       span {
         font-style: $heading-font;
         text-transform: uppercase;
