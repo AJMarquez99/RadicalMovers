@@ -26,7 +26,7 @@
 
   include ('components/_header.html');
   include ('components/_services.html');
-  include ('components/_estimate.html');
+  include ('components/_estimate.php');
   include ('components/_testimonials.html');
   include ('components/_map.html');
   include ('components/_footer.html');
