@@ -1,6 +1,6 @@
 <?php
 
-  $subject = $name = $email = $message = "";
+  /*$subject = $name = $email = $message = "";
 
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ( isset($_POST['name'], $_POST['email'], $_POST['phone_number'], $_POST['message']) ) {
@@ -15,7 +15,7 @@
 
       mail($recipient, $subject, $mailBody, "From: $name <$email>");
     }
-  }
+  }*/
 
   function secure_input($data) {
      $data = trim($data);
@@ -25,8 +25,8 @@
   }
 
   include ('components/_header.html');
-  include ('components/_services.html');
   include ('components/_estimate.php');
+  include ('components/_services.html');
   include ('components/_testimonials.html');
   include ('components/_map.html');
   include ('components/_footer.html');
