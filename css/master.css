@@ -570,6 +570,36 @@ li:hover > .sub-nav-dropdown a:hover {
 
 .pricing-container {
   padding: 90px 20px 0;
+  /*.pricing-content {
+    padding: 90px 0px 0;
+    min-height: 380px;
+    position: relative;
+    i {
+      font-size: 6em;
+      color: $primary-color;
+      &:nth-of-type(odd) {
+        position: relative;
+        top: 0;
+      }
+      &:nth-of-type(even) {
+        position: relative;
+        top: -75px;
+      }
+      &:last-of-type {
+        right: 25px;
+      }
+      &:first-of-type {
+        left: 25px;
+      }
+    }
+    p {
+      max-width: 1000px;
+      font-size: 2em;
+      font-family: $nav-font;
+      margin: 30px auto 0;
+      line-height: 2em;
+    }
+  }
   /*.truck-container {
     display: flex;
     flex-direction: row;
@@ -682,35 +712,20 @@ li:hover > .sub-nav-dropdown a:hover {
     }
   }*/
 }
-.pricing-container .pricing-content {
-  padding: 90px 0px 0;
-  min-height: 380px;
-  position: relative;
+.pricing-container .row {
+  justify-content: space-around;
 }
-.pricing-container .pricing-content i {
-  font-size: 6em;
-  color: #2e3192;
+
+.pricing-box {
+  padding: 50px;
+  width: 45%;
 }
-.pricing-container .pricing-content i:nth-of-type(odd) {
-  position: relative;
-  top: 0;
+.pricing-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #969696;
 }
-.pricing-container .pricing-content i:nth-of-type(even) {
-  position: relative;
-  top: -75px;
-}
-.pricing-container .pricing-content i:last-of-type {
-  right: 25px;
-}
-.pricing-container .pricing-content i:first-of-type {
-  left: 25px;
-}
-.pricing-container .pricing-content p {
-  max-width: 1000px;
-  font-size: 2em;
-  font-family: "Work Sans", sans-serif;
-  margin: 30px auto 0;
-  line-height: 2em;
+.pricing-box, .pricing-box:hover {
+  transition: all 0.5s;
 }
 
 .tips-container {

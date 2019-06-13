@@ -138,7 +138,7 @@
 
 .pricing-container {
   padding: 90px 20px 0;
-  .pricing-content {
+  /*.pricing-content {
     padding: 90px 0px 0;
     min-height: 380px;
     position: relative;
@@ -279,6 +279,21 @@
       transition: color 0.5s;
     }
   }*/
+  .row {
+    justify-content: space-around;
+  }
+}
+
+.pricing-box {
+  padding: 50px;
+  width: 45%;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 5px rgb(150, 150, 150);
+  }
+  &, &:hover {
+    transition: all 0.5s;
+  }
 }
 
 .tips-container {
