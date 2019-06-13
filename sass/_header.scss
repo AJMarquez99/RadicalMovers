@@ -46,24 +46,31 @@
       display: flex;
       width: $logo-size;
       height: $logo-size;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      padding: 3px;
-      background-color: $primary-color;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        padding: 3px;
+        background-color: $primary-color;
+      }
     }
     .header-logo-content {
       padding-top: 10px;
       padding-left: 20px;
     }
     .company-name {
-      font-style: $heading-font;
+      width: 350px;
+      height: 60px;
+      img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+      }
+      /*font-style: $heading-font;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 4.3em;
-      @include stroke(2px, $primary-color);
+      /@include stroke(2px, $primary-color);
       &::before {
         content: "Radical";
         color: $secondary-color;
@@ -71,7 +78,7 @@
       &::after {
         content: "Movers";
         color: #FFF;
-      }
+      }*/
     }
     .company-line {
       color: #FFF;

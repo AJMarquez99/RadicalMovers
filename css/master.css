@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
   width: 125px;
   height: 125px;
 }
-.nav-header .header-logo img {
+.nav-header .header-logo .header-logo-container img {
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -75,19 +75,26 @@ body::-webkit-scrollbar {
   padding-left: 20px;
 }
 .nav-header .header-logo .company-name {
-  font-style: "Cabin", sans-serif;
+  width: 350px;
+  height: 60px;
+  /*font-style: $heading-font;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 4.3em;
-  text-shadow: -2px -2px 0 #2e3192, -2px -1px 0 #2e3192, -2px 0px 0 #2e3192, -2px 1px 0 #2e3192, -2px 2px 0 #2e3192, -1px -2px 0 #2e3192, -1px -1px 0 #2e3192, -1px 0px 0 #2e3192, -1px 1px 0 #2e3192, -1px 2px 0 #2e3192, 0px -2px 0 #2e3192, 0px -1px 0 #2e3192, 0px 0px 0 #2e3192, 0px 1px 0 #2e3192, 0px 2px 0 #2e3192, 1px -2px 0 #2e3192, 1px -1px 0 #2e3192, 1px 0px 0 #2e3192, 1px 1px 0 #2e3192, 1px 2px 0 #2e3192, 2px -2px 0 #2e3192, 2px -1px 0 #2e3192, 2px 0px 0 #2e3192, 2px 1px 0 #2e3192, 2px 2px 0 #2e3192;
+  /@include stroke(2px, $primary-color);
+  &::before {
+    content: "Radical";
+    color: $secondary-color;
+  }
+  &::after {
+    content: "Movers";
+    color: #FFF;
+  }*/
 }
-.nav-header .header-logo .company-name::before {
-  content: "Radical";
-  color: #d41111;
-}
-.nav-header .header-logo .company-name::after {
-  content: "Movers";
-  color: #FFF;
+.nav-header .header-logo .company-name img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
 }
 .nav-header .header-logo .company-line {
   color: #FFF;
@@ -443,7 +450,7 @@ li:hover > .sub-nav-dropdown a:hover {
   margin-bottom: 25px;
 }
 
-.service-content {
+/*.service-content {
   margin-top: 90px;
   width: 100%;
   display: flex;
@@ -455,64 +462,107 @@ li:hover > .sub-nav-dropdown a:hover {
   flex: 25%;
   background-color: transparent;
   min-height: 400px;
-}
-.service-flip-card .service-card-inner {
+  .service-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  &:hover .service-card-inner {
+    transform: rotateY(180deg);
+  }
+  .service-card-front, .service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .service-card-front {
+    background-color: #000;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h3 {
+      position: absolute;
+      color: #FFF;
+      font-size: 3em;
+      font-weight: normal!important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      text-shadow: $text-contrast;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &:hover .service-card-front h3 {
+    display: none;
+  }
+  .service-card-back {
+    transform: rotateY(180deg);
+    background-color: #FFF;
+    color: rgb(75, 75, 75);
+    padding: 20px 35px;
+    h3 {
+      font-size: 2.5em!important;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.6em;
+      font-family: $heading-font;
+      text-align: justify;
+      text-align-last: center;
+      line-height: 2em;
+    }
+  }
+}*/
+.service-accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 22px;
+  font-family: "Work Sans", sans-serif;
+  transition: 0.4s;
 }
-.service-flip-card:hover .service-card-inner {
-  transform: rotateY(180deg);
+
+.active, .service-accordion:hover {
+  background-color: #ccc;
 }
-.service-flip-card .service-card-front, .service-flip-card .service-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.service-flip-card .service-card-front {
-  background-color: #000;
-}
-.service-flip-card .service-card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.service-flip-card .service-card-front h3 {
-  position: absolute;
-  color: #FFF;
-  font-size: 3em;
-  font-weight: normal !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max-content;
-  text-shadow: 1px 0 5px #282828, 2px 0 5px #282828, 0 1px 5px #282828, 0 2px 5px #282828, -1px 0 5px #282828, -2px 0 5px #282828, 0 -1px 5px #282828, 0 -2px 5px #282828;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.service-flip-card:hover .service-card-front h3 {
+
+.service-panel {
+  margin: 0 auto;
+  padding: 0 18px;
   display: none;
+  overflow: hidden;
 }
-.service-flip-card .service-card-back {
-  transform: rotateY(180deg);
-  background-color: #FFF;
-  color: #4b4b4b;
-  padding: 20px 35px;
+.service-panel p {
+  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+  padding: 15px 0;
 }
-.service-flip-card .service-card-back h3 {
-  font-size: 2.5em !important;
-  margin-bottom: 20px;
+.service-panel li {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
 }
-.service-flip-card .service-card-back p {
-  font-size: 1.6em;
-  font-family: "Cabin", sans-serif;
-  text-align: justify;
-  text-align-last: center;
-  line-height: 2em;
+
+#other_services {
+  padding: 10px 0;
+}
+#other_services li {
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
 }
 
 .pricing-container {
