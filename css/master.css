@@ -718,14 +718,26 @@ li:hover > .sub-nav-dropdown a:hover {
 
 .pricing-box {
   padding: 50px;
-  width: 45%;
+  max-width: 43%;
 }
 .pricing-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 5px 5px #969696;
+  transform: scale(1.04);
+  box-shadow: 0 0 3px 3px #bebebe;
 }
 .pricing-box, .pricing-box:hover {
   transition: all 0.5s;
+}
+.pricing-box h4 {
+  font-size: 22px;
+  font-family: "Cabin", sans-serif;
+}
+.pricing-box span {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.pricing-disclaimer {
+  font-size: 1.6em !important;
 }
 
 .tips-container {
