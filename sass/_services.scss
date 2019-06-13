@@ -91,14 +91,14 @@
 
 .service-accordion {
   background-color: #eee;
-  color: #444;
+  color: darken($header-color, 60%);
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: center;
   outline: none;
-  font-size: 22px;
+  font-size: 25px;
   font-family: $nav-font;
   transition: 0.4s;
 }
@@ -114,24 +114,25 @@
   //background-color: white;
   overflow: hidden;
   p {
-    font-size: 15px;
+    font-size: 18px;
     font-family: $nav-font;
     padding: 15px 0;
+    color: darken($header-color, 40%);
   }
   li {
     margin-bottom: 7px;
-    font-size: 13px;
+    font-size: 15px;
     font-family: $nav-font;
+    color: darken($header-color, 40%);
   }
 }
 
 #other_services {
   padding: 10px 0;
-  
+
   li {
     font-size: 18px;
     font-family: $nav-font;
-    font-weight: 500;
   }
 }
 

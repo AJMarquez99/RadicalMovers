@@ -187,6 +187,8 @@ li:hover > .sub-nav-dropdown a:hover {
   height: 1000px;
   max-height: 100%;
   background-image: url(../images/backgroundImage.jpg);
+  background-size: cover;
+  background-position: bottom;
   opacity: 1;
   z-index: 0;
 }
@@ -523,14 +525,14 @@ li:hover > .sub-nav-dropdown a:hover {
 }*/
 .service-accordion {
   background-color: #eee;
-  color: #444;
+  color: #1a1a1a;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: center;
   outline: none;
-  font-size: 22px;
+  font-size: 25px;
   font-family: "Work Sans", sans-serif;
   transition: 0.4s;
 }
@@ -546,14 +548,16 @@ li:hover > .sub-nav-dropdown a:hover {
   overflow: hidden;
 }
 .service-panel p {
-  font-size: 15px;
+  font-size: 18px;
   font-family: "Work Sans", sans-serif;
   padding: 15px 0;
+  color: #4d4d4d;
 }
 .service-panel li {
   margin-bottom: 7px;
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Work Sans", sans-serif;
+  color: #4d4d4d;
 }
 
 #other_services {
@@ -562,7 +566,6 @@ li:hover > .sub-nav-dropdown a:hover {
 #other_services li {
   font-size: 18px;
   font-family: "Work Sans", sans-serif;
-  font-weight: 500;
 }
 
 .pricing-container {
