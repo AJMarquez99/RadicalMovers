@@ -287,6 +287,9 @@
 .pricing-box {
   padding: 50px;
   max-width: 43%;
+  @media screen and (max-width: $sm-break) {
+    max-width: 100%;
+  }
   &:hover {
     transform: scale(1.04);
     box-shadow: 0 0 3px 3px rgb(190, 190, 190);
@@ -306,7 +309,7 @@
 
 .pricing-disclaimer {
   font-size: 1.6em!important;
-  
+
 }
 
 .tips-container {
